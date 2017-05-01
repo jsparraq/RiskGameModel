@@ -11,4 +11,8 @@ package riskgamemodel;
  */
 public class Attack {
     private int ID;
+    
+    public void setID(int new_ID){
+        this.ID = new_ID;
+    }
 }
