@@ -13,8 +13,8 @@ public class Boundary {
 
     private int ID;
 
-    public void setID(int id_new) {
-        this.ID = id_new;
+    public void setID(int value) {
+        this.ID = value;
     }
 
     public int getID() {
