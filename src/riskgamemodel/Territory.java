@@ -14,4 +14,8 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
+    
+    public void setName(String name_new){
+        this.Name = name_new;
+    }
 }
