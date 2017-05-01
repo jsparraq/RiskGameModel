@@ -18,4 +18,20 @@ public class Territory {
     public void setName(String name_new){
         this.Name = name_new;
     }
+    public String getName(){
+        return Name;
+    }
+    public void setOwner(String owner_new){
+        this.Owner = owner_new;
+    }
+    public String getOwner(){
+        return Owner;
+    }
+    public void setArmy(int army_new){
+        this.Army = army_new;
+    }
+    public int getArmy(){
+        return Army;
+    }
+    
 }
