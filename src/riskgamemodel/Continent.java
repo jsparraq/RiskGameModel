@@ -10,5 +10,7 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Continent {
-    
+    private String Name;
+    private String Owner;
+    private int Army;
 }

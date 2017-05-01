@@ -11,5 +11,7 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Territory {
-    
+    private String Name;
+    private String Owner;
+    private int Army;
 }

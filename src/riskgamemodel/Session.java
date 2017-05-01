@@ -10,5 +10,6 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Session {
-    
+    private int ID;
+    private String State;
 }

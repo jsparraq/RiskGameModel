@@ -10,5 +10,8 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Card {
-    
+        private String Type;
+        private int ID;
+        private String Owner;
+        private String Design;
 }

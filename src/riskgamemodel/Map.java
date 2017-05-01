@@ -10,5 +10,5 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Map {
-    
+    private String Name;
 }

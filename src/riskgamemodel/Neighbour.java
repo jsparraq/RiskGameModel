@@ -9,6 +9,6 @@ package riskgamemodel;
  *
  * @author Sebastian
  */
-public class Neighbour {
+public class Neighbour extends Territory{
     
 }

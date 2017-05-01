@@ -10,5 +10,7 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Die {
-    
+    private String Type;
+    private int ID;
+    private int Value;
 }

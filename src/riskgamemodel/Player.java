@@ -10,5 +10,10 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Player {
-    
+    private boolean Turn;
+    private String CaptureState;
+    private String Color;
+    private int TerritoryAmount;
+    private int CardAmount;
+    private int Army;
 }
