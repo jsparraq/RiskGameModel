@@ -5,6 +5,8 @@
  */
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 
 
 /**
@@ -12,5 +14,6 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Neighbour extends Territory{
-    private Boundary Boundaries; 
+    
+    private ArrayList<Attack> Attacks;
 }

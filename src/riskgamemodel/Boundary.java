@@ -5,6 +5,8 @@
  */
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sebastian
@@ -12,6 +14,8 @@ package riskgamemodel;
 public class Boundary {
 
     private int ID;
+    private ArrayList<Territory> Territories;
+    private ArrayList<Neighbour> Neighbours;
 
     public void setID(int value) {
         this.ID = value;
