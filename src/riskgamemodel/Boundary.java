@@ -10,5 +10,14 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Boundary {
+
     private int ID;
+
+    public void setID(int id_new) {
+        this.ID = id_new;
+    }
+
+    public int getID() {
+        return ID;
+    }
 }
