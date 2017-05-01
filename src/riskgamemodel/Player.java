@@ -17,48 +17,48 @@ public class Player {
     private int CardAmount;
     private int Army;
     
-     public void setTurn(boolean new_Turn){
-        this.Turn = new_Turn;
+     public void setTurn(boolean value){
+        this.Turn = value;
     }
     
     public boolean getTurn(){
         return this.Turn;
     }
     
-    public void setCaptureState(String new_State){
-        this.CaptureState = new_State;
+    public void setCaptureState(String value){
+        this.CaptureState = value;
     }
     
     public String getCaptureState(){
         return this.CaptureState;
     }
     
-    public void setColor(String new_Color){
-        this.Color = new_Color;
+    public void setColor(String value){
+        this.Color = value;
     }
     
     public String getColor(){
         return this.Color;
     }
     
-    public void setTerritoryAmount(int new_Amount){
-        this.TerritoryAmount = new_Amount;
+    public void setTerritoryAmount(int value){
+        this.TerritoryAmount = value;
     }
     
     public int getTerritoryAmount(){
         return this.TerritoryAmount;
     }
     
-    public void setCardAmount(int new_Amount){
-        this.CardAmount = new_Amount;
+    public void setCardAmount(int value){
+        this.CardAmount = value;
     }
     
     public int getCardAmount(){
         return this.CardAmount;
     }
     
-    public void setArmy(int new_Army){
-        this.Army = new_Army;
+    public void setArmy(int value){
+        this.Army = value;
     }
     
     public int getArmy(){
