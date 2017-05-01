@@ -5,6 +5,8 @@
  */
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sebastian
@@ -13,6 +15,7 @@ public class Continent {
     private String Name;
     private String Owner;
     private int Army;
+    private ArrayList<Territory> Territories;
     
     public void setName(String value){
         this.Name = value;

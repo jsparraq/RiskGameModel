@@ -5,12 +5,17 @@
  */
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sebastian
  */
 public class Map {
     private String Name;
+    private ArrayList<Continent> Continents;
+    private ArrayList<Card> Cards;
+    private Boundary Boundary;
     
     public void setName(String value){
         Name = value;

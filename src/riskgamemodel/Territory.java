@@ -1,5 +1,7 @@
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,6 +16,8 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
+    private ArrayList<Attack> Attacks;
+    private ArrayList<Boundary> Boundaries;
     
     public void setName(String value){
         this.Name = value;

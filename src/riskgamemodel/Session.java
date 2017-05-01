@@ -5,6 +5,8 @@
  */
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sebastian
@@ -12,6 +14,8 @@ package riskgamemodel;
 public class Session {
     private int ID;
     private String State;
+    private ArrayList<Player> players;
+    private Map Map;
     
     public void setID(int value){
         this.ID = value;
