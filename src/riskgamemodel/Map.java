@@ -16,7 +16,5 @@ public class Map {
         Name = value;
     }
     
-    public String getName(){
-        return Name;
-    }
+    
 }
