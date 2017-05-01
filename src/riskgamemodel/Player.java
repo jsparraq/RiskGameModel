@@ -64,4 +64,9 @@ public class Player {
     public int getArmy(){
         return this.Army;
     }
+    
+    public void accepts(){
+        Army = Army + TerritoryAmount/3;
+        
+    }
 }
