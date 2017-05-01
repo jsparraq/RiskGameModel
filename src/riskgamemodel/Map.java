@@ -11,4 +11,5 @@ package riskgamemodel;
  */
 public class Map {
     private String Name;
+    //maaaaap!! 
 }
