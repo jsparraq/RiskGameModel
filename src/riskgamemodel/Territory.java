@@ -15,20 +15,20 @@ public class Territory {
     private String Owner;
     private int Army;
     
-    public void setName(String name_new){
-        this.Name = name_new;
+    public void setName(String value){
+        this.Name = value;
     }
     public String getName(){
         return Name;
     }
-    public void setOwner(String owner_new){
-        this.Owner = owner_new;
+    public void setOwner(String value){
+        this.Owner = value;
     }
     public String getOwner(){
         return Owner;
     }
-    public void setArmy(int army_new){
-        this.Army = army_new;
+    public void setArmy(int value){
+        this.Army = value;
     }
     public int getArmy(){
         return Army;
