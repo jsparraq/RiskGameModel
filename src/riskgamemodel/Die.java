@@ -15,24 +15,24 @@ public class Die {
     private int ID;
     private int Value;
 
-    public void setType(String type_new) {
-        this.Type = type_new;
+    public void setType(String value) {
+        this.Type = value;
     }
 
     public String getType() {
         return Type;
     }
 
-    public void setID(int id_new) {
-        this.ID = id_new;
+    public void setID(int value) {
+        this.ID = value;
     }
 
     public int getID() {
         return ID;
     }
 
-    public void setValue(int value_new) {
-        this.Value = value_new;
+    public void setValue(int value) {
+        this.Value = value;
     }
 
     public int getValue() {
