@@ -15,4 +15,8 @@ public class Attack {
     public void setID(int new_ID){
         this.ID = new_ID;
     }
+    
+    public int getID(){
+        return ID;
+    }
 }

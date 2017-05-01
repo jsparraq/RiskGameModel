@@ -12,4 +12,19 @@ package riskgamemodel;
 public class Session {
     private int ID;
     private String State;
+    
+    public void setID(int value){
+        this.ID = value;
+    }
+    
+    public int getID(){
+        return ID;
+    }
+    
+    public void setStete(String value){
+        this.State = value;
+    }
+    public String getState(){
+        return State;
+    }
 }

@@ -13,4 +13,27 @@ public class Continent {
     private String Name;
     private String Owner;
     private int Army;
+    
+    public void setName(String value){
+        this.Name = value;
+    }
+    public String getName(){
+        return Name;
+    }
+    
+    public void setOwner(String value){
+        this.Owner = value;
+    }
+    public String getOwner(){
+        return Owner;
+    }
+    
+    public void setArmy(int value){
+        this.Army = value;
+    }
+    public int getArmy(){
+        return Army;
+    }
+        
+        
 }
