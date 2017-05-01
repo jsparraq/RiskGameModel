@@ -11,5 +11,12 @@ package riskgamemodel;
  */
 public class Map {
     private String Name;
-    //maaaaap!! 
+    
+    public void setName(String value){
+        Name = value;
+    }
+    
+    public String getName(){
+        return Name;
+    }
 }
