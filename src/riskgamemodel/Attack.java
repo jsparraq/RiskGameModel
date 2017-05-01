@@ -17,6 +17,7 @@ public class Attack {
     
     public void setID(int value){
         this.ID = value;
+        System.out.println("qwe");
     }
     
     public int getID(){
