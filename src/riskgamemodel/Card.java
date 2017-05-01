@@ -15,26 +15,26 @@ public class Card {
         private String Owner;
         private String Design;
         
-        public void setType(String type_new){
-            this.Type = type_new;
+        public void setType(String value){
+            this.Type = value;
         }
         public String getType(){
             return Type;
         }
-        public void setID(int id_new){
-            this.ID = id_new;
+        public void setID(int value){
+            this.ID = value;
         }
         public int getID(){
             return ID;
         }
-        public void setOwner(String owner_new){
-            this.Owner = owner_new;
+        public void setOwner(String value){
+            this.Owner = value;
         }
         public String getOwner(){
             return Owner;
         }
-        public void setDesign(String design_new){
-            this.Design = design_new;
+        public void setDesign(String value){
+            this.Design = value;
         }
         public String getDesign(){
             return Design;
