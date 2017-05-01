@@ -10,5 +10,5 @@ package riskgamemodel;
  * @author Sebastian
  */
 public class Boundary {
-    
+    private int ID;
 }
