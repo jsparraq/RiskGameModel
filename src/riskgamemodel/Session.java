@@ -19,8 +19,9 @@ public class Session {
     private Map Map;
     
     private Session(){}
+    
     public static Session getSession(){
-        if(session==null){
+        if(session == null){
             session= new Session();
         }
         return session;
