@@ -20,7 +20,5 @@ public class Attack {
         System.out.println("qwe");
     }
     
-    public int getID(){
-        return ID;
-    }
+ 
 }
