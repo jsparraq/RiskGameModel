@@ -13,7 +13,6 @@ import java.util.ArrayList;
  */
 public class Attack {
     private int ID;
-    private ArrayList<Die> Dice;
     
     public void setID(int value){
         this.ID = value;
