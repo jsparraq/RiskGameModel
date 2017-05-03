@@ -19,8 +19,8 @@ public class Attack {
         this.ID = value;
         System.out.println("asdas");
     }
-    
-    public int getID(){
+      public int getID(){
         return ID;
     }
+ 
 }
