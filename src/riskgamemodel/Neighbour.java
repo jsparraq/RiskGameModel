@@ -15,5 +15,5 @@ import java.util.ArrayList;
  */
 public class Neighbour extends Territory{
     
-    private ArrayList<Attack> Attacks;
+    private Attack[] Attacks;
 }

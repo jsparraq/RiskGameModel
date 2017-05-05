@@ -16,7 +16,7 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
-    private ArrayList<Attack> Attacks;
+    private Attack[] Attacks;
     
     public void setName(String value){
         this.Name = value;

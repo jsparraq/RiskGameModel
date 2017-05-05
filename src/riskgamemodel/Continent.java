@@ -15,7 +15,7 @@ public class Continent {
     private String Name;
     private String Owner;
     private int Army;
-    private ArrayList<Territory> Territories;
+    private Territory[] Territories;
     
     public void setName(String value){
         this.Name = value;

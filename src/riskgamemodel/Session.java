@@ -15,7 +15,7 @@ public class Session {
     private static Session session;
     private int ID;
     private String State;
-    private ArrayList<Player> players;
+    private Player[] players;
     private Map Map;
     
     private Session(){}

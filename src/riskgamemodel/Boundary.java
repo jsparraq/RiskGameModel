@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class Boundary {
 
     private int ID;
-    private ArrayList<Territory> Territories;
-    private ArrayList<Neighbour> Neighbours;
+    private Territory[] Territories;
+    private Neighbour[] Neighbours;
 
     public void setID(int value) {
         this.ID = value;
