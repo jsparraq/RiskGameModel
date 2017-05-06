@@ -39,4 +39,7 @@ public class Card {
         public String getDesign(){
             return Design;
         }
+        public static void Trades(Player player,Card card1,Card card2,Card card3){
+           
+        }
 }

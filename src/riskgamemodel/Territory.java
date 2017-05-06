@@ -37,4 +37,8 @@ public class Territory {
         return Army;
     }
     
+    public static void Moves(Territory TerritoryA,Territory TerritoryB){
+        
+    }
+    
 }

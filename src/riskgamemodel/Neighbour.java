@@ -16,4 +16,7 @@ import java.util.ArrayList;
 public class Neighbour extends Territory{
     
     private Attack[] Attacks;
+    public static void Conquers(Player conqueror, Neighbour conquered){
+        
+    }
 }

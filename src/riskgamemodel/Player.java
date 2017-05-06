@@ -65,8 +65,14 @@ public class Player {
         return this.Army;
     }
     
-    public void accepts(){
-        Army = Army + TerritoryAmount/3;
+    public static void accepts(Player player){
+        player.Army = player.Army + player.TerritoryAmount/3;
         
     }
+    public static void Passes(Boolean conquered){
+    }
+    public static void Places(Player player, Territory Territorytoplace){
+    }
+    
+    
 }

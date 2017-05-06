@@ -38,4 +38,7 @@ public class Die {
     public int getValue() {
         return Value;
     }
+    
+    public static void Rolls(Territory TAtaque,Territory TDefensa){
+    }
 }

@@ -21,5 +21,8 @@ public class Attack {
       public int getID(){
         return ID;
     }
+    
+    public static void Declares(Territory TAtaque,Territory TDefensa){
+    }
  
 }
