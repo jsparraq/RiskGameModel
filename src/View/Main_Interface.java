@@ -36,15 +36,12 @@ public class Main_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Button_Attack = new javax.swing.JButton();
         Button_Move_Army = new javax.swing.JButton();
         Button_Pass_Turn = new javax.swing.JButton();
         Map = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -274,6 +271,5 @@ public class Main_Interface extends javax.swing.JFrame {
     private javax.swing.JButton Button_Pass_Turn;
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

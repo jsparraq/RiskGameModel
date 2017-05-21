@@ -36,15 +36,12 @@ public class Move_Army_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Button_Finish = new javax.swing.JButton();
         Final_Territory = new javax.swing.JComboBox();
         Starting_territory = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -393,6 +390,5 @@ public class Move_Army_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
     private javax.swing.JComboBox Starting_territory;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

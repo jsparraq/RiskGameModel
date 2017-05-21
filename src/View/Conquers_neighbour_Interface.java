@@ -36,15 +36,12 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         Text = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Button_Finish = new javax.swing.JButton();
         Value_army = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -138,6 +135,5 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel Map;
     private javax.swing.JLabel Text;
     private javax.swing.JComboBox Value_army;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

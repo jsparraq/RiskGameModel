@@ -36,7 +36,6 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Die_Value_Attack_1 = new javax.swing.JLabel();
         Die_Value_Attack_2 = new javax.swing.JLabel();
@@ -45,8 +44,6 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         Die_Value_defense_2 = new javax.swing.JLabel();
         Button_Finish = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -267,6 +264,5 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel Die_Value_Defense_1;
     private javax.swing.JLabel Die_Value_defense_2;
     private javax.swing.JLabel Logo_Risk;
-    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
