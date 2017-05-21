@@ -37,16 +37,14 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabelFondo = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jLabel3 = new javax.swing.JLabel();
+        Logo_Risk = new javax.swing.JLabel();
+        Die_Value_Attack_1 = new javax.swing.JLabel();
+        Die_Value_Attack_2 = new javax.swing.JLabel();
+        Die_Value_Attack_3 = new javax.swing.JLabel();
+        Die_Value_Defense_1 = new javax.swing.JLabel();
+        Die_Value_defense_2 = new javax.swing.JLabel();
+        Button_Finish = new javax.swing.JButton();
+        Background = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -54,57 +52,42 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Die 2 Attack    3");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        Die_Value_Attack_1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_1.setForeground(new java.awt.Color(255, 255, 255));
+        Die_Value_Attack_1.setText("Die 1 Attack    5");
+        getContentPane().add(Die_Value_Attack_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Die 3 Attack    1");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        Die_Value_Attack_2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_2.setForeground(new java.awt.Color(255, 255, 255));
+        Die_Value_Attack_2.setText("Die 2 Attack    3");
+        getContentPane().add(Die_Value_Attack_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Die 1 Defense    6");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
+        Die_Value_Attack_3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_3.setForeground(new java.awt.Color(255, 255, 255));
+        Die_Value_Attack_3.setText("Die 3 Attack    1");
+        getContentPane().add(Die_Value_Attack_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Die 2 Defense    1");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
+        Die_Value_Defense_1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Defense_1.setForeground(new java.awt.Color(255, 255, 255));
+        Die_Value_Defense_1.setText("Die 1 Defense    6");
+        getContentPane().add(Die_Value_Defense_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Die 1 Attack    5");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+        Die_Value_defense_2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_defense_2.setForeground(new java.awt.Color(255, 255, 255));
+        Die_Value_defense_2.setText("Die 2 Defense    1");
+        getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
 
-        jButton1.setText("Finish");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, 50));
+        Button_Finish.setText("Finish");
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, 50));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 290));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
      
  
@@ -276,16 +259,14 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton Button_Finish;
+    private javax.swing.JLabel Die_Value_Attack_1;
+    private javax.swing.JLabel Die_Value_Attack_2;
+    private javax.swing.JLabel Die_Value_Attack_3;
+    private javax.swing.JLabel Die_Value_Defense_1;
+    private javax.swing.JLabel Die_Value_defense_2;
+    private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabelFondo;
     // End of variables declaration//GEN-END:variables
 }

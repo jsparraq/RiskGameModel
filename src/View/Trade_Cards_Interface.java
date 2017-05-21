@@ -37,14 +37,13 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabelFondo = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Logo_Risk = new javax.swing.JLabel();
+        Button_Finish = new javax.swing.JButton();
+        Text = new javax.swing.JLabel();
+        Trade_Card_1 = new javax.swing.JComboBox();
+        Trade_Card_2 = new javax.swing.JComboBox<>();
+        Trade_Card_3 = new javax.swing.JComboBox<>();
+        Background = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -52,52 +51,49 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
 
-        jButton1.setText("Finish");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+        Button_Finish.setText("Finish");
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Select your cards");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+        Text.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Text.setForeground(new java.awt.Color(255, 255, 255));
+        Text.setText("Select your cards");
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Card 2", "Card 1", "Card 3", "Card 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        Trade_Card_1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Card 2", "Card 1", "Card 3", "Card 4" }));
+        Trade_Card_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                Trade_Card_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 80, -1));
+        getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 80, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 1", "Card 2", "Card 3", "Card 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        Trade_Card_2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 1", "Card 2", "Card 3", "Card 4" }));
+        Trade_Card_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                Trade_Card_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 80, -1));
+        getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 80, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 3", "Card 2", "Card 1", "Card 4" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 80, -1));
+        Trade_Card_3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 3", "Card 2", "Card 1", "Card 4" }));
+        getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 80, -1));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 280));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 280));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void Trade_Card_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_Trade_Card_1ActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void Trade_Card_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_Trade_Card_2ActionPerformed
 
      
  
@@ -145,14 +141,13 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Background;
+    private javax.swing.JButton Button_Finish;
+    private javax.swing.JLabel Logo_Risk;
+    private javax.swing.JLabel Text;
+    private javax.swing.JComboBox Trade_Card_1;
+    private javax.swing.JComboBox<String> Trade_Card_2;
+    private javax.swing.JComboBox<String> Trade_Card_3;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabelFondo;
     // End of variables declaration//GEN-END:variables
 }
