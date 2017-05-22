@@ -7,38 +7,46 @@ import java.util.ArrayList;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Sebastian
  */
 public class Territory {
+    
     private String Name;
     private String Owner;
     private int Army;
     private Attack[] Attacks;
     
-    public void setName(String value){
+    public void setName(String value) {
         this.Name = value;
     }
-    public String getName(){
+    
+    public String getName() {
         return Name;
     }
-    public void setOwner(String value){
+    
+    public void setOwner(String value) {
         this.Owner = value;
     }
-    public String getOwner(){
+    
+    public String getOwner() {
         return Owner;
     }
-    public void setArmy(int value){
+    
+    public void setArmy(int value) {
         this.Army = value;
     }
-    public int getArmy(){
+    
+    public int getArmy() {
         return Army;
     }
     
-    public static void Moves(Territory TerritoryA,Territory TerritoryB){
-        
+    public static void Moves(Territory TerritoryA, Territory TerritoryB) {
+        if (TerritoryA.getArmy() > 1 && TerritoryA.getOwner().equals(TerritoryB.getOwner())) {
+            TerritoryA.setArmy(TerritoryA.getArmy() - 1);
+            TerritoryB.setArmy(TerritoryB.getArmy() + 1);
+        }
     }
     
 }
