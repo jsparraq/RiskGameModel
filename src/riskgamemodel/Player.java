@@ -89,7 +89,19 @@ public class Player {
         }
     }
 
-    public static void Passes(Boolean conquered) {
+    public static void Passes(Player player,Card[] Cards) {
+        if(player.getCaptureState() == "CAPTURE"){
+            
+            for(int i=0;i<Cards.length;i++){
+                if(Cards[i].getOwner()=="WHITE"){
+                   Cards[i].setOwner(player.getColor());
+                   player.setCaptureState("NON-CAPTURE");
+                    
+                }
+            }
+            
+        }
+        
     }
 
     public static void Places(Player player, Territory Territorytoplace) {
