@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package riskgamemodel;
-
+import java.util.Arrays;
 /**
  *
  * @author Sebastian
@@ -52,6 +52,7 @@ public class Die {
     
     public static void Rolls(Territory TAtaque,Territory TDefensa){
         int I;
+        int J;
         int ID=1;
         if(TAtaque.getArmy()>3){
             I=3;
@@ -65,7 +66,42 @@ public class Die {
           d.setValue(random()); 
           d.setID(ID);
           ID++;
-          ATTACKS[I]=d;
+          ATTACKS[i]=d;
+        }
+        Arrays.sort(ATTACKS);
+        
+        
+        
+         if(TDefensa.getArmy()>1){
+            J=2;
+        }else{
+            J=1;
+        }
+        Die DEFENSE[]= new Die[J];
+        for(int i =J-1; i>-1;i--){
+          Die d = new Die();
+          d.setType("DEFENSE");
+          d.setValue(random()); 
+          d.setID(ID);
+          ID++;
+          DEFENSE[i]=d;
+        }
+        Arrays.sort(DEFENSE);
+        int MENOR;
+        if(J<I){
+           MENOR=J; 
+        }else{
+            MENOR=I;
+        }
+        
+        for(int i=0;i<MENOR;i++){
+            if(ATTACKS[i].getValue()>DEFENSE[i].getValue()){
+               int ar = TDefensa.getArmy();
+               TDefensa.setArmy(ar-1);
+            }else{
+               int ar = TAtaque.getArmy();
+               TAtaque.setArmy(ar-1);
+            }
         }
         
     }
@@ -73,4 +109,14 @@ public class Die {
     private static int random(){
         return (int) ((Math.random()*6)+1);
     }
+    
+    public int compareTo(Die o) {
+            if (Value < o.Value) {
+                return -1;
+            }
+            if (Value > o.Value) {
+                return 1;
+            }
+            return 0;
+        }
 }
