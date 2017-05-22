@@ -7,6 +7,9 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import riskgamemodel.Session;
 
 /**
  *
@@ -14,10 +17,17 @@ import java.awt.Toolkit;
  */
 public class Conquers_neighbour_Interface extends javax.swing.JFrame {
 
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
     public Conquers_neighbour_Interface() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+    
+    public Conquers_neighbour_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -66,7 +76,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 90, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        Map.setIcon(Map());
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 350, 220));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -79,13 +89,9 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Value_armyActionPerformed
 
-     
- 
-     
-    
-
-
-    
+    private Icon Map(){
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/classic.jpg")));
+    }
     /**
      * @param args the command line arguments
      */
@@ -123,7 +129,8 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Conquers_neighbour_Interface().setVisible(true);
+                
+                new Conquers_neighbour_Interface(Session.getSession()).setVisible(true);
             }
         });
     }
