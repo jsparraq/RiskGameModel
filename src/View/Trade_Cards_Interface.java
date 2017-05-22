@@ -96,6 +96,11 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 210, -1));
 
         Trade_Card_3.setModel((new javax.swing.DefaultComboBoxModel(cards())));
+        Trade_Card_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Trade_Card_3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 210, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -113,8 +118,16 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Trade_Card_2ActionPerformed
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        
+        String card1_string = (String)Trade_Card_1.getSelectedItem();
+        String type,desing,name_territory;
+        for (int i = 0; i < card1_string.length(); i++) {
+            
+        }
     }//GEN-LAST:event_Button_FinishActionPerformed
+
+    private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Trade_Card_3ActionPerformed
     
     private String[] cards(){
         Player[] players = sessionstart.getPlayers();

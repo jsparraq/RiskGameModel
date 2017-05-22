@@ -14,12 +14,15 @@ public class Card {
         private int ID;
         private String Owner;
         private String Design;
+        private Territory Territory;
         
-        public Card(String type, int id, String owner, String design){
+        
+        public Card(String type, int id, String owner, String design,Territory territory){
             Type=type;
             ID = id;
             Owner = owner;
             Design = design;
+            Territory = territory;
         }
         
         public void setType(String value){
@@ -51,7 +54,7 @@ public class Card {
         }
         
         public String getString(){            
-            return this.Type + "-" + this.Design;
+            return this.Type + "-" + this.Design + "-" + this.Territory.getName();
         }
         
 }
