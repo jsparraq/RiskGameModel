@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import riskgamemodel.Session;
 
 /**
  *
@@ -78,6 +79,11 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, -1, -1));
 
         Button_Finish.setText("Finish");
+        Button_Finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_FinishActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 320, 120, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -85,6 +91,10 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_FinishActionPerformed
 
      
  

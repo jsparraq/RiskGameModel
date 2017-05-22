@@ -7,6 +7,8 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import riskgamemodel.Player;
+import riskgamemodel.Session;
 
 /**
  *
@@ -69,7 +71,18 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AcceptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AcceptsActionPerformed
-        
+        Session session = Session.getSession();
+        Player[] players = session.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+                break;
+            }
+        }
+        Player.accepts(playerstart);
+        this.setVisible(false);
+        new Trade_Cards_Interface().setVisible(true);       
     }//GEN-LAST:event_Button_AcceptsActionPerformed
 
      
