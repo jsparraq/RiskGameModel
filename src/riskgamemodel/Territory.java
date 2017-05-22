@@ -18,6 +18,13 @@ public class Territory {
     private int Army;
     private Attack[] Attacks;
     
+    public Territory(String name, String owner, int army, Attack[] att){
+        Name = name;
+        Owner = owner;
+        Army = army;
+        Attacks = att;
+    }
+    
     public void setName(String value) {
         this.Name = value;
     }
