@@ -20,4 +20,10 @@ public class Neighbour extends Territory{
     public static void Conquers(Player conqueror, Neighbour conquered){
         
     }
+
+    public Neighbour(String name, String owner, int army, Attack[] att) {
+        super(name, owner, army, att);
+    }
+
+
 }
