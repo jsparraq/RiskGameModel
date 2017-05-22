@@ -32,4 +32,8 @@ public class Map {
         return Continents;
     }
     
+    public Card[] getCards(){
+        return Cards;
+    }
+    
 }

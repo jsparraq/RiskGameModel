@@ -7,7 +7,10 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.ArrayList;
+import riskgamemodel.Card;
 import riskgamemodel.Player;
+import riskgamemodel.Session;
 
 /**
  *
@@ -15,7 +18,7 @@ import riskgamemodel.Player;
  */
 public class Trade_Cards_Interface extends javax.swing.JFrame {
 
-    Player playerstart;
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
@@ -24,8 +27,8 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
-    public Trade_Cards_Interface(Player player) {
-        playerstart = player;
+    public Trade_Cards_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -75,7 +78,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         Text.setText("Select your cards");
         getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 180, 30));
 
-        Trade_Card_1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Card 2", "Card 1", "Card 3", "Card 4" }));
+        Trade_Card_1.setModel((new javax.swing.DefaultComboBoxModel(cards())));
         Trade_Card_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Trade_Card_1ActionPerformed(evt);
@@ -83,7 +86,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 210, -1));
 
-        Trade_Card_2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 1", "Card 2", "Card 3", "Card 4" }));
+        Trade_Card_2.setModel((new javax.swing.DefaultComboBoxModel(cards())));
         Trade_Card_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Trade_Card_2ActionPerformed(evt);
@@ -91,7 +94,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 210, -1));
 
-        Trade_Card_3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 3", "Card 2", "Card 1", "Card 4" }));
+        Trade_Card_3.setModel((new javax.swing.DefaultComboBoxModel(cards())));
         getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 210, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -111,7 +114,28 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Button_FinishActionPerformed
-
+    
+    private String[] cards(){
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        Card[] cards = sessionstart.getMap().getCards();
+        ArrayList<Card> cards_player = new ArrayList();
+        for (Card card : cards) {
+            if (card.getOwner().equals(playerstart.getColor())) {
+                cards_player.add(card);
+            }
+        }
+        String[] card_string = new String[cards_player.size()];
+        for (int i = 0; i < cards_player.size(); i++) {
+            card_string[i] = cards_player.get(i).getString();
+        }
+        return card_string;
+    }
         
     /**
      * @param args the command line arguments

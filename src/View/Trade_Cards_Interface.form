@@ -78,13 +78,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="Trade_Card_1">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Card 2"/>
-            <StringItem index="1" value="Card 1"/>
-            <StringItem index="2" value="Card 3"/>
-            <StringItem index="3" value="Card 4"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="(new javax.swing.DefaultComboBoxModel(cards()))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -98,13 +93,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="Trade_Card_2">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Card 1"/>
-            <StringItem index="1" value="Card 2"/>
-            <StringItem index="2" value="Card 3"/>
-            <StringItem index="3" value="Card 4"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="(new javax.swing.DefaultComboBoxModel(cards()))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -121,13 +111,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="Trade_Card_3">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Card 3"/>
-            <StringItem index="1" value="Card 2"/>
-            <StringItem index="2" value="Card 1"/>
-            <StringItem index="3" value="Card 4"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="(new javax.swing.DefaultComboBoxModel(cards()))" type="code"/>
         </Property>
       </Properties>
       <AuxValues>

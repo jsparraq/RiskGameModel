@@ -87,7 +87,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         }
         Player.accepts(playerstart);
         this.setVisible(false);
-        new Trade_Cards_Interface(playerstart).setVisible(true);       
+        new Trade_Cards_Interface(sessionstart).setVisible(true);       
     }//GEN-LAST:event_Button_AcceptsActionPerformed
     
     /**
