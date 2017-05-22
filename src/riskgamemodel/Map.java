@@ -17,8 +17,11 @@ public class Map {
     private Card[] Cards;
     private Boundary Boundary;
     
-    public Map(String n){
-        Name = n;        
+    public Map(String name,Continent[] continents, Card[] cards, Boundary boundary){
+        Name = name;
+        Continents = continents;
+        Cards = cards;
+        Boundary = boundary;
     }
     public void setName(String value){
         Name = value;

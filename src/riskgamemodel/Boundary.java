@@ -16,7 +16,11 @@ public class Boundary {
     private int ID;
     private Territory[] Territories;
     private Neighbour[] Neighbours;
-
+    
+    public Boundary(int id, Territory[] territories, Territory[] territories1){
+        ID = id;
+        
+    }
     public void setID(int value) {
         this.ID = value;
     }

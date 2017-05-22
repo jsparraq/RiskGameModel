@@ -45,13 +45,14 @@ public class Session {
             Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory3,territory4});
             Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory5,territory5});
             Card card1 = new Card("STANDARD",1,"BLUE","Infantry",territory1);
-            Card card2 = new Card("STANDARD",1,"BLUE","Cavalry",territory2);
-            Card card3 = new Card("STANDARD",1,"RED","Artillery",territory3);
-            Card card4 = new Card("STANDARD",1,"RED","Infantry",territory4);
-            Card card5 = new Card("STANDARD",1,"GREEN","Cavalry",territory5);
-            Card card6 = new Card("STANDARD",1,"WHITE","Artillery",territory6);
-            Card card7 = new Card("STANDARD",1,"WHITE","Infantry",territory7);
-            session = new Session(1,"Run",players);
+            Card card2 = new Card("STANDARD",2,"BLUE","Cavalry",territory2);
+            Card card3 = new Card("STANDARD",3,"RED","Artillery",territory3);
+            Card card4 = new Card("STANDARD",4,"RED","Infantry",territory4);
+            Card card5 = new Card("STANDARD",5,"GREEN","Cavalry",territory5);
+            Card card6 = new Card("STANDARD",6,"WHITE","Artillery",territory6);
+            Card card7 = new Card("STANDARD",7,"WHITE","Infantry",territory7);
+            Boundary boundary = new Boundary(1,new Territory[]{territory1,territory2,territory3,territory4,territory5,territory6,territory7},new Territory[]{territory2,territory3,territory4,territory5,territory6,territory7,territory1});
+            session = new Session(1,"Run",players,new Map("ameroki_pic2",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary));
         }
         return session;
     }
