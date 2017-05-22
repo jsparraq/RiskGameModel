@@ -13,12 +13,20 @@ import java.util.ArrayList;
  */
 public class Attack {
     private int ID;
+    private int army;
     private Die[] Dice;
     
     public void setID(int value){
         this.ID = value;
     }
       public int getID(){
+        return ID;
+    }
+      
+     public void setarmy(int value){
+        this.ID = value;
+    }
+      public int getarmy(){
         return ID;
     }
     
