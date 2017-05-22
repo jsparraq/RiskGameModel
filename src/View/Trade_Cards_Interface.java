@@ -45,19 +45,27 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(new java.awt.Dimension(370, 280));
+        setResizable(false);
+        setSize(new java.awt.Dimension(560, 430));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 220, 130));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+        Button_Finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_FinishActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 80, 40));
 
         Text.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Select your cards");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 140, 30));
 
         Trade_Card_1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Card 2", "Card 1", "Card 3", "Card 4" }));
         Trade_Card_1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +73,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Trade_Card_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 80, -1));
+        getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 210, -1));
 
         Trade_Card_2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 1", "Card 2", "Card 3", "Card 4" }));
         Trade_Card_2.addActionListener(new java.awt.event.ActionListener() {
@@ -73,13 +81,13 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Trade_Card_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 80, -1));
+        getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 210, -1));
 
         Trade_Card_3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Card 3", "Card 2", "Card 1", "Card 4" }));
-        getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 80, -1));
+        getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 210, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 280));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -91,6 +99,10 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     private void Trade_Card_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Trade_Card_2ActionPerformed
+
+    private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_FinishActionPerformed
 
      
  

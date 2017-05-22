@@ -50,38 +50,38 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
 
-        Die_Value_Attack_1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_Attack_1.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_Attack_1.setText("Die 1 Attack    5");
-        getContentPane().add(Die_Value_Attack_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+        getContentPane().add(Die_Value_Attack_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, -1, -1));
 
-        Die_Value_Attack_2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_Attack_2.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_Attack_2.setText("Die 2 Attack    3");
-        getContentPane().add(Die_Value_Attack_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
+        getContentPane().add(Die_Value_Attack_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
 
-        Die_Value_Attack_3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Attack_3.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_Attack_3.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_Attack_3.setText("Die 3 Attack    1");
-        getContentPane().add(Die_Value_Attack_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        getContentPane().add(Die_Value_Attack_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 160, 30));
 
-        Die_Value_Defense_1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_Defense_1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_Defense_1.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_Defense_1.setText("Die 1 Defense    6");
-        getContentPane().add(Die_Value_Defense_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
+        getContentPane().add(Die_Value_Defense_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
 
-        Die_Value_defense_2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Die_Value_defense_2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_defense_2.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_defense_2.setText("Die 2 Defense    1");
-        getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
+        getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, -1, -1));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, 50));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 320, 120, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 290));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

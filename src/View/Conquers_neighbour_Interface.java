@@ -44,19 +44,19 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Text.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Your Army");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 120, -1));
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 280, -1, -1));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 100, 30));
 
         Value_army.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
         Value_army.addActionListener(new java.awt.event.ActionListener() {
@@ -64,13 +64,13 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
                 Value_armyActionPerformed(evt);
             }
         });
-        getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
+        getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 90, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 350, 220));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 410));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

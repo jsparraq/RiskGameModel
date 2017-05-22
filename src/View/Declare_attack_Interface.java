@@ -45,14 +45,14 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, 60));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 80, 40));
 
         Territory_attacker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
         Territory_attacker.addActionListener(new java.awt.event.ActionListener() {
@@ -60,19 +60,19 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
                 Territory_attackerActionPerformed(evt);
             }
         });
-        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 80, -1));
+        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 140, -1));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 350, 220));
 
         Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Territory 3", "Territory 4" }));
-        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 80, -1));
+        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 140, -1));
 
         Button_Roll_Dice.setText("Roll Dice");
-        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 80, 60));
+        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 90, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 410));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

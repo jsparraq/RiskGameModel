@@ -44,11 +44,11 @@ public class Main_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
 
         Button_Attack.setText("Attack");
         Button_Attack.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +56,7 @@ public class Main_Interface extends javax.swing.JFrame {
                 Button_AttackActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Attack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
+        getContentPane().add(Button_Attack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 110, 30));
 
         Button_Move_Army.setText("Move Army");
         Button_Move_Army.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class Main_Interface extends javax.swing.JFrame {
                 Button_Move_ArmyActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Move_Army, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        getContentPane().add(Button_Move_Army, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 130, 30));
 
         Button_Pass_Turn.setText("Pass Turn");
         Button_Pass_Turn.addActionListener(new java.awt.event.ActionListener() {
@@ -72,13 +72,13 @@ public class Main_Interface extends javax.swing.JFrame {
                 Button_Pass_TurnActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 290, -1, -1));
+        getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 140, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 410));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -48,10 +48,10 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 473, 110, 30));
 
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
         Final_Territory.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +59,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Final_TerritoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 80, -1));
+        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, 150, 20));
 
         Starting_territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 2", "Territory 1" }));
         Starting_territory.addActionListener(new java.awt.event.ActionListener() {
@@ -67,13 +67,13 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Starting_territoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 80, -1));
+        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 150, -1));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ameroki_pic2.jpg"))); // NOI18N
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 410));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

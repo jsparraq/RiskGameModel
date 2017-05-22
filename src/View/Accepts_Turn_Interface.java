@@ -42,16 +42,17 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(560, 430));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Text.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Your turn has started!");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
 
         Button_Accepts.setText("Accepts Turn");
         Button_Accepts.addActionListener(new java.awt.event.ActionListener() {
@@ -59,10 +60,10 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
                 Button_AcceptsActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Accepts, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, -1, -1));
+        getContentPane().add(Button_Accepts, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 120, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 280));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
