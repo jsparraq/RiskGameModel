@@ -32,11 +32,6 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -76,8 +71,8 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 90, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 350, 220));
+        Map.setIcon(Map());
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 280, 170));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
@@ -90,7 +85,8 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Value_armyActionPerformed
 
     private Icon Map(){
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/classic.jpg")));
+        String name = "ameroki_pic2";
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
     }
     /**
      * @param args the command line arguments
