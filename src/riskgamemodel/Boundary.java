@@ -19,7 +19,11 @@ public class Boundary {
     
     public Boundary(int id, Territory[] territories, Territory[] territories1){
         ID = id;
-        
+        Territories = territories;
+        Neighbours = new Neighbour[territories1.length];
+        for (int i = 0; i < territories1.length; i++) {
+            Neighbours[i] = new Neighbour(territories1[i].getName(),territories1[i].getOwner(),territories1[i].getArmy(),territories1[i].getAttacks());
+        }
     }
     public void setID(int value) {
         this.ID = value;

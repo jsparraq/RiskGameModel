@@ -25,6 +25,9 @@ public class Territory {
         Attacks = att;
     }
     
+    public Attack[] getAttacks(){
+        return Attacks;
+    }
     public void setName(String value) {
         this.Name = value;
     }
