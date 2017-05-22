@@ -19,6 +19,7 @@ import riskgamemodel.Session;
 public class Trade_Cards_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Card[] cards;
     /**
      * Creates new form Interfaz
      */
@@ -104,15 +105,15 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Trade_Card_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Trade_Card_1ActionPerformed
 
     private void Trade_Card_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Trade_Card_2ActionPerformed
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Button_FinishActionPerformed
     
     private String[] cards(){
@@ -123,7 +124,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 playerstart = player;
             }
         }
-        Card[] cards = sessionstart.getMap().getCards();
+        cards = sessionstart.getMap().getCards();
         ArrayList<Card> cards_player = new ArrayList();
         for (Card card : cards) {
             if (card.getOwner().equals(playerstart.getColor())) {

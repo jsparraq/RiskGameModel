@@ -121,7 +121,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Accepts_Turn_Interface().setVisible(true);
+                new Accepts_Turn_Interface(Session.getSession()).setVisible(true);
             }
         });
     }

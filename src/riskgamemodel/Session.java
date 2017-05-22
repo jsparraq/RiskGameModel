@@ -26,7 +26,7 @@ public class Session {
     
     public static Session getSession(){
         if(session == null){
-            session= new Session(new Map("classic"));
+            session= new Session(new Map("ameroki_pic2"));
         }
         return session;
     }

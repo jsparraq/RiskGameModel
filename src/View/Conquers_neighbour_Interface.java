@@ -85,8 +85,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Value_armyActionPerformed
 
     private Icon Map(){
-        String name = "ameroki_pic2";
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".jpg")));
     }
     /**
      * @param args the command line arguments
