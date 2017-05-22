@@ -31,6 +31,9 @@ public class Continent {
     public String getName(){
         return Name;
     }
+    public Territory[] getTerritory(){
+        return Territories;
+    }
     
     public void setOwner(String value){
         this.Owner = value;

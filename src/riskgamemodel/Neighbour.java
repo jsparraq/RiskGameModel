@@ -17,7 +17,23 @@ public class Neighbour extends Territory{
     
     private Attack[] Attacks;
     
-    public static void Conquers(Player conqueror, Neighbour conquered){
+    public static void Conquers(Player conqueror, Neighbour conquered,Attack att,Continent[] continents){
+        conquered.setOwner(conqueror.getColor());
+        
+        
+         int pass_army =0;
+        while(pass_army<att.getarmy()){
+            // se tiene que hacer un listener para esto
+            // mirar que pasa cuando el atacante queda con menos de los que puede pasar
+        System.out.println("Escriba con cuantos va a colocar");
+        conquered.setArmy(pass_army);
+        }
+        String name_of_contient;
+        for(int i=0;i<continents.length;i++){
+            for(int j=0;j<continents[i].getTerritory().length;j++){
+                
+            }
+        }
         
     }
 
