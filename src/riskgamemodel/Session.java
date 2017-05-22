@@ -29,12 +29,29 @@ public class Session {
     
     public static Session getSession(){
         if(session == null){
-            Player player1 = new Player(true,"non-capture","BLUE",2,3,0);
+            Player player1 = new Player(true,"non-capture","BLUE",1,2,0);
             Player player2 = new Player(false,"non-capture","RED",4,2,0);
-            Player player3 = new Player(false,"non-capture","GREEN",1,3,0);
-            Player player4 = new Player(false,"non-capture","PURPLE",1,3,0);
+            Player player3 = new Player(false,"non-capture","GREEN",1,1,0);
+            Player player4 = new Player(false,"non-capture","PURPLE",1,0,0);
             Player[] players = new Player[]{player1,player2,player3,player4};
-            session = new Session();
+            Territory territory1 = new Territory("A","BLUE",3,new Attack[]{});
+            Territory territory2 = new Territory("B","RED",3,new Attack[]{});
+            Territory territory3 = new Territory("C","RED",3,new Attack[]{});
+            Territory territory4 = new Territory("D","RED",3,new Attack[]{});
+            Territory territory5 = new Territory("E","RED",3,new Attack[]{});
+            Territory territory6 = new Territory("F","GREEN",3,new Attack[]{});
+            Territory territory7 = new Territory("G","PURPLE",3,new Attack[]{});
+            Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
+            Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory3,territory4});
+            Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory5,territory5});
+            Card card1 = new Card("STANDARD",1,"BLUE","Infantry",territory1);
+            Card card2 = new Card("STANDARD",1,"BLUE","Cavalry",territory2);
+            Card card3 = new Card("STANDARD",1,"RED","Artillery",territory3);
+            Card card4 = new Card("STANDARD",1,"RED","Infantry",territory4);
+            Card card5 = new Card("STANDARD",1,"GREEN","Cavalry",territory5);
+            Card card6 = new Card("STANDARD",1,"WHITE","Artillery",territory6);
+            Card card7 = new Card("STANDARD",1,"WHITE","Infantry",territory7);
+            session = new Session(1,"Run",players);
         }
         return session;
     }

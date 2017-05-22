@@ -18,7 +18,7 @@ public class Card {
         
         
         public Card(String type, int id, String owner, String design,Territory territory){
-            Type=type;
+            Type = type;
             ID = id;
             Owner = owner;
             Design = design;
