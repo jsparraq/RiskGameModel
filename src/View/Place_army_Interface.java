@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.Icon;
 
 /**
  *
@@ -60,7 +61,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 130, -1));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        Map.setIcon(Map());
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -73,7 +74,10 @@ public class Place_army_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TerritoryActionPerformed
 
-     
+    private Icon Map(){
+        String name = "ameroki_pic2";
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
+    } 
  
      
     

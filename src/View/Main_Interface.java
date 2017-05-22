@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.Icon;
 
 /**
  *
@@ -74,7 +75,7 @@ public class Main_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 140, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        Map.setIcon(Map());
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -96,7 +97,10 @@ public class Main_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
 
      
- 
+     private Icon Map(){
+        String name = "ameroki_pic2";
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
+    }
      
     
 
