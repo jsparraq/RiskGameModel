@@ -24,10 +24,10 @@ public class Attack {
     }
       
      public void setarmy(int value){
-        this.ID = value;
+        this.army = value;
     }
       public int getarmy(){
-        return ID;
+        return army;
     }
     
     public static void Declares(Territory TAtaque,Territory TDefensa){
