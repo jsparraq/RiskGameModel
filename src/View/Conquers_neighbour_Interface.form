@@ -87,8 +87,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="Map">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="Map()" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/images/ameroki_pic2 - copia.jpg"/>
         </Property>
       </Properties>
       <Constraints>

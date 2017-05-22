@@ -16,6 +16,11 @@ public class Attack {
     private int army;
     private Die[] Dice;
     
+    public Attack(int id, int Army, Die[] Dices1){
+        ID = id;
+        army = Army;
+        Dice = Dices1;        
+    }
     public void setID(int value){
         this.ID = value;
     }
