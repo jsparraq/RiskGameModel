@@ -17,7 +17,18 @@ public class Player {
     private int TerritoryAmount;
     private int CardAmount;
     private int Army;
-
+    
+    public Player(){
+        
+    }
+    public Player(boolean turn, String capture, String color,int territoryamount, int cardamount, int army){
+        Turn = turn;
+        CaptureState = capture;
+        Color = color;
+        TerritoryAmount = territoryamount;
+        CardAmount = cardamount;
+        Army = army;
+    }
     public void setTurn(boolean value) {
         this.Turn = value;
     }
