@@ -76,7 +76,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 90, 30));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ameroki_pic2 - copia.jpg"))); // NOI18N
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 350, 220));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
