@@ -28,12 +28,35 @@ public class Neighbour extends Territory{
         System.out.println("Escriba con cuantos va a colocar");
         conquered.setArmy(pass_army);
         }
-        String name_of_contient;
+        int NAME_CONTINENT=-1;
+        int TERRITORY_AMOUNT=-1;
+        
+        Territory[] territorios_continet=null;
         for(int i=0;i<continents.length;i++){
-            for(int j=0;j<continents[i].getTerritory().length;j++){
-                
+            Territory[] territorios =continents[i].getTerritory();
+            for(int j=0;j<territorios.length;j++){
+                if(territorios[j].getName()==conquered.getName()){
+                    NAME_CONTINENT = i;
+                    TERRITORY_AMOUNT = territorios.length;
+                    territorios_continet= territorios;
+                    break;
+                }
+            }
+            if(NAME_CONTINENT!=-1){
+                break;
             }
         }
+        int counter=0;
+        for(int i=0;i<TERRITORY_AMOUNT;i++){
+            if(territorios_continet[i].getName()==conquered.getName()){
+                counter++;
+            }
+        }
+        if(counter==TERRITORY_AMOUNT){
+           continents[NAME_CONTINENT].setName(conquered.getName());
+        }
+        
+        
         
     }
 
