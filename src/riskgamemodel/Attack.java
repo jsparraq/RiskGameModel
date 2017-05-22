@@ -24,5 +24,5 @@ public class Attack {
     
     public static void Declares(Territory TAtaque,Territory TDefensa){
     }
- 
+    
 }
