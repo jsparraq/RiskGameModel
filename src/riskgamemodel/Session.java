@@ -16,7 +16,7 @@ public class Session {
     private int ID;
     private String State;
     private Player[] players;
-    private Map Map;
+    private Map map;
     
     private Session(){}
     
@@ -40,5 +40,13 @@ public class Session {
     }
     public String getState(){
         return State;
+    }
+    
+    public Player[] getPlayers(){
+        return players;
+    }
+    
+    public Map getMap(){
+        return this.map;
     }
 }

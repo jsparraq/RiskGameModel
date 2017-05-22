@@ -68,7 +68,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AcceptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AcceptsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_Button_AcceptsActionPerformed
 
      

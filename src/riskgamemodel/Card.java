@@ -42,4 +42,9 @@ public class Card {
         public static void Trades(Player player,Card card1,Card card2,Card card3){
            
         }
+        
+        public String getString(){            
+            return this.Type + "-" + this.Design;
+        }
+        
 }

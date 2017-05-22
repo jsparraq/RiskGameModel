@@ -66,8 +66,15 @@ public class Player {
     }
     
     public static void accepts(Player player){
-        player.Army = player.Army + player.TerritoryAmount/3;
-        
+        player.Army = player.TerritoryAmount/3;
+        Session session = Session.getSession();
+        Map map = session.getMap();
+        Continent[] Continents = map.getContinents();
+        for (Continent Continent : Continents) {
+            if (Continent.getOwner().equals(player.Color)) {
+                player.Army = player.Army + Continent.getArmy();
+            }
+        }
     }
     public static void Passes(Boolean conquered){
     }

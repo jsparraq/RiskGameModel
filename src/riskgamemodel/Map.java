@@ -25,4 +25,8 @@ public class Map {
         return Name;
     }
     
+    public Continent[] getContinents(){
+        return Continents;
+    }
+    
 }
