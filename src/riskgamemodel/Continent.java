@@ -17,6 +17,14 @@ public class Continent {
     private int Army;
     private Territory[] Territories;
     
+    
+    public Continent(String name, String owner, int army, Territory[] terr){
+        Name = name;
+        Owner = owner;
+        Army = army;
+        Territories = terr;
+    }
+    
     public void setName(String value){
         this.Name = value;
     }

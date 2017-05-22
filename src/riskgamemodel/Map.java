@@ -17,6 +17,9 @@ public class Map {
     private Card[] Cards;
     private Boundary Boundary;
     
+    public Map(String n){
+        Name = n;        
+    }
     public void setName(String value){
         Name = value;
     }

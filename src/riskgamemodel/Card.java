@@ -15,6 +15,13 @@ public class Card {
         private String Owner;
         private String Design;
         
+        public Card(String type, int id, String owner, String design){
+            Type=type;
+            ID = id;
+            Owner = owner;
+            Design = design;
+        }
+        
         public void setType(String value){
             this.Type = value;
         }

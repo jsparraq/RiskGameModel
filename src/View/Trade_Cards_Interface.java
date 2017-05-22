@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import riskgamemodel.Player;
 
 /**
  *
@@ -14,10 +15,17 @@ import java.awt.Toolkit;
  */
 public class Trade_Cards_Interface extends javax.swing.JFrame {
 
+    Player playerstart;
     /**
      * Creates new form Interfaz
      */
     public Trade_Cards_Interface() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+    
+    public Trade_Cards_Interface(Player player) {
+        playerstart = player;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -62,10 +70,10 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 80, 40));
 
-        Text.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Select your cards");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 140, 30));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 180, 30));
 
         Trade_Card_1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Card 2", "Card 1", "Card 3", "Card 4" }));
         Trade_Card_1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,13 +112,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Button_FinishActionPerformed
 
-     
- 
-     
-    
-
-
-    
+        
     /**
      * @param args the command line arguments
      */
@@ -143,6 +145,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Trade_Cards_Interface().setVisible(true);
             }

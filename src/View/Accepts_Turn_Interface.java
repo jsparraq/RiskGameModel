@@ -15,11 +15,17 @@ import riskgamemodel.Session;
  * @author andre
  */
 public class Accepts_Turn_Interface extends javax.swing.JFrame {
-
+    
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
     public Accepts_Turn_Interface() {
+        initComponents();
+        this.setLocationRelativeTo(null);
+    }
+    public Accepts_Turn_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -71,8 +77,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AcceptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AcceptsActionPerformed
-        Session session = Session.getSession();
-        Player[] players = session.getPlayers();
+        Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();
         for (Player player : players) {
             if (player.getTurn()) {
@@ -82,15 +87,8 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         }
         Player.accepts(playerstart);
         this.setVisible(false);
-        new Trade_Cards_Interface().setVisible(true);       
+        new Trade_Cards_Interface(playerstart).setVisible(true);       
     }//GEN-LAST:event_Button_AcceptsActionPerformed
-
-     
- 
-     
-    
-
-
     
     /**
      * @param args the command line arguments

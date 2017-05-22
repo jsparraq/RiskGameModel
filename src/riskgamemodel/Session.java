@@ -20,9 +20,13 @@ public class Session {
     
     private Session(){}
     
+    private Session(Map m){
+        map = m;
+    }
+    
     public static Session getSession(){
         if(session == null){
-            session= new Session();
+            session= new Session(new Map("classic"));
         }
         return session;
     }
