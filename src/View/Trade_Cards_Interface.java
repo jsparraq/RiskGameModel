@@ -122,9 +122,9 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         String card1_string = (String)Trade_Card_1.getSelectedItem();
         String card2_string = (String)Trade_Card_2.getSelectedItem();
         String card3_string = (String)Trade_Card_3.getSelectedItem();
-        Card card1;
-        Card card2;
-        Card card3;
+        Card card1 = new Card();
+        Card card2 = new Card();
+        Card card3 = new Card();
         for (Card card : cards) {
             if (card.getString().equals(card1_string)) {
                 card1 = card;
@@ -134,7 +134,14 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 card3 = card;
             }
         }
-        
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        Card.Trades(playerstart, card1, card2, card3);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed
