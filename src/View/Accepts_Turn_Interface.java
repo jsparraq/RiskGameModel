@@ -7,8 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import manager.AcceptTurnManager;
 import riskgamemodel.Player;
 import riskgamemodel.Session;
 
@@ -27,11 +26,6 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
-    }
-    
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
     }
 
     /**
@@ -76,17 +70,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AcceptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AcceptsActionPerformed
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-                break;
-            }
-        }
-        Player.accepts(playerstart);
-        this.setVisible(false);
-        new Trade_Cards_Interface(sessionstart).setVisible(true); 
+        AcceptTurnManager.Button_finish(sessionstart, this);
     }//GEN-LAST:event_Button_AcceptsActionPerformed
     
 

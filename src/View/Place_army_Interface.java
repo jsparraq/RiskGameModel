@@ -13,6 +13,7 @@ import riskgamemodel.Continent;
 import riskgamemodel.Player;
 import riskgamemodel.Session;
 import riskgamemodel.Territory;
+import manager.PlaceArmyManager;
 
 /**
  *

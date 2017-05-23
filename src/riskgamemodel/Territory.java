@@ -57,7 +57,7 @@ public class Territory {
     
     public String getString() {
         if(Owner.equals("WHITE")){
-            return Name + " - " + Integer.toString(Army) + "Without owner";
+            return Name + " - " + Integer.toString(Army) + " without owner";
         }
         return Name + " - " + Integer.toString(Army);
     }

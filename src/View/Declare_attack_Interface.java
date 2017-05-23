@@ -68,6 +68,11 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 140, -1));
 
         Button_Roll_Dice.setText("Roll Dice");
+        Button_Roll_Dice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_Roll_DiceActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 90, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -79,6 +84,10 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     private void Territory_attackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_attackerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Territory_attackerActionPerformed
+
+    private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
+        // TODO add your handling code here
+    }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

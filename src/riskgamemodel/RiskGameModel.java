@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package riskgamemodel;
-
-import View.*;
+import manager.AcceptTurnManager;
 
 /**
  *
@@ -17,7 +16,7 @@ public class RiskGameModel {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Accepts_Turn_Interface(Session.getSession()).setVisible(true);
+        new AcceptTurnManager();
     }
     
 }

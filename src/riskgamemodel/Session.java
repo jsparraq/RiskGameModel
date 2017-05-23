@@ -34,11 +34,11 @@ public class Session {
             Player player3 = new Player(false,"non-capture","GREEN",1,1,0);
             Player player4 = new Player(false,"non-capture","PURPLE",1,0,0);
             Player[] players = new Player[]{player1,player2,player3,player4};
-            Territory territory1 = new Territory("A","BLUE",3,new Attack[]{});
-            Territory territory2 = new Territory("B","RED",3,new Attack[]{});
-            Territory territory3 = new Territory("C","RED",3,new Attack[]{});
-            Territory territory4 = new Territory("D","RED",3,new Attack[]{});
-            Territory territory5 = new Territory("E","RED",3,new Attack[]{});
+            Territory territory1 = new Territory("A","WHITE",0,new Attack[]{});
+            Territory territory2 = new Territory("B","WHITE",0,new Attack[]{});
+            Territory territory3 = new Territory("C","RED",1,new Attack[]{});
+            Territory territory4 = new Territory("D","RED",4,new Attack[]{});
+            Territory territory5 = new Territory("E","RED",5,new Attack[]{});
             Territory territory6 = new Territory("F","GREEN",3,new Attack[]{});
             Territory territory7 = new Territory("G","PURPLE",3,new Attack[]{});
             Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
