@@ -5,8 +5,6 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.Icon;
 import manager.MoveArmyManager;
 import riskgamemodel.Session;
@@ -26,11 +24,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,18 +47,19 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 473, 110, 30));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 160, 30));
 
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
+        Final_Territory.setEnabled(false);
         Final_Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Final_TerritoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, 150, 20));
+        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 310, 20));
 
         Starting_territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 2", "Territory 1" }));
         Starting_territory.addActionListener(new java.awt.event.ActionListener() {
@@ -72,13 +67,13 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Starting_territoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 150, -1));
+        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 310, -1));
 
         Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(MoveArmyManager.Map(sessionstart)))));
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
