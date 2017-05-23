@@ -61,7 +61,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
 
-        Territory.setModel((new javax.swing.DefaultComboBoxModel(Territories())));
+        Territory.setModel((new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territories(sessionstart))));
         Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerritoryActionPerformed(evt);
@@ -69,7 +69,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 220, -1));
 
-        Map.setIcon(Map());
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
@@ -87,58 +87,8 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
-        Territory territory = new Territory();
-        for (int i = 0; i < territoryplayer.size(); i++) {
-            if(name_territory.equals(territoryplayer.get(i).getString())){
-                territory = territoryplayer.get(i);
-                break;
-            }
-        }
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-                break;
-            }
-        }
-        Player.Places(playerstart, territory);
-        this.setVisible(false);
-        if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
-            new Place_army_Interface(sessionstart).setVisible(true);
-        }else{
-            new Main_Interface(sessionstart).setVisible(true);
-        }
-        
+        PlaceArmyManager.Button_Finish(sessionstart, this, name_territory);
     }//GEN-LAST:event_Button_finishActionPerformed
-    
-    private String[] Territories(){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
-        territoryplayer = new ArrayList();
-        Continent[] continents = sessionstart.getMap().getContinents();
-        for (Continent continent : continents) {
-            Territory[] territories = continent.getTerritory();
-            for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
-                    territoryplayer.add(territorie);
-                }
-            }
-        }
-        String[] territoriesplayer = new String[territoryplayer.size()];
-        for (int i = 0; i < territoryplayer.size(); i++) {
-            territoriesplayer[i] = territoryplayer.get(i).getString();
-        }
-        return territoriesplayer;
-    }
-    private Icon Map(){
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + Session.getSession().getMap().getName() + ".png")));
-    } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;

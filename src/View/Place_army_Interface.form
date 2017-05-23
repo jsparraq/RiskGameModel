@@ -42,7 +42,7 @@
     <Component class="javax.swing.JComboBox" name="Territory">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(new javax.swing.DefaultComboBoxModel(Territories()))" type="code"/>
+          <Connection code="(new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territories(sessionstart)))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -57,7 +57,7 @@
     <Component class="javax.swing.JLabel" name="Map">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="Map()" type="code"/>
+          <Connection code="(new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart))))" type="code"/>
         </Property>
       </Properties>
       <Constraints>

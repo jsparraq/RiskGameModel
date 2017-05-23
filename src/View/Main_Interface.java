@@ -5,9 +5,8 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.Icon;
+import manager.MainManager;
 import riskgamemodel.Player;
 import riskgamemodel.Session;
 
@@ -78,7 +77,7 @@ public class Main_Interface extends javax.swing.JFrame {
         getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 170, 30));
 
         Map.setIcon(Map());
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
@@ -97,16 +96,7 @@ public class Main_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_Move_ArmyActionPerformed
 
     private void Button_Pass_TurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Pass_TurnActionPerformed
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-                break;
-            }
-        }
-        Player.Passes(playerstart, Session.getSession().getMap().getCards());
-        System.out.println("SE ACABO EL TURNO");
+        MainManager.Button_Pass(sessionstart,this);
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
 
     private Icon Map(){
@@ -114,7 +104,7 @@ public class Main_Interface extends javax.swing.JFrame {
     }
     
     private boolean stateSession(){
-        if(sessionstart.getState() == "START PLACE ARMY"){
+        if("START PLACE ARMY".equals(sessionstart.getState())){
             return false;
         }
         return true;
