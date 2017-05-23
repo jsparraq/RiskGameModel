@@ -37,21 +37,18 @@ public class Place_army_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Logo_Risk = new javax.swing.JLabel();
         Button_finish = new javax.swing.JButton();
         Territory = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, -1, -1));
-
         Button_finish.setText("Finish");
-        getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 450, 110, -1));
+        getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
 
         Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
         Territory.addActionListener(new java.awt.event.ActionListener() {
@@ -59,13 +56,16 @@ public class Place_army_Interface extends javax.swing.JFrame {
                 TerritoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 130, -1));
+        getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 220, -1));
 
         Map.setIcon(Map());
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -76,14 +76,14 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
     private Icon Map(){
         String name = "ameroki_pic2";
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + Session.getSession().getMap().getName() + ".png")));
     } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JButton Button_finish;
-    private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
     private javax.swing.JComboBox Territory;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

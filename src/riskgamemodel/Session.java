@@ -54,7 +54,7 @@ public class Session {
             Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};
             Territory[] B = new Territory[]{territory2,territory1,territory3,territory2,territory4,territory3,territory5,territory4,territory6,territory5,territory7,territory6,territory1,territory7};
             Boundary boundary = new Boundary(1,A,B);
-            session = new Session(1,"Run",players,new Map("ameroki_pic2",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary));
+            session = new Session(1,"Run",players,new Map("ameroki_pic",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary));
         }
         return session;
     }

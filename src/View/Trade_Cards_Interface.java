@@ -141,6 +141,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
             this.setVisible(false);
             new Place_army_Interface(sessionstart).setVisible(true);
         }else if(cards_player.size() < 3){
+            this.setVisible(false);
             new Place_army_Interface(sessionstart).setVisible(true);
         }else{
             Card.Trades(playerstart, card1, card2, card3);
