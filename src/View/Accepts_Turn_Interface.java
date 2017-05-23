@@ -7,6 +7,8 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import riskgamemodel.Player;
 import riskgamemodel.Session;
 
@@ -84,7 +86,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         }
         Player.accepts(playerstart);
         this.setVisible(false);
-        new Trade_Cards_Interface(sessionstart).setVisible(true);       
+        new Trade_Cards_Interface(sessionstart).setVisible(true); 
     }//GEN-LAST:event_Button_AcceptsActionPerformed
     
 

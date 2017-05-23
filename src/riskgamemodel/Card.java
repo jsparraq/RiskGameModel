@@ -72,5 +72,4 @@ public class Card {
         public String getString(){            
             return this.Type + "-" + this.Design + "-" + this.Territory.getName();
         }
-        
 }

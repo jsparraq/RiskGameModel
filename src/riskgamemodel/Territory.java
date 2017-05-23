@@ -18,6 +18,9 @@ public class Territory {
     private int Army;
     private Attack[] Attacks;
     
+    public Territory(){
+        
+    }
     public Territory(String name, String owner, int army, Attack[] att){
         Name = name;
         Owner = owner;
@@ -53,6 +56,9 @@ public class Territory {
     }
     
     public String getString() {
+        if(Owner.equals("WHITE")){
+            return Name + " - " + Integer.toString(Army) + "Without owner";
+        }
         return Name + " - " + Integer.toString(Army);
     }
     

@@ -21,6 +21,7 @@ import riskgamemodel.Territory;
 public class Place_army_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    ArrayList<Territory> territoryplayer;
     /**
      * Creates new form Interfaz
      */
@@ -52,6 +53,11 @@ public class Place_army_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Button_finish.setText("Finish");
+        Button_finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_finishActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
 
         Territory.setModel((new javax.swing.DefaultComboBoxModel(Territories())));
@@ -77,21 +83,45 @@ public class Place_army_Interface extends javax.swing.JFrame {
     private void TerritoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerritoryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TerritoryActionPerformed
+
+    private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
+        String name_territory = (String)Territory.getSelectedItem();
+        Territory territory = new Territory();
+        for (int i = 0; i < territoryplayer.size(); i++) {
+            if(name_territory.equals(territoryplayer.get(i).getString())){
+                territory = territoryplayer.get(i);
+            }
+        }
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        this.setVisible(false);
+        if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
+            new Place_army_Interface(sessionstart).setVisible(true);
+        }else{
+            new Main_Interface(sessionstart).setVisible(true);
+        }
+        
+    }//GEN-LAST:event_Button_finishActionPerformed
     
     private String[] Territories(){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();
-        for (int i = 0; i < players.length; i++) {
-            if(players[i].getTurn()){
-                playerstart = players[i];
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
             }
         }
-        ArrayList<Territory> territoryplayer = new ArrayList();
+        territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor())) {
+                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
                     territoryplayer.add(territorie);
                 }
             }

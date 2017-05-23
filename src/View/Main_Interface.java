@@ -8,6 +8,7 @@ package View;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import riskgamemodel.Session;
 
 /**
  *
@@ -15,17 +16,15 @@ import javax.swing.Icon;
  */
 public class Main_Interface extends javax.swing.JFrame {
 
+    Session sessionstart;
     /**
      * Creates new form Interfaz
+     * @param session
      */
-    public Main_Interface() {
+    public Main_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
-    }
-    
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
     }
 
     /**
@@ -97,9 +96,7 @@ public class Main_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
 
      private Icon Map(){
-        String name = "ameroki_pic2";
-        
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".jpg")));
     }
      
     // Variables declaration - do not modify//GEN-BEGIN:variables
