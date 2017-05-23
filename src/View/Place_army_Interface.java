@@ -7,8 +7,12 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.Icon;
+import riskgamemodel.Continent;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
+import riskgamemodel.Territory;
 
 /**
  *
@@ -50,7 +54,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         Button_finish.setText("Finish");
         getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
 
-        Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
+        Territory.setModel((new javax.swing.DefaultComboBoxModel(Territories())));
         Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerritoryActionPerformed(evt);
@@ -73,9 +77,32 @@ public class Place_army_Interface extends javax.swing.JFrame {
     private void TerritoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TerritoryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TerritoryActionPerformed
-
+    
+    private String[] Territories(){
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (int i = 0; i < players.length; i++) {
+            if(players[i].getTurn()){
+                playerstart = players[i];
+            }
+        }
+        ArrayList<Territory> territoryplayer = new ArrayList();
+        Continent[] continents = sessionstart.getMap().getContinents();
+        for (Continent continent : continents) {
+            Territory[] territories = continent.getTerritory();
+            for (Territory territorie : territories) {
+                if (territorie.getOwner().equals(playerstart.getColor())) {
+                    territoryplayer.add(territorie);
+                }
+            }
+        }
+        String[] territoriesplayer = new String[territoryplayer.size()];
+        for (int i = 0; i < territoryplayer.size(); i++) {
+            territoriesplayer[i] = territoryplayer.toString();
+        }
+        return territoriesplayer;
+    }
     private Icon Map(){
-        String name = "ameroki_pic2";
         return (new javax.swing.ImageIcon(getClass().getResource("/images/" + Session.getSession().getMap().getName() + ".png")));
     } 
 

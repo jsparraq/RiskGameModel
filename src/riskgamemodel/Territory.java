@@ -52,6 +52,10 @@ public class Territory {
         return Army;
     }
     
+    public String getString() {
+        return Name + " - " + Integer.toString(Army);
+    }
+    
     public static void Moves(Territory TerritoryA, Territory TerritoryB) {
         if (TerritoryA.getArmy() > 1 && TerritoryA.getOwner().equals(TerritoryB.getOwner())) {
             TerritoryA.setArmy(TerritoryA.getArmy() - 1);
