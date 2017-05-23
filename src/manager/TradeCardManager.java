@@ -27,9 +27,12 @@ public class TradeCardManager {
         ArrayList<Card> cards_player = new ArrayList();
         Card[] cards = sessionstart.getMap().getCards();
         for (Card card : cards) {
-            if (card.getOwner().equals(playerstart.getColor())) {
+            if (card.getOwner().equals(playerstart.getColor())){
                 cards_player.add(card);
             }
+        }
+        if (cards_player.size() == 0){
+            return new String[]{"You don't have more cards"};
         }
         String[] card_string = new String[cards_player.size()];
         for (int i = 0; i < cards_player.size(); i++) {

@@ -8,6 +8,7 @@ package View;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import manager.MoveArmyManager;
 import riskgamemodel.Session;
 
 /**
@@ -73,7 +74,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, 150, -1));
 
-        Map.setIcon(Map());
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(MoveArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 180, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N

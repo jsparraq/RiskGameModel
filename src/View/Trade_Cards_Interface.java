@@ -105,11 +105,12 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Trade_Card_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_1ActionPerformed
+
         
     }//GEN-LAST:event_Trade_Card_1ActionPerformed
 
     private void Trade_Card_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_2ActionPerformed
-        
+
     }//GEN-LAST:event_Trade_Card_2ActionPerformed
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
@@ -120,7 +121,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_Trade_Card_3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

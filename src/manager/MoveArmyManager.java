@@ -5,10 +5,15 @@
  */
 package manager;
 
+import riskgamemodel.*;
+
 /**
  *
  * @author user
  */
 public class MoveArmyManager {
     
+    public static String Map(Session sessionstart){
+        return "/images/" + sessionstart.getMap().getName() + ".png";
+    } 
 }
