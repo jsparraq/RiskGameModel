@@ -5,6 +5,8 @@
  */
 package riskgamemodel;
 
+import View.*;
+
 /**
  *
  * @author Sebastian
@@ -15,9 +17,7 @@ public class RiskGameModel {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //Parra perra!! :v
-        //Santiago 
+        new Accepts_Turn_Interface(Session.getSession()).setVisible(true);
     }
     
 }

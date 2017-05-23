@@ -29,8 +29,8 @@ public class Session {
     
     public static Session getSession(){
         if(session == null){
-            Player player1 = new Player(true,"non-capture","BLUE",1,2,0);
-            Player player2 = new Player(false,"non-capture","RED",4,2,0);
+            Player player1 = new Player(false,"non-capture","RED",1,2,0);
+            Player player2 = new Player(true,"non-capture","BLUE",4,2,0);
             Player player3 = new Player(false,"non-capture","GREEN",1,1,0);
             Player player4 = new Player(false,"non-capture","PURPLE",1,0,0);
             Player[] players = new Player[]{player1,player2,player3,player4};
