@@ -42,7 +42,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Attack"/>
         <Property name="enabled" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="stateSession()" type="code"/>
+          <Connection code="MainManager.stateSession(sessionstart)" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -58,7 +58,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Move Army"/>
         <Property name="enabled" type="boolean" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="stateSession()" type="code"/>
+          <Connection code="MainManager.stateSession(sessionstart)&#xd;&#xa;" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -86,7 +86,7 @@
     <Component class="javax.swing.JLabel" name="Map">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="Map()" type="code"/>
+          <Connection code="(new javax.swing.ImageIcon(getClass().getResource(MainManager.Map(sessionstart))))" type="code"/>
         </Property>
       </Properties>
       <Constraints>

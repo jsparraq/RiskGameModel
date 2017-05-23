@@ -51,7 +51,7 @@ public class Main_Interface extends javax.swing.JFrame {
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, 80));
 
         Button_Attack.setText("Attack");
-        Button_Attack.setEnabled(stateSession());
+        Button_Attack.setEnabled(MainManager.stateSession(sessionstart));
         Button_Attack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_AttackActionPerformed(evt);
@@ -60,7 +60,8 @@ public class Main_Interface extends javax.swing.JFrame {
         getContentPane().add(Button_Attack, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 170, 30));
 
         Button_Move_Army.setText("Move Army");
-        Button_Move_Army.setEnabled(stateSession());
+        Button_Move_Army.setEnabled(MainManager.stateSession(sessionstart)
+        );
         Button_Move_Army.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_Move_ArmyActionPerformed(evt);
@@ -76,7 +77,7 @@ public class Main_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 170, 30));
 
-        Map.setIcon(Map());
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(MainManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
@@ -86,30 +87,17 @@ public class Main_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AttackActionPerformed
-       this.setVisible(false);
-       new Declare_attack_Interface(sessionstart).setVisible(true);
+        MainManager.Button_Attack(sessionstart, this);
     }//GEN-LAST:event_Button_AttackActionPerformed
 
     private void Button_Move_ArmyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Move_ArmyActionPerformed
-        this.setVisible(false);
-        new Move_Army_Interface(sessionstart).setVisible(true);
+        MainManager.Button_Moves(sessionstart, this);
     }//GEN-LAST:event_Button_Move_ArmyActionPerformed
 
     private void Button_Pass_TurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Pass_TurnActionPerformed
         MainManager.Button_Pass(sessionstart,this);
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
-
-    private Icon Map(){
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".png")));
-    }
-    
-    private boolean stateSession(){
-        if("START PLACE ARMY".equals(sessionstart.getState())){
-            return false;
-        }
-        return true;
-    }
-     
+         
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JButton Button_Attack;
