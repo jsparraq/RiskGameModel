@@ -48,23 +48,25 @@ public class Main_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, 80));
 
         Button_Attack.setText("Attack");
+        Button_Attack.setEnabled(stateSession());
         Button_Attack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_AttackActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Attack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 110, 30));
+        getContentPane().add(Button_Attack, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 170, 30));
 
         Button_Move_Army.setText("Move Army");
+        Button_Move_Army.setEnabled(stateSession());
         Button_Move_Army.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_Move_ArmyActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Move_Army, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 470, 130, 30));
+        getContentPane().add(Button_Move_Army, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, 170, 30));
 
         Button_Pass_Turn.setText("Pass Turn");
         Button_Pass_Turn.addActionListener(new java.awt.event.ActionListener() {
@@ -72,13 +74,13 @@ public class Main_Interface extends javax.swing.JFrame {
                 Button_Pass_TurnActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 470, 140, 30));
+        getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 170, 30));
 
         Map.setIcon(Map());
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -95,8 +97,15 @@ public class Main_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
 
-     private Icon Map(){
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".jpg")));
+    private Icon Map(){
+        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".png")));
+    }
+    
+    private boolean stateSession(){
+        if(sessionstart.getState() == "START PLACE ARMY"){
+            return false;
+        }
+        return true;
     }
      
     // Variables declaration - do not modify//GEN-BEGIN:variables

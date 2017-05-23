@@ -90,6 +90,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         for (int i = 0; i < territoryplayer.size(); i++) {
             if(name_territory.equals(territoryplayer.get(i).getString())){
                 territory = territoryplayer.get(i);
+                break;
             }
         }
         Player[] players = sessionstart.getPlayers();
@@ -97,8 +98,10 @@ public class Place_army_Interface extends javax.swing.JFrame {
         for (Player player : players) {
             if (player.getTurn()) {
                 playerstart = player;
+                break;
             }
         }
+        Player.Places(playerstart, territory);
         this.setVisible(false);
         if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
             new Place_army_Interface(sessionstart).setVisible(true);
@@ -128,7 +131,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         }
         String[] territoriesplayer = new String[territoryplayer.size()];
         for (int i = 0; i < territoryplayer.size(); i++) {
-            territoriesplayer[i] = territoryplayer.toString();
+            territoriesplayer[i] = territoryplayer.get(i).getString();
         }
         return territoriesplayer;
     }
