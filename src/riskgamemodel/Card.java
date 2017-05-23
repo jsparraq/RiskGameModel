@@ -16,7 +16,9 @@ public class Card {
         private String Design;
         private Territory Territory;
         
-        
+        public Card(){
+            
+        }
         public Card(String type, int id, String owner, String design,Territory territory){
             Type = type;
             ID = id;
