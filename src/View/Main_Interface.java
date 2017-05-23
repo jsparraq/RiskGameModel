@@ -8,6 +8,7 @@ package View;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -86,15 +87,26 @@ public class Main_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_AttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AttackActionPerformed
-        // TODO add your handling code here:
+       this.setVisible(false);
+       new Declare_attack_Interface(sessionstart).setVisible(true);
     }//GEN-LAST:event_Button_AttackActionPerformed
 
     private void Button_Move_ArmyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Move_ArmyActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new Move_Army_Interface(sessionstart).setVisible(true);
     }//GEN-LAST:event_Button_Move_ArmyActionPerformed
 
     private void Button_Pass_TurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Pass_TurnActionPerformed
-        // TODO add your handling code here:
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+                break;
+            }
+        }
+        Player.Passes(playerstart, Session.getSession().getMap().getCards());
+        System.out.println("SE ACABO EL TURNO");
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
 
     private Icon Map(){

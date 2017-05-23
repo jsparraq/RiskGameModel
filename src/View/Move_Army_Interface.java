@@ -8,6 +8,7 @@ package View;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import riskgamemodel.Session;
 
 /**
  *
@@ -15,10 +16,12 @@ import javax.swing.Icon;
  */
 public class Move_Army_Interface extends javax.swing.JFrame {
 
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
-    public Move_Army_Interface() {
+    public Move_Army_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }

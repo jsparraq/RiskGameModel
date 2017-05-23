@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import riskgamemodel.Session;
 
 /**
  *
@@ -14,19 +15,17 @@ import java.awt.Toolkit;
  */
 public class Declare_attack_Interface extends javax.swing.JFrame {
 
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
-    public Declare_attack_Interface() {
+    public Declare_attack_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
     
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
