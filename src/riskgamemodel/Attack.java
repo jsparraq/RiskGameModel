@@ -35,7 +35,21 @@ public class Attack {
         return army;
     }
     
-    public static void Declares(Territory TAtaque,Territory TDefensa){
+    public static boolean Declares(Territory TAtaque,Territory TDefensa,Player player,Boundary boundary){
+        if(TAtaque.getOwner()==player.getColor()&&TAtaque.getArmy()>1&&TDefensa.getOwner()!=player.getColor()){
+            Neighbour[] neighbours=boundary.getNeighbours();
+            Territory[] territories=boundary.getTerritories();
+            for(int i =0;i<neighbours.length;i++){
+                if(neighbours[i].getName()==TDefensa.getName()&&territories[i].getName()==TAtaque.getName()){
+                    return true;
+                    
+                }
+            }
+        }else{
+            return false;
+        }
+        return false;
     }
+    
     
 }

@@ -32,4 +32,10 @@ public class Boundary {
     public int getID() {
         return ID;
     }
+    public Territory[] getTerritories() {
+        return this.Territories;
+    }
+    public  Neighbour[] getNeighbours() {
+        return this.Neighbours;
+    }
 }
