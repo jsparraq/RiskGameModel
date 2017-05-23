@@ -20,10 +20,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
-    public Accepts_Turn_Interface() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
+
     public Accepts_Turn_Interface(Session session) {
         sessionstart = session;
         initComponents();

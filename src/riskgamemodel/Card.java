@@ -51,8 +51,22 @@ public class Card {
         public String getDesign(){
             return Design;
         }
-        public static void Trades(Player player,Card card1,Card card2,Card card3){
-           
+        public static boolean Trades(Player player,Card card1,Card card2,Card card3){
+           Card[] CARDS_TRADES = new Card[3];
+           CARDS_TRADES[0] = card1;
+           CARDS_TRADES[1] = card2;
+           CARDS_TRADES[2] = card3;
+           if (card1 == card2 || card1 == card3){
+               return false;
+           }else if (card2 == card3){
+               return false;
+           }
+           card1.setOwner("WHITE");
+           card2.setOwner("WHITE");
+           card3.setOwner("WHITE");
+           player.setCardAmount(player.getCardAmount() - 3);
+           player.setArmy(player.getArmy() + 10);
+           return true;
         }
         
         public String getString(){            

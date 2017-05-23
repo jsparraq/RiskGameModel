@@ -21,10 +21,6 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
-    public Conquers_neighbour_Interface() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
     
     public Conquers_neighbour_Interface(Session session) {
         sessionstart = session;

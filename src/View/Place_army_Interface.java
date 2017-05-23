@@ -8,6 +8,7 @@ package View;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
+import riskgamemodel.Session;
 
 /**
  *
@@ -15,18 +16,17 @@ import javax.swing.Icon;
  */
 public class Place_army_Interface extends javax.swing.JFrame {
 
+    Session sessionstart;
     /**
      * Creates new form Interfaz
      */
-    public Place_army_Interface() {
+
+    public Place_army_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
     
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -20,13 +20,10 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     Card[] cards;
+    ArrayList<Card> cards_player;
     /**
      * Creates new form Interfaz
      */
-    public Trade_Cards_Interface() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
     
     public Trade_Cards_Interface(Session session) {
         sessionstart = session;
@@ -35,10 +32,6 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -141,7 +134,20 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 playerstart = player;
             }
         }
-        Card.Trades(playerstart, card1, card2, card3);
+        if(cards_player.size() > 6){
+            while(!Card.Trades(playerstart, card1, card2, card3)){
+                
+            }
+            this.setVisible(false);
+            new Place_army_Interface(sessionstart).setVisible(true);
+        }else if(cards_player.size() < 3){
+            new Place_army_Interface(sessionstart).setVisible(true);
+        }else{
+            Card.Trades(playerstart, card1, card2, card3);
+            this.setVisible(false);
+            new Place_army_Interface(sessionstart).setVisible(true);
+        }
+        
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed
@@ -156,7 +162,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 playerstart = player;
             }
         }
-        ArrayList<Card> cards_player = new ArrayList();
+        cards_player = new ArrayList();
         for (Card card : cards) {
             if (card.getOwner().equals(playerstart.getColor())) {
                 cards_player.add(card);
