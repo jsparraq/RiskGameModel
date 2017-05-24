@@ -18,7 +18,10 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
-    public Roll_Dice_Interface() {
+    Session sessionstart;
+    
+    public Roll_Dice_Interface(Session session) {
+        sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }

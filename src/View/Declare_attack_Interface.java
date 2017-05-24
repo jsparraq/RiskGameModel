@@ -93,7 +93,9 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Territory_attackerActionPerformed
 
     private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
-        // TODO add your handling code here
+        String terrAt = (String)Territory_attacker.getSelectedItem();
+        String terrdef = (String)Territory_Defender.getSelectedItem();
+        AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef);
     }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
