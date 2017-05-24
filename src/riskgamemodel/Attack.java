@@ -36,11 +36,11 @@ public class Attack {
     }
     
     public static boolean Declares(Territory TAtaque,Territory TDefensa,Player player,Boundary boundary){
-        if(TAtaque.getOwner()==player.getColor()&&TAtaque.getArmy()>1&&TDefensa.getOwner()!=player.getColor()){
+        if(TAtaque.getOwner().equals(player.getColor())&&TAtaque.getArmy()>1&&!TDefensa.getOwner().equals(player.getColor())){
             Neighbour[] neighbours=boundary.getNeighbours();
             Territory[] territories=boundary.getTerritories();
             for(int i =0;i<neighbours.length;i++){
-                if(neighbours[i].getName()==TDefensa.getName()&&territories[i].getName()==TAtaque.getName()){
+                if(neighbours[i].getName().equals(TDefensa.getName())&&territories[i].getName().equals(TAtaque.getName())){
                     return true;
                     
                 }

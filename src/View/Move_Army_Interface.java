@@ -43,7 +43,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
@@ -52,7 +52,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         Button_Finish.setText("Finish");
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 160, 30));
 
-        Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
+        Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "----" }));
         Final_Territory.setEnabled(false);
         Final_Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,7 +61,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 310, 20));
 
-        Starting_territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 2", "Territory 1" }));
+        Starting_territory.setModel((new javax.swing.DefaultComboBoxModel(MoveArmyManager.Territories(sessionstart))));
         Starting_territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Starting_territoryActionPerformed(evt);
@@ -83,14 +83,9 @@ public class Move_Army_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Final_TerritoryActionPerformed
 
     private void Starting_territoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Starting_territoryActionPerformed
-        // TODO add your handling code here:
+        Final_Territory.setEnabled(true);
+        Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(MoveArmyManager.neighbours(sessionstart, (String)Starting_territory.getSelectedItem())));
     }//GEN-LAST:event_Starting_territoryActionPerformed
-
-    private Icon Map(){
-        String name = "ameroki_pic2";
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + name + ".jpg")));
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;

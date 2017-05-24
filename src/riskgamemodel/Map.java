@@ -23,6 +23,9 @@ public class Map {
         Cards = cards;
         Boundary = boundary;
     }
+    public Boundary getboundary(){
+        return Boundary;
+    }
     public void setName(String value){
         Name = value;
     }

@@ -63,10 +63,8 @@ public class Territory {
     }
     
     public static void Moves(Territory TerritoryA, Territory TerritoryB) {
-        if (TerritoryA.getArmy() > 1 && TerritoryA.getOwner().equals(TerritoryB.getOwner())) {
-            TerritoryA.setArmy(TerritoryA.getArmy() - 1);
-            TerritoryB.setArmy(TerritoryB.getArmy() + 1);
-        }
+        TerritoryA.setArmy(TerritoryA.getArmy() - 1);
+        TerritoryB.setArmy(TerritoryB.getArmy() + 1);
     }
     
 }
