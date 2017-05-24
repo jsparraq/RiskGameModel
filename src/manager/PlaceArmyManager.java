@@ -55,6 +55,7 @@ public class PlaceArmyManager {
                 break;
             }
         }
+        
         ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
@@ -72,6 +73,7 @@ public class PlaceArmyManager {
                 break;
             }
         }
+
         Player.Places(playerstart, territory);
         window.setVisible(false);
         if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
