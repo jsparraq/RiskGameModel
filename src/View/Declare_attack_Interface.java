@@ -5,8 +5,7 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
+import manager.AttackManager;
 import riskgamemodel.Session;
 
 /**
@@ -36,7 +35,6 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         Logo_Risk = new javax.swing.JLabel();
-        Button_Finish = new javax.swing.JButton();
         Territory_attacker = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
         Territory_Defender = new javax.swing.JComboBox<>();
@@ -50,22 +48,21 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
 
-        Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, 80, 40));
-
-        Territory_attacker.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Territory 1", "Territory 2" }));
+        Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart))));
         Territory_attacker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Territory_attackerActionPerformed(evt);
             }
         });
-        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 140, -1));
+        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 190, -1));
 
-        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Map.jpg"))); // NOI18N
+        Map.setIcon(((new javax.swing.ImageIcon(getClass().getResource(AttackManager.Map(sessionstart)))))
+        );
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 350, 220));
 
-        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Territory 3", "Territory 4" }));
-        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 140, -1));
+        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
+        Territory_Defender.setEnabled(false);
+        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 190, -1));
 
         Button_Roll_Dice.setText("Roll Dice");
         Button_Roll_Dice.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +70,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
                 Button_Roll_DiceActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 90, 40));
+        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 90, 40));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
@@ -82,7 +79,8 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Territory_attackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_attackerActionPerformed
-        // TODO add your handling code here:
+        Territory_Defender.setEnabled(true);
+        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem())));
     }//GEN-LAST:event_Territory_attackerActionPerformed
 
     private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
@@ -92,7 +90,6 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton Button_Finish;
     private javax.swing.JButton Button_Roll_Dice;
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;

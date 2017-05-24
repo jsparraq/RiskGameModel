@@ -44,6 +44,7 @@ public class MoveArmyManager {
         }
         return territoriesplayer;
     }
+    
     public static String[] neighbours(Session sessionstart,String territory){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();

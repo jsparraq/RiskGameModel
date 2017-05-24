@@ -56,7 +56,7 @@ public class Card {
            CARDS_TRADES[0] = card1;
            CARDS_TRADES[1] = card2;
            CARDS_TRADES[2] = card3;
-           if (card1 == card2 || card1 == card3){
+           if (CARDS_TRADES[0] == CARDS_TRADES[1] || CARDS_TRADES[0] == CARDS_TRADES[2]){
                return false;
            }else if (card2 == card3){
                return false;
