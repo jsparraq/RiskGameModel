@@ -5,7 +5,9 @@
  */
 package manager;
 
+import View.Main_Interface;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 import riskgamemodel.*;
 
 /**
@@ -55,7 +57,7 @@ public class MoveArmyManager {
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getString().equals(territory)) {
+                if (territorie.getString().equals(territory)) {
                     territoryA = territorie;
                 }
             }
@@ -64,7 +66,7 @@ public class MoveArmyManager {
         Neighbour[] neighbours = sessionstart.getMap().getboundary().getNeighbours();
         ArrayList<String> Neighbours = new ArrayList();
         for (int i = 0; i < territories.length; i++) {
-            if (territories[i] == territoryA){
+            if (territories[i] == territoryA && neighbours[i].getOwner().equals(playerstart.getColor())){
                 Neighbours.add(neighbours[i].getString());
             }
         }
@@ -73,5 +75,25 @@ public class MoveArmyManager {
             NEIGHBOURS[i] = Neighbours.get(i);
         }
         return NEIGHBOURS;
+    }
+    
+    public static void Button_Finish(JFrame window,String territory, String Neighbour,Session sessionstart){
+        Territory territoryA = new Territory();
+        Territory territoryB = new Territory();
+        Continent[] continents = sessionstart.getMap().getContinents();
+        for (Continent continent : continents) {
+            Territory[] territories = continent.getTerritory();
+            for (Territory territorie : territories) {
+                if (territorie.getString().equals(territory)) {
+                    territoryA = territorie;
+                }else if(territorie.getString().equals(Neighbour)){
+                    territoryB = territorie;
+                }
+            }
+        }
+        
+        Territory.Moves(territoryA, territoryB);
+        window.setVisible(false);
+        new Main_Interface(sessionstart).setVisible(true);
     }
 }

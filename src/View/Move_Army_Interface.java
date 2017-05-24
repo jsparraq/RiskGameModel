@@ -50,6 +50,11 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         Button_Finish.setText("Finish");
+        Button_Finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_FinishActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 160, 30));
 
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "----" }));
@@ -86,6 +91,10 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         Final_Territory.setEnabled(true);
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(MoveArmyManager.neighbours(sessionstart, (String)Starting_territory.getSelectedItem())));
     }//GEN-LAST:event_Starting_territoryActionPerformed
+
+    private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
+        MoveArmyManager.Button_Finish(this, (String)Starting_territory.getSelectedItem(), (String)Final_Territory.getSelectedItem(), sessionstart);
+    }//GEN-LAST:event_Button_FinishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
