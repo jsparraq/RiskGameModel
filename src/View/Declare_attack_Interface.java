@@ -39,6 +39,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         Map = new javax.swing.JLabel();
         Territory_Defender = new javax.swing.JComboBox<>();
         Button_Roll_Dice = new javax.swing.JButton();
+        Button_finish = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -46,7 +47,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 210, 80));
 
         Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart))));
         Territory_attacker.addActionListener(new java.awt.event.ActionListener() {
@@ -54,15 +55,15 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
                 Territory_attackerActionPerformed(evt);
             }
         });
-        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 190, -1));
+        getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, 290, -1));
 
         Map.setIcon(((new javax.swing.ImageIcon(getClass().getResource(AttackManager.Map(sessionstart)))))
         );
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 350, 220));
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
         Territory_Defender.setEnabled(false);
-        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 190, -1));
+        getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 290, -1));
 
         Button_Roll_Dice.setText("Roll Dice");
         Button_Roll_Dice.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +71,18 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
                 Button_Roll_DiceActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 90, 40));
+        getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 110, 30));
+
+        Button_finish.setText("Finish");
+        Button_finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_finishActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 90, 30));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -87,10 +96,15 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         // TODO add your handling code here
     }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
+    private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
+        AttackManager.button_Finish(this, sessionstart);
+    }//GEN-LAST:event_Button_finishActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JButton Button_Roll_Dice;
+    private javax.swing.JButton Button_finish;
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
     private javax.swing.JComboBox<String> Territory_Defender;

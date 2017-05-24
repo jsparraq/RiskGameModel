@@ -5,7 +5,9 @@
  */
 package manager;
 
+import View.Main_Interface;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 import riskgamemodel.*;
 
 /**
@@ -74,5 +76,15 @@ public class AttackManager {
     
     public static String Map(Session sessionstart){
         return "/images/" + sessionstart.getMap().getName() + ".png";
-    } 
+    }
+    
+    public static void button_Finish(JFrame window,Session sessionstart){
+        window.setVisible(false);
+        new Main_Interface(sessionstart).setVisible(true);
+    }
+    
+    public static void button_RollDie(JFrame window,Session sessionstart){
+        window.setVisible(false);
+        new Main_Interface(sessionstart).setVisible(true);
+    }
 }

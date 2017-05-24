@@ -41,8 +41,7 @@ public class Attack {
             Territory[] territories=boundary.getTerritories();
             for(int i =0;i<neighbours.length;i++){
                 if(neighbours[i].getName().equals(TDefensa.getName())&&territories[i].getName().equals(TAtaque.getName())){
-                    return true;
-                    
+                    return true; 
                 }
             }
         }else{
