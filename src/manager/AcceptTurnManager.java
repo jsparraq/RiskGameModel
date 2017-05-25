@@ -14,8 +14,8 @@ import riskgamemodel.*;
  */
 public class AcceptTurnManager {
     
-    public AcceptTurnManager(){
-        new Accepts_Turn_Interface(Session.getSession()).setVisible(true);
+    public AcceptTurnManager(Session sessionstart){
+        new Accepts_Turn_Interface(sessionstart).setVisible(true);
     }
     
     public static void Button_finish(Session session, JFrame window){
@@ -27,7 +27,7 @@ public class AcceptTurnManager {
                 break;
             }
         }
-        Player.accepts(playerstart);
+        Player.accepts(playerstart,session);
         window.setVisible(false);
         new Trade_Cards_Interface(session).setVisible(true);
     }

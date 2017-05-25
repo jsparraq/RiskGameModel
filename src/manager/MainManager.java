@@ -34,7 +34,7 @@ public class MainManager {
                 break;
             }
         }
-        Player.Passes(playerstart, Session.getSession().getMap().getCards());
+        Player.Passes(playerstart, sessionstart.getMap().getCards());
         window.setVisible(false);
         System.out.println("SE ACABO EL TURNO");
         System.exit(0);

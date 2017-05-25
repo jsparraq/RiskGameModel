@@ -77,9 +77,8 @@ public class Player {
         return this.Army;
     }
 
-    public static void accepts(Player player) {
+    public static void accepts(Player player,Session session) {
         player.Army = player.TerritoryAmount / 3;
-        Session session = Session.getSession();
         Map map = session.getMap();
         Continent[] Continents = map.getContinents();
         for (Continent Continent : Continents) {
