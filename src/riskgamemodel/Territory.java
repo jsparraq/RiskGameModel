@@ -16,21 +16,16 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
-    private ArrayList<Attack> Attacks;
     
     public Territory(){
         
     }
-    public Territory(String name, String owner, int army, ArrayList<Attack> att){
+    public Territory(String name, String owner, int army){
         Name = name;
         Owner = owner;
         Army = army;
-        Attacks = att;
     }
     
-    public ArrayList<Attack> getAttacks(){
-        return Attacks;
-    }
     public void setName(String value) {
         this.Name = value;
     }

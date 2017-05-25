@@ -15,14 +15,14 @@ public class Boundary {
 
     private int ID;
     private Territory[] Territories;
-    private Neighbour[] Neighbours;
+    private Territory[] Neighbours;
     
     public Boundary(int id, Territory[] territories, Territory[] territories1){
         ID = id;
         Territories = territories;
-        Neighbours = new Neighbour[territories1.length];
+        Neighbours = new Territory[territories1.length];
         for (int i = 0; i < territories1.length; i++) {
-            Neighbours[i] = new Neighbour(territories1[i].getName(),territories1[i].getOwner(),territories1[i].getArmy(),territories1[i].getAttacks());
+            Neighbours[i] = territories1[i];
         }
     }
     public void setID(int value) {
@@ -35,7 +35,7 @@ public class Boundary {
     public Territory[] getTerritories() {
         return this.Territories;
     }
-    public  Neighbour[] getNeighbours() {
+    public  Territory[] getNeighbours() {
         return this.Neighbours;
     }
 }

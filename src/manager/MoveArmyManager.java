@@ -64,7 +64,7 @@ public class MoveArmyManager {
             }
         }
         Territory[] territories = sessionstart.getMap().getboundary().getTerritories();
-        Neighbour[] neighbours = sessionstart.getMap().getboundary().getNeighbours();
+        Territory[] neighbours = sessionstart.getMap().getboundary().getNeighbours();
         ArrayList<String> Neighbours = new ArrayList();
         for (int i = 0; i < territories.length; i++) {
             if (territories[i] == territoryA && neighbours[i].getOwner().equals(playerstart.getColor())){

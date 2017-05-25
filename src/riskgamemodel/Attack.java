@@ -15,16 +15,21 @@ public class Attack {
     private int army;
     private Die[] Attacks;
     private Die[] Defense;
+    private Territory attacker;
+    private Territory defender;
     
     
-    public Attack(int id, int Army, Die[] Dices2, Die[] Dices3){
+    public Attack(int id, int Army, Die[] Dices2, Die[] Dices3,Territory Attacker,Territory Defender){
         army = Army;
         Attacks = Dices2; 
         Defense = Dices3;
+        attacker = Attacker;
+        defender = Defender;
     }
     
-    public Attack(){
-        
+    public Attack(Territory Attacker,Territory Defender){
+        attacker = Attacker;
+        defender = Defender;
     }
     public void setarmy(int value){
         this.army = value;
@@ -35,7 +40,7 @@ public class Attack {
     }
     
     public static Attack Declares(Territory TAtaque,Territory TDefensa){
-        Attack attack = new Attack();
+        Attack attack = new Attack(TAtaque,TDefensa);
         return attack;
     }
     public void setAttacks(Die[] dice){
@@ -53,5 +58,11 @@ public class Attack {
         return Defense;
     }
     
+    public Territory getAttacker(){
+        return attacker;
+    }
     
+    public Territory getDefender(){
+        return defender;
+    }
 }

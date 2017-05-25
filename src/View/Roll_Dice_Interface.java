@@ -22,7 +22,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     Session sessionstart;
     Attack attack;
 
-    public Roll_Dice_Interface(Session session,Attack attack,Territory attacker,Territory defender) {
+    public Roll_Dice_Interface(Session session,Attack attack) {
         sessionstart = session;
         this.attack = attack;
         initComponents();
@@ -31,7 +31,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         Die_Value_Attack_3.setVisible(false);
         Die_Value_Defense_1.setVisible(false);
         Die_Value_defense_2.setVisible(false);
-        RollDieManager.start(attacker, defender, attack, this);
+        RollDieManager.start(attack, this);
         this.setLocationRelativeTo(null);
     }
 

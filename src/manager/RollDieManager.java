@@ -19,8 +19,8 @@ import riskgamemodel.Territory;
  */
 public class RollDieManager {
 
-    public static void start(Territory TAtaque,Territory TDefensa,Attack attack,Roll_Dice_Interface window){
-        Die.Rolls(TAtaque, TDefensa, attack);
+    public static void start(Attack attack,Roll_Dice_Interface window){
+        Die.Rolls(attack);
         javax.swing.JLabel label;
         for (int i = 0; i < attack.getAttacks().length; i++) {
             switch (i) {

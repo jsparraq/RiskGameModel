@@ -48,6 +48,7 @@ public class AttackManager {
         for (Player player : players) {
             if (player.getTurn()) {
                 playerstart = player;
+                break;
             }
         }
         Territory territoryA = new Territory();
@@ -57,20 +58,23 @@ public class AttackManager {
             for (Territory territorie : territories) {
                 if (territorie.getString().equals(territory)) {
                     territoryA = territorie;
+                    break;
                 }
             }
         }
+        
         Territory[] territories = sessionstart.getMap().getboundary().getTerritories();
-        Neighbour[] neighbours = sessionstart.getMap().getboundary().getNeighbours();
-        ArrayList<String> Neighbours = new ArrayList();
+        Territory[] neighbours = sessionstart.getMap().getboundary().getNeighbours();
+        ArrayList<String> Neighbours1 = new ArrayList();
         for (int i = 0; i < territories.length; i++) {
             if (territories[i] == territoryA && !neighbours[i].getOwner().equals(playerstart.getColor())) {
-                Neighbours.add(neighbours[i].getString());
+                Neighbours1.add(neighbours[i].getString());
             }
         }
-        String[] NEIGHBOURS = new String[Neighbours.size()];
-        for (int i = 0; i < Neighbours.size(); i++) {
-            NEIGHBOURS[i] = Neighbours.get(i);
+        
+        String[] NEIGHBOURS = new String[Neighbours1.size()];
+        for (int i = 0; i < Neighbours1.size(); i++) {
+            NEIGHBOURS[i] = Neighbours1.get(i);
         }
         return NEIGHBOURS;
     }
@@ -100,8 +104,8 @@ public class AttackManager {
             }
         }    
         
-        Attack attack = Attack.Declares(territorydefend, territorydefend);
+        Attack attack = Attack.Declares(territoryattack, territorydefend);
         window.setVisible(false);
-        new Roll_Dice_Interface(sessionstart,attack,territoryattack,territorydefend).setVisible(true);
+        new Roll_Dice_Interface(sessionstart,attack).setVisible(true);
     }
 }

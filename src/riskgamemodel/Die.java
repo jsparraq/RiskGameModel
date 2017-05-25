@@ -48,14 +48,14 @@ public class Die implements Comparable<Die>{
         return Value;
     }
     
-    public static void Rolls(Territory TAtaque,Territory TDefensa,Attack attack){
+    public static void Rolls(Attack attack){
         int I;
         int J;
         int ID=1;
-        if(TAtaque.getArmy()>3){
+        if(attack.getAttacker().getArmy()>3){
             I=3;
         }else{
-            I=TAtaque.getArmy()-1;
+            I=attack.getAttacker().getArmy()-1;
         }
         Die ATTACKS[] = new Die[I];
         for(int i =I-1; i>-1;i--){
@@ -67,7 +67,7 @@ public class Die implements Comparable<Die>{
           ATTACKS[i]=d;
         }
         Arrays.sort(ATTACKS);
-         if(TDefensa.getArmy()>1){
+         if(attack.getDefender().getArmy()>1){
             J=2;
         }else{
             J=1;
@@ -91,11 +91,11 @@ public class Die implements Comparable<Die>{
         
         for(int i=0;i<MENOR;i++){
             if(ATTACKS[i].getValue()>DEFENSE[i].getValue()){
-               int ar = TDefensa.getArmy();
-               TDefensa.setArmy(ar-1);
+               int ar = attack.getDefender().getArmy();
+               attack.getDefender().setArmy(ar-1);
             }else{
-               int ar = TAtaque.getArmy();
-               TAtaque.setArmy(ar-1);
+               int ar = attack.getAttacker().getArmy();
+               attack.getAttacker().setArmy(ar-1);
             }
         }
         Die[] dice = new Die[I];
