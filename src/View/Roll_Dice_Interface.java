@@ -7,6 +7,7 @@ package View;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import manager.RollDieManager;
 import riskgamemodel.Session;
 
 /**
@@ -19,14 +20,14 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
      * Creates new form Interfaz
      */
     Session sessionstart;
-    
+
     public Roll_Dice_Interface(Session session) {
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    
-    public Image getIconImage(){
+
+    public Image getIconImage() {
         Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
         return retValue;
     }
@@ -96,7 +97,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        // TODO add your handling code here:
+        RollDieManager.Button_Finish(sessionstart, this);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
 

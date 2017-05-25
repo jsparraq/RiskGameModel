@@ -5,10 +5,18 @@
  */
 package manager;
 
+import View.Main_Interface;
+import javax.swing.JFrame;
+import riskgamemodel.Session;
+
 /**
  *
  * @author user
  */
 public class RollDieManager {
-    
+
+    public static void Button_Finish(Session sessionstart, JFrame window) {
+        window.setVisible(false);
+        new Main_Interface(sessionstart).setVisible(true);
+    }
 }
