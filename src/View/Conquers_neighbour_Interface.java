@@ -7,6 +7,8 @@ package View;
 
 import javax.swing.Icon;
 import riskgamemodel.Session;
+import manager.ConquersNeighbourManager;
+import riskgamemodel.Attack;
 
 /**
  *
@@ -19,7 +21,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
      * Creates new form Interfaz
      */
     
-    public Conquers_neighbour_Interface(Session session) {
+    public Conquers_neighbour_Interface(Session session,Attack attack) {
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
@@ -48,13 +50,13 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Your Army");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, 120, -1));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 580, 120, -1));
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, 80));
 
         Button_Finish.setText("Finish");
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 100, 30));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, 180, 30));
 
         Value_army.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
         Value_army.addActionListener(new java.awt.event.ActionListener() {
@@ -62,13 +64,13 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
                 Value_armyActionPerformed(evt);
             }
         });
-        getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 450, 90, 30));
+        getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, 160, 30));
 
-        Map.setIcon(Map());
-        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 280, 170));
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(ConquersNeighbourManager.Map(sessionstart)))));
+        getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 580));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -76,11 +78,6 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     private void Value_armyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Value_armyActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Value_armyActionPerformed
-
-    private Icon Map(){
-        return (new javax.swing.ImageIcon(getClass().getResource("/images/" + sessionstart.getMap().getName() + ".jpg")));
-    }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;

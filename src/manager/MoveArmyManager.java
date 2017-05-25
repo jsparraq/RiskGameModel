@@ -33,7 +33,7 @@ public class MoveArmyManager {
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor())) {
+                if (territorie.getOwner().equals(playerstart.getColor()) && territorie.getArmy()>1) {
                     territoryplayer.add(territorie);
                 }
             }

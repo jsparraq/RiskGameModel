@@ -30,7 +30,7 @@ public class Session {
     public static Session getSession(){
         if(session == null){
             Player player1 = new Player(false,"non-capture","BLUE",1,2,0);
-            Player player2 = new Player(true,"non-capture","RED",5,2,3);
+            Player player2 = new Player(true,"non-capture","RED",9,2,3);
             Player player3 = new Player(false,"non-capture","GREEN",1,1,0);
             Player player4 = new Player(false,"non-capture","PURPLE",1,0,0);
             Player[] players = new Player[]{player1,player2,player3,player4};
@@ -39,7 +39,7 @@ public class Session {
             Territory territory3 = new Territory("C","RED",1);
             Territory territory4 = new Territory("D","RED",4);
             Territory territory5 = new Territory("E","RED",5);
-            Territory territory6 = new Territory("F","GREEN",3);
+            Territory territory6 = new Territory("F","GREEN",1);
             Territory territory7 = new Territory("G","PURPLE",3);
             Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
             Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});

@@ -101,7 +101,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        RollDieManager.Button_Finish(sessionstart, this);
+        RollDieManager.Button_Finish(sessionstart, attack,this);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     public javax.swing.JLabel Attack_1(){

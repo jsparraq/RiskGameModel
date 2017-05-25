@@ -5,10 +5,20 @@
  */
 package manager;
 
+import riskgamemodel.Attack;
+import riskgamemodel.Session;
+
 /**
  *
  * @author user
  */
 public class ConquersNeighbourManager {
     
+    public static String Map(Session sessionstart){
+        return "/images/" + sessionstart.getMap().getName() + ".png";
+    } 
+    
+    public static String[] armies(Attack attack){
+        return new String[]{};
+    }
 }

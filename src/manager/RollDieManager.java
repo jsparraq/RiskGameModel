@@ -5,6 +5,7 @@
  */
 package manager;
 
+import View.Conquers_neighbour_Interface;
 import View.Main_Interface;
 import View.Roll_Dice_Interface;
 import javax.swing.JFrame;
@@ -51,8 +52,12 @@ public class RollDieManager {
             label.setText("Die " + (i + 1) + " defense " + attack.getDefense()[i].getValue());
         }
     }
-    public static void Button_Finish(Session sessionstart, JFrame window) {
+    public static void Button_Finish(Session sessionstart,Attack attack ,JFrame window) {
         window.setVisible(false);
-        new Main_Interface(sessionstart).setVisible(true);
+        if(attack.getDefender().getArmy() == 0){
+            new Conquers_neighbour_Interface(sessionstart,attack).setVisible(true);
+        }else{
+            new Main_Interface(sessionstart).setVisible(true);
+        }
     }
 }
