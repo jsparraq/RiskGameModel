@@ -5,7 +5,6 @@
  */
 package View;
 
-import javax.swing.Icon;
 import riskgamemodel.Session;
 import manager.ConquersNeighbourManager;
 import riskgamemodel.Attack;
@@ -17,12 +16,14 @@ import riskgamemodel.Attack;
 public class Conquers_neighbour_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Attack Attack;
     /**
      * Creates new form Interfaz
      */
     
     public Conquers_neighbour_Interface(Session session,Attack attack) {
         sessionstart = session;
+        Attack = attack;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -56,9 +57,14 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, 80));
 
         Button_Finish.setText("Finish");
+        Button_Finish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_FinishActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, 180, 30));
 
-        Value_army.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5" }));
+        Value_army.setModel((new javax.swing.DefaultComboBoxModel(ConquersNeighbourManager.armies(Attack))));
         Value_army.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Value_armyActionPerformed(evt);
@@ -78,6 +84,10 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
     private void Value_armyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Value_armyActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Value_armyActionPerformed
+
+    private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
+        ConquersNeighbourManager.Button_Finish(Attack, this, (String)Value_army.getSelectedItem(),sessionstart);
+    }//GEN-LAST:event_Button_FinishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
