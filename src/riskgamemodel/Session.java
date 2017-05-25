@@ -5,8 +5,6 @@
  */
 package riskgamemodel;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Sebastian

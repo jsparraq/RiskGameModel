@@ -17,6 +17,17 @@ import riskgamemodel.*;
  */
 public class PlaceArmyManager {
     
+    public static int armies(Session sessionstart){
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        return playerstart.getArmy();
+    }
+    
     public static String[] Territories(Session sessionstart){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();

@@ -5,12 +5,7 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.util.ArrayList;
-import javax.swing.Icon;
-import riskgamemodel.Continent;
-import riskgamemodel.Player;
 import riskgamemodel.Session;
 import riskgamemodel.Territory;
 import manager.PlaceArmyManager;
@@ -43,15 +38,20 @@ public class Place_army_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Army_player = new javax.swing.JLabel();
         Button_finish = new javax.swing.JButton();
         Territory = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Logo_Risk = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Army_player.setForeground(new java.awt.Color(255, 255, 255));
+        Army_player.setText(("Your armies are " + Integer.toString(PlaceArmyManager.armies(sessionstart))));
+        getContentPane().add(Army_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 130, 20));
 
         Button_finish.setText("Finish");
         Button_finish.addActionListener(new java.awt.event.ActionListener() {
@@ -72,8 +72,8 @@ public class Place_army_Interface extends javax.swing.JFrame {
         Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
@@ -91,10 +91,11 @@ public class Place_army_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_finishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Army_player;
     private javax.swing.JLabel Background;
     private javax.swing.JButton Button_finish;
+    private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
     private javax.swing.JComboBox Territory;
-    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
