@@ -13,16 +13,16 @@ import java.util.ArrayList;
  */
 public class Attack {
     private int army;
-    private ArrayList<Die> Dice;
+    private Die[] Dice;
     
     
-    public Attack(int id, int Army, ArrayList<Die> Dices1){
+    public Attack(int id, int Army, Die[] Dices1){
         army = Army;
         Dice = Dices1;        
     }
     
     public Attack(){
-        Dice = new ArrayList();        
+        
     }
     public void setarmy(int value){
         this.army = value;
@@ -35,6 +35,9 @@ public class Attack {
     public static Attack Declares(Territory TAtaque,Territory TDefensa){
         Attack attack = new Attack();
         return attack;
+    }
+    public void setDice(Die[] dice){
+        Dice = dice;
     }
     
     

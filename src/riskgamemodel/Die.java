@@ -16,14 +16,12 @@ public class Die implements Comparable<Die>{
     private int Value;
 
     public void Die(){
-        this.Type=null;
-        this.ID=0;
-        this.Value=0;
+        
     }
     public void Die(String Type,int ID,int Value){
-        this.Type=null;
-        this.ID=0;
-        this.Value=0;
+        this.Type = Type;
+        this.ID = ID;
+        this.Value = Value;
     }
     
     public void setType(String value) {
@@ -69,9 +67,6 @@ public class Die implements Comparable<Die>{
           ATTACKS[i]=d;
         }
         Arrays.sort(ATTACKS);
-        
-        
-        
          if(TDefensa.getArmy()>1){
             J=2;
         }else{
@@ -103,19 +98,20 @@ public class Die implements Comparable<Die>{
                TAtaque.setArmy(ar-1);
             }
         }
-         
+        Die[] dice = new Die[I + J];
         for (int i = 0; i < ATTACKS.length; i++) {
-            System.out.println("Attack: "+(i+1)+" "+ ATTACKS[i].Value);
+            dice[i] = ATTACKS[i];
         }
-         for (int i = 0; i < DEFENSE.length; i++) {
-            System.out.println("Defense: "+(i+1)+" "+ DEFENSE[i].Value);
+        for (int i = 0; i < DEFENSE.length; i++) {
+            dice[I+i] = DEFENSE[i];
         }
-        
+        attack.setDice(dice);        
     }
     
     private static int random(){
         return (int) ((Math.random()*6)+1);
     }
+    
     @Override
     public int compareTo(Die o) {
             if (Value < o.Value) {

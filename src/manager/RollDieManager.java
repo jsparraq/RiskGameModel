@@ -7,7 +7,9 @@ package manager;
 
 import View.Main_Interface;
 import javax.swing.JFrame;
+import riskgamemodel.Attack;
 import riskgamemodel.Session;
+import riskgamemodel.Territory;
 
 /**
  *
@@ -15,6 +17,9 @@ import riskgamemodel.Session;
  */
 public class RollDieManager {
 
+    public static void start(Territory TAtaque,Territory TDefensa,Attack attack){
+        
+    }
     public static void Button_Finish(Session sessionstart, JFrame window) {
         window.setVisible(false);
         new Main_Interface(sessionstart).setVisible(true);

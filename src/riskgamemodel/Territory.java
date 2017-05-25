@@ -16,19 +16,19 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
-    private Attack[] Attacks;
+    private ArrayList<Attack> Attacks;
     
     public Territory(){
         
     }
-    public Territory(String name, String owner, int army, Attack[] att){
+    public Territory(String name, String owner, int army, ArrayList<Attack> att){
         Name = name;
         Owner = owner;
         Army = army;
         Attacks = att;
     }
     
-    public Attack[] getAttacks(){
+    public ArrayList<Attack> getAttacks(){
         return Attacks;
     }
     public void setName(String value) {

@@ -7,7 +7,6 @@ package View;
 
 import manager.RollDieManager;
 import riskgamemodel.Attack;
-import riskgamemodel.Die;
 import riskgamemodel.Session;
 import riskgamemodel.Territory;
 
@@ -26,7 +25,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     public Roll_Dice_Interface(Session session,Attack attack,Territory attacker,Territory defender) {
         sessionstart = session;
         this.attack = attack;
-        Die.Rolls(attacker, defender, attack);
+        RollDieManager.start(attacker, defender, attack);
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -51,7 +50,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N

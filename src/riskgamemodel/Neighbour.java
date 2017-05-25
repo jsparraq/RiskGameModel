@@ -60,7 +60,7 @@ public class Neighbour extends Territory{
         
     }
 
-    public Neighbour(String name, String owner, int army, Attack[] att) {
+    public Neighbour(String name, String owner, int army, ArrayList<Attack> att) {
         super(name, owner, army, att);
     }
 
