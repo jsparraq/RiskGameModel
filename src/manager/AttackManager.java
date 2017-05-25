@@ -100,10 +100,8 @@ public class AttackManager {
             }
         }    
         
-        System.out.println(territoryattack.getName()+" "+territorydefend.getName());
-        Die.Rolls(territoryattack, territorydefend);
-        System.out.println(territoryattack.getArmy()+" "+territorydefend.getArmy());
+        Attack attack = Attack.Declares(territorydefend, territorydefend);
         window.setVisible(false);
-        new Roll_Dice_Interface(sessionstart).setVisible(true);
+        new Roll_Dice_Interface(sessionstart,attack,territoryattack,territorydefend).setVisible(true);
     }
 }

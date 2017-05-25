@@ -50,7 +50,7 @@ public class Die implements Comparable<Die>{
         return Value;
     }
     
-    public static void Rolls(Territory TAtaque,Territory TDefensa){
+    public static void Rolls(Territory TAtaque,Territory TDefensa,Attack attack){
         int I;
         int J;
         int ID=1;
@@ -59,7 +59,7 @@ public class Die implements Comparable<Die>{
         }else{
             I=TAtaque.getArmy()-1;
         }
-        Die ATTACKS[]= new Die[I];
+        Die ATTACKS[] = new Die[I];
         for(int i =I-1; i>-1;i--){
           Die d = new Die();
           d.setType("ATTACK");

@@ -5,10 +5,11 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import manager.RollDieManager;
+import riskgamemodel.Attack;
+import riskgamemodel.Die;
 import riskgamemodel.Session;
+import riskgamemodel.Territory;
 
 /**
  *
@@ -20,17 +21,16 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
      * Creates new form Interfaz
      */
     Session sessionstart;
+    Attack attack;
 
-    public Roll_Dice_Interface(Session session) {
+    public Roll_Dice_Interface(Session session,Attack attack,Territory attacker,Territory defender) {
         sessionstart = session;
+        this.attack = attack;
+        Die.Rolls(attacker, defender, attack);
         initComponents();
         this.setLocationRelativeTo(null);
     }
 
-    public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/icon.png"));
-        return retValue;
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
