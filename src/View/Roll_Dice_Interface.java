@@ -25,8 +25,13 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     public Roll_Dice_Interface(Session session,Attack attack,Territory attacker,Territory defender) {
         sessionstart = session;
         this.attack = attack;
-        RollDieManager.start(attacker, defender, attack);
         initComponents();
+        Die_Value_Attack_1.setVisible(false);
+        Die_Value_Attack_2.setVisible(false);
+        Die_Value_Attack_3.setVisible(false);
+        Die_Value_Defense_1.setVisible(false);
+        Die_Value_defense_2.setVisible(false);
+        RollDieManager.start(attacker, defender, attack, this);
         this.setLocationRelativeTo(null);
     }
 
@@ -99,6 +104,27 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         RollDieManager.Button_Finish(sessionstart, this);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
+    public javax.swing.JLabel Attack_1(){
+        return Die_Value_Attack_1;
+    }
+    
+    public javax.swing.JLabel Attack_2(){
+        return Die_Value_Attack_2;
+    }
+    
+    public javax.swing.JLabel Attack_3(){
+        return Die_Value_Attack_3;
+    }
+  
+    public javax.swing.JLabel Defense_1(){
+        return Die_Value_Defense_1;
+    }
+    
+    public javax.swing.JLabel Defense_2(){
+        return Die_Value_defense_2;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;

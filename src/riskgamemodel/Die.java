@@ -105,7 +105,8 @@ public class Die implements Comparable<Die>{
         for (int i = 0; i < DEFENSE.length; i++) {
             dice[I+i] = DEFENSE[i];
         }
-        attack.setDice(dice);        
+        attack.setDice(dice);  
+        attack.setarmy(I);
     }
     
     private static int random(){

@@ -40,5 +40,9 @@ public class Attack {
         Dice = dice;
     }
     
+    public Die[] getDice(){
+        return Dice;
+    }
+    
     
 }
