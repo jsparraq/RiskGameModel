@@ -13,12 +13,14 @@ import java.util.ArrayList;
  */
 public class Attack {
     private int army;
-    private Die[] Dice;
+    private Die[] Attacks;
+    private Die[] Defense;
     
     
-    public Attack(int id, int Army, Die[] Dices1){
+    public Attack(int id, int Army, Die[] Dices2, Die[] Dices3){
         army = Army;
-        Dice = Dices1;        
+        Attacks = Dices2; 
+        Defense = Dices3;
     }
     
     public Attack(){
@@ -36,12 +38,19 @@ public class Attack {
         Attack attack = new Attack();
         return attack;
     }
-    public void setDice(Die[] dice){
-        Dice = dice;
+    public void setAttacks(Die[] dice){
+        Attacks = dice;
     }
     
-    public Die[] getDice(){
-        return Dice;
+    public Die[] getAttacks(){
+        return Attacks;
+    }
+    public void setDefense(Die[] dice){
+        Defense = dice;
+    }
+    
+    public Die[] getDefense(){
+        return Defense;
     }
     
     

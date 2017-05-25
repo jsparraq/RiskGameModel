@@ -98,14 +98,16 @@ public class Die implements Comparable<Die>{
                TAtaque.setArmy(ar-1);
             }
         }
-        Die[] dice = new Die[I + J];
+        Die[] dice = new Die[I];
         for (int i = 0; i < ATTACKS.length; i++) {
             dice[i] = ATTACKS[i];
         }
+        attack.setAttacks(dice);
+        Die[] dice1 = new Die[J];
         for (int i = 0; i < DEFENSE.length; i++) {
-            dice[I+i] = DEFENSE[i];
+            dice1[i] = DEFENSE[i];
         }
-        attack.setDice(dice);  
+        attack.setDefense(dice1);  
         attack.setarmy(I);
     }
     
@@ -115,10 +117,10 @@ public class Die implements Comparable<Die>{
     
     @Override
     public int compareTo(Die o) {
-            if (Value < o.Value) {
+            if (Value > o.Value) {
                 return -1;
             }
-            if (Value > o.Value) {
+            if (Value < o.Value) {
                 return 1;
             }
             return 0;

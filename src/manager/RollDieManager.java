@@ -21,16 +21,35 @@ public class RollDieManager {
 
     public static void start(Territory TAtaque,Territory TDefensa,Attack attack,Roll_Dice_Interface window){
         Die.Rolls(TAtaque, TDefensa, attack);
-        int attacks_number = 0;
-        int defense_number = 0;
-        for (int i = 0; i < attack.getDice().length; i++) {
-            if(attack.getDice()[i].getType().equals("ATTACK")){
-                attacks_number++;
-            }else if(attack.getDice()[i].getType().equals("DEFENSE")){
-                attacks_number++;
+        javax.swing.JLabel label;
+        for (int i = 0; i < attack.getAttacks().length; i++) {
+            switch (i) {
+                case 0:
+                    label = window.Attack_1();
+                    break;
+                case 1:
+                    label = window.Attack_2();
+                    break;
+                default:
+                    label = window.Attack_3();
+                    break;
             }
+            label.setVisible(true);
+            label.setText("Die " + (i + 1) + " attack " + attack.getAttacks()[i].getValue());
         }
         
+        for (int i = 0; i < attack.getDefense().length; i++) {
+            switch (i) {
+                case 0:
+                    label = window.Defense_1();
+                    break;
+                default:
+                    label = window.Defense_2();
+                    break;
+            }
+            label.setVisible(true);
+            label.setText("Die " + (i + 1) + " defense " + attack.getDefense()[i].getValue());
+        }
     }
     public static void Button_Finish(Session sessionstart, JFrame window) {
         window.setVisible(false);

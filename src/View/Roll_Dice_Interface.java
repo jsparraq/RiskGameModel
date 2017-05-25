@@ -79,12 +79,12 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         Die_Value_Defense_1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_Defense_1.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_Defense_1.setText("Die 1 Defense    6");
-        getContentPane().add(Die_Value_Defense_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
+        getContentPane().add(Die_Value_Defense_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 200, -1, -1));
 
         Die_Value_defense_2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Die_Value_defense_2.setForeground(new java.awt.Color(255, 255, 255));
         Die_Value_defense_2.setText("Die 2 Defense    1");
-        getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, -1, -1));
+        getContentPane().add(Die_Value_defense_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, -1, -1));
 
         Button_Finish.setText("Finish");
         Button_Finish.addActionListener(new java.awt.event.ActionListener() {
