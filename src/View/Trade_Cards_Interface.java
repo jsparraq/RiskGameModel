@@ -67,7 +67,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Button_FinishActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 80, 40));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 120, 40));
 
         Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,7 +82,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 210, -1));
 
-        Trade_Card_2.setModel((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart))));
+        Trade_Card_2.setModel(((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart)))));
         Trade_Card_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Trade_Card_2ActionPerformed(evt);
@@ -90,7 +90,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 210, -1));
 
-        Trade_Card_3.setModel((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart))));
+        Trade_Card_3.setModel(((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart)))));
         Trade_Card_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Trade_Card_3ActionPerformed(evt);
@@ -105,12 +105,11 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Trade_Card_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_1ActionPerformed
-
-        
+        TradeCardManager.diferents((String)Trade_Card_1.getSelectedItem(), (String)Trade_Card_2.getSelectedItem(), (String)Trade_Card_3.getSelectedItem(), Button_Finish);
     }//GEN-LAST:event_Trade_Card_1ActionPerformed
 
     private void Trade_Card_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_2ActionPerformed
-
+        TradeCardManager.diferents((String)Trade_Card_1.getSelectedItem(), (String)Trade_Card_2.getSelectedItem(), (String)Trade_Card_3.getSelectedItem(), Button_Finish);
     }//GEN-LAST:event_Trade_Card_2ActionPerformed
 
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
@@ -121,7 +120,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed
-
+        TradeCardManager.diferents((String)Trade_Card_1.getSelectedItem(), (String)Trade_Card_2.getSelectedItem(), (String)Trade_Card_3.getSelectedItem(), Button_Finish);
     }//GEN-LAST:event_Trade_Card_3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

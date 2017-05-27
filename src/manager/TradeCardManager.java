@@ -7,6 +7,7 @@ package manager;
 
 import View.Place_army_Interface;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import riskgamemodel.*;
 
@@ -81,6 +82,12 @@ public class TradeCardManager {
             Card.Trades(playerstart, card1, card2, card3);
             window.setVisible(false);
             new Place_army_Interface(sessionstart).setVisible(true);
+        }
+    }
+    
+    public static void diferents(String first_Card, String Second_Card,String Third_Card, JButton button){
+        if(!first_Card.equals(Second_Card) && !first_Card.equals(Third_Card) && !Third_Card.equals(Second_Card)){
+            button.setText("Trades cards");
         }
     }
 }

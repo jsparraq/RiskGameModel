@@ -35,7 +35,7 @@ public class RiskGameModel {
         Card card2 = new Card("STANDARD",2,"BLUE","Cavalry",territory2);
         Card card3 = new Card("STANDARD",3,"RED","Artillery",territory3);
         Card card4 = new Card("STANDARD",4,"RED","Infantry",territory4);
-        Card card5 = new Card("STANDARD",5,"GREEN","Cavalry",territory5);
+        Card card5 = new Card("STANDARD",5,"RED","Cavalry",territory5);
         Card card6 = new Card("STANDARD",6,"WHITE","Artillery",territory6);
         Card card7 = new Card("STANDARD",7,"WHITE","Infantry",territory7);
         Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};
