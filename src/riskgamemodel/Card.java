@@ -60,6 +60,8 @@ public class Card {
                return false;
            }else if (card2 == card3){
                return false;
+           }else if(CARDS_TRADES[0].getOwner() == null || CARDS_TRADES[1].getOwner() == null || CARDS_TRADES[2].getOwner() == null){
+               return false;
            }
            card1.setOwner("WHITE");
            card2.setOwner("WHITE");
