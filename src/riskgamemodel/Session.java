@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package riskgamemodel;
 
-import java.util.ArrayList;
 
 /**
- *
+ * 
  * @author Sebastian
  */
 public class Session {
@@ -19,7 +14,13 @@ public class Session {
     private Map map;
     
     private Session(){}
-    
+    /**
+     * 
+     * @param id
+     * @param state
+     * @param Players
+     * @param map1 
+     */
     public Session(int id, String state,Player[] Players, Map map1){
         ID = id;
         State = state;
