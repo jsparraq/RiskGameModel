@@ -5,7 +5,7 @@ package riskgamemodel;
  * @author UNC Risk Game Model
  */
 public class Session {
-    private static Session session;
+    
     private int ID;
     private String State;
     private Player[] players;

@@ -4,8 +4,8 @@ package riskgamemodel;
  * @author UNC_ RiskGameModel
  */
 public class Card {
+        private static int[] values = new int[]{4,6,8,10,12,15};
         private String Type;
-        private int ID;
         private String Owner;
         private String Design;
         private Territory Territory;
@@ -15,7 +15,6 @@ public class Card {
          */
         public Card(){
             Type = null;
-            ID = 0;
             Owner = null;
             Design = null;
             Territory = null;
@@ -24,14 +23,12 @@ public class Card {
         /**
          * This method is the constructor of Card class
          * @param type
-         * @param id
          * @param owner
          * @param design
          * @param territory 
          */
-        public Card(String type, int id, String owner, String design,Territory territory){
+        public Card(String type, String owner, String design,Territory territory){
             Type = type;
-            ID = id;
             Owner = owner;
             Design = design;
             Territory = territory;
@@ -50,21 +47,6 @@ public class Card {
          */
         public String getType(){
             return Type;
-        }
-        
-        /**
-         * 
-         * @param value 
-         */
-        public void setID(int value){
-            this.ID = value;
-        }
-        
-        /**
-         * @return The ID of the card
-         */
-        public int getID(){
-            return ID;
         }
         
         /**
@@ -106,25 +88,26 @@ public class Card {
          * @return 
          */
         public static boolean Trades(Player player,Card card1,Card card2,Card card3){
-           Card[] CARDS_TRADES = new Card[3];
-           CARDS_TRADES[0] = card1;
-           CARDS_TRADES[1] = card2;
-           CARDS_TRADES[2] = card3;
-           if (CARDS_TRADES[0] == CARDS_TRADES[1] || CARDS_TRADES[0] == CARDS_TRADES[2]){
-               return false;
-           }else if (card2 == card3){
-               return false;
-           }else if(CARDS_TRADES[0].getOwner() == null || CARDS_TRADES[1].getOwner() == null || CARDS_TRADES[2].getOwner() == null){
-               return false;
-           }
-           card1.setOwner("WHITE");
-           card2.setOwner("WHITE");
-           card3.setOwner("WHITE");
-           player.setCardAmount(player.getCardAmount() - 3);
-           player.setArmy(player.getArmy() + 10);
-           return true;
+            Card[] CARDS_TRADES = new Card[3];
+            CARDS_TRADES[0] = card1;
+            CARDS_TRADES[1] = card2;
+            CARDS_TRADES[2] = card3;
+            if(!CARDS_TRADES[0].getDesign().equals(CARDS_TRADES[1].getDesign()) && !CARDS_TRADES[0].getDesign().equals(CARDS_TRADES[2].getDesign()) && !CARDS_TRADES[2].getDesign().equals(CARDS_TRADES[1].getDesign())){
+                card1.setOwner("WHITE");
+                card2.setOwner("WHITE");
+                card3.setOwner("WHITE");
+                player.setCardAmount(player.getCardAmount() - 3);
+                if (player.gettrades() > 6){
+                    player.setArmy(player.getArmy() + values[5] + (player.gettrades() - 6)*5);
+                    player.settrades(player.gettrades() + 1);
+                }else{
+                    player.setArmy(player.getArmy() + values[player.gettrades() - 1]);
+                    player.settrades(player.gettrades() + 1);
+                }
+                return true;
+            }
+            return false;
         }
-        
         /**
          * @return 
          */

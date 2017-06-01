@@ -32,7 +32,7 @@ public class TradeCardManager {
                 cards_player.add(card);
             }
         }
-        if (cards_player.size() == 0){
+        if (cards_player.isEmpty()){
             return new String[]{"You don't have more cards"};
         }
         String[] card_string = new String[cards_player.size()];
@@ -78,8 +78,7 @@ public class TradeCardManager {
             }
         }
         if(cards_player.size() > 6){
-            while(!Card.Trades(playerstart, card1, card2, card3)){
-                
+            while(!Card.Trades(playerstart, card1, card2, card3) && cards_player.size() > 6){
             }
             window.setVisible(false);
             new Place_army_Interface(sessionstart).setVisible(true);

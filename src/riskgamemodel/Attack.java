@@ -6,6 +6,7 @@ package riskgamemodel;
  */
 public class Attack {
     private int army;
+    private int ID;
     private Die[] Attacks;
     private Die[] Defense;
     private Territory attacker;
@@ -27,6 +28,8 @@ public class Attack {
         Defense = Dicesdefence;
         attacker = Attacker;
         defender = Defender;
+        ID = id;
+        
     }
     
     /**

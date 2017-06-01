@@ -12,6 +12,7 @@ public class Player {
     private int CardAmount;
     private int Army;
     private int ContinentAmount;
+    private int trades;
     
     /**
      * This method is the constructor of Player class
@@ -186,6 +187,14 @@ public class Player {
             }
         }
 
+    }
+    
+    public int gettrades(){
+        return trades;
+    }
+    
+    public void settrades(int value){
+        trades = value;
     }
 
 }
