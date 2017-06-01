@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package riskgamemodel;
 
-import java.util.ArrayList;
-
 /**
- *
- * @author Sebastian
+ * @author UNC_RiskGameModel
  */
 public class Continent {
     private String Name;
@@ -17,7 +10,13 @@ public class Continent {
     private int Army;
     private Territory[] Territories;
     
-    
+    /**
+     * 
+     * @param name
+     * @param owner
+     * @param army
+     * @param terr 
+     */
     public Continent(String name, String owner, int army, Territory[] terr){
         Name = name;
         Owner = owner;
@@ -25,26 +24,58 @@ public class Continent {
         Territories = terr;
     }
     
+    /**
+     * 
+     * @param value 
+     */
     public void setName(String value){
         this.Name = value;
     }
+    
+    /**
+     * 
+     * @return 
+     */
     public String getName(){
         return Name;
     }
+    
+    /**
+     * 
+     * @return 
+     */
     public Territory[] getTerritory(){
         return Territories;
     }
     
+    /**
+     * 
+     * @param value 
+     */
     public void setOwner(String value){
         this.Owner = value;
     }
+    
+    /**
+     * 
+     * @return 
+     */
     public String getOwner(){
         return Owner;
     }
     
+    /**
+     * 
+     * @param value 
+     */
     public void setArmy(int value){
         this.Army = value;
     }
+    
+    /**
+     * 
+     * @return 
+     */
     public int getArmy(){
         return Army;
     }

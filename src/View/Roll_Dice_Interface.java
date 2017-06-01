@@ -5,10 +5,9 @@
  */
 package View;
 
-import manager.RollDieManager;
+import Controller.RollDieManager;
 import riskgamemodel.Attack;
 import riskgamemodel.Session;
-import riskgamemodel.Territory;
 
 /**
  *
@@ -22,6 +21,11 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
     Session sessionstart;
     Attack attack;
 
+    /**
+     * 
+     * @param session
+     * @param attack 
+     */
     public Roll_Dice_Interface(Session session,Attack attack) {
         sessionstart = session;
         this.attack = attack;
@@ -100,26 +104,50 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
         RollDieManager.Button_Finish(sessionstart, attack,this);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
+    /**
+     * 
+     * @return 
+     */
     public javax.swing.JLabel Attack_1(){
         return Die_Value_Attack_1;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public javax.swing.JLabel Attack_2(){
         return Die_Value_Attack_2;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public javax.swing.JLabel Attack_3(){
         return Die_Value_Attack_3;
     }
   
+    /**
+     * 
+     * @return 
+     */
     public javax.swing.JLabel Defense_1(){
         return Die_Value_Defense_1;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public javax.swing.JLabel Defense_2(){
         return Die_Value_defense_2;
     }

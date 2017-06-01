@@ -5,12 +5,9 @@
  */
 package View;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.util.ArrayList;
-import manager.TradeCardManager;
+import Controller.TradeCardManager;
 import riskgamemodel.Card;
-import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -20,15 +17,12 @@ import riskgamemodel.Session;
 public class Trade_Cards_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
-    Card[] cards;
-    ArrayList<Card> cards_player;
     /**
      * Creates new form Interfaz
      */
     
     public Trade_Cards_Interface(Session session) {
         sessionstart = session;
-        cards = sessionstart.getMap().getCards();
         initComponents();
         this.setLocationRelativeTo(null);
     }

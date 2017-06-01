@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package manager;
+package Controller;
 
 import View.Declare_attack_Interface;
 import View.Move_Army_Interface;

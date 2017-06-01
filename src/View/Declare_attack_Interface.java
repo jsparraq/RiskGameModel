@@ -1,22 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
-import manager.AttackManager;
+import Controller.AttackManager;
 import riskgamemodel.Session;
 
 /**
  *
- * @author andre
+ * @author UNC Risk Game Model
  */
 public class Declare_attack_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     /**
      * Creates new form Interfaz
+     */
+    
+    /**
+     * 
+     * @param session 
      */
     public Declare_attack_Interface(Session session) {
         sessionstart = session;
@@ -87,17 +87,29 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Territory_attackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_attackerActionPerformed
         Territory_Defender.setEnabled(true);
         Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem())));
     }//GEN-LAST:event_Territory_attackerActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
         String terrAt = (String)Territory_attacker.getSelectedItem();
         String terrdef = (String)Territory_Defender.getSelectedItem();
         AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef);
     }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         AttackManager.button_Finish(this, sessionstart);
     }//GEN-LAST:event_Button_finishActionPerformed

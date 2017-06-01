@@ -1,10 +1,8 @@
-
 package riskgamemodel;
 
 
 /**
- * 
- * @author Sebastian
+ * @author UNC Risk Game Model
  */
 public class Session {
     private static Session session;
@@ -29,25 +27,50 @@ public class Session {
     }
     
     
+    /**
+     * 
+     * @param value 
+     */
     public void setID(int value){
         this.ID = value;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public int getID(){
         return ID;
     }
     
+    /**
+     * 
+     * @param value 
+     */
     public void setStete(String value){
         this.State = value;
     }
+    
+    /**
+     * 
+     * @return 
+     */
     public String getState(){
         return State;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public Player[] getPlayers(){
         return players;
     }
     
+    /**
+     * 
+     * @return 
+     */
     public Map getMap(){
         return this.map;
     }

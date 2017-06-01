@@ -1,23 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
 import javax.swing.Icon;
-import manager.MoveArmyManager;
+import Controller.MoveArmyManager;
 import riskgamemodel.Session;
 
 /**
  *
- * @author andre
+ * @author UNC Risk Game Model
  */
 public class Move_Army_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     /**
      * Creates new form Interfaz
+     */
+    
+    /**
+     * 
+     * @param session 
      */
     public Move_Army_Interface(Session session) {
         sessionstart = session;
@@ -83,15 +83,27 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Final_TerritoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Final_TerritoryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Final_TerritoryActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Starting_territoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Starting_territoryActionPerformed
         Final_Territory.setEnabled(true);
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(MoveArmyManager.neighbours(sessionstart, (String)Starting_territory.getSelectedItem())));
     }//GEN-LAST:event_Starting_territoryActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
         MoveArmyManager.Button_Finish(this, (String)Starting_territory.getSelectedItem(), (String)Final_Territory.getSelectedItem(), sessionstart);
     }//GEN-LAST:event_Button_FinishActionPerformed

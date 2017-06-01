@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
-import javax.swing.Icon;
-import manager.MainManager;
-import riskgamemodel.Player;
+import Controller.MainManager;
 import riskgamemodel.Session;
 
 /**
  *
- * @author andre
+ * @author UNC Risk Game Model
  */
 public class Main_Interface extends javax.swing.JFrame {
 
@@ -20,6 +13,11 @@ public class Main_Interface extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      * @param session
+     */
+    
+    /**
+     * 
+     * @param session 
      */
     public Main_Interface(Session session) {
         sessionstart = session;
@@ -86,14 +84,26 @@ public class Main_Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_AttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AttackActionPerformed
         MainManager.Button_Attack(sessionstart, this);
     }//GEN-LAST:event_Button_AttackActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_Move_ArmyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Move_ArmyActionPerformed
         MainManager.Button_Moves(sessionstart, this);
     }//GEN-LAST:event_Button_Move_ArmyActionPerformed
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_Pass_TurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Pass_TurnActionPerformed
         MainManager.Button_Pass(sessionstart,this);
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed

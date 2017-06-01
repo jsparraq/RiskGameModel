@@ -1,27 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
-import java.util.ArrayList;
 import riskgamemodel.Session;
-import riskgamemodel.Territory;
-import manager.PlaceArmyManager;
+import Controller.PlaceArmyManager;
 
 /**
  *
- * @author andre
+ * @author UNC Risk Game Model
  */
 public class Place_army_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
-    ArrayList<Territory> territoryplayer;
     /**
      * Creates new form Interfaz
      */
 
+    /**
+     * 
+     * @param session 
+     */
     public Place_army_Interface(Session session) {
         sessionstart = session;
         initComponents();
@@ -85,6 +81,11 @@ public class Place_army_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_TerritoryActionPerformed
 
+    
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
         PlaceArmyManager.Button_Finish(sessionstart, this, name_territory);

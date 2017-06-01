@@ -6,8 +6,7 @@
 package riskgamemodel;
 
 /**
- *
- * @author Sebastian
+ * @author UNC_ RiskGameModel
  */
 public class Card {
         private String Type;
@@ -19,6 +18,15 @@ public class Card {
         public Card(){
             
         }
+        
+        /**
+         * 
+         * @param type
+         * @param id
+         * @param owner
+         * @param design
+         * @param territory 
+         */
         public Card(String type, int id, String owner, String design,Territory territory){
             Type = type;
             ID = id;
@@ -27,30 +35,78 @@ public class Card {
             Territory = territory;
         }
         
+        /**
+         * 
+         * @param value 
+         */
         public void setType(String value){
             this.Type = value;
         }
+        
+        /**
+         * 
+         * @return 
+         */
         public String getType(){
             return Type;
         }
+        
+        /**
+         * 
+         * @param value 
+         */
         public void setID(int value){
             this.ID = value;
         }
+        
+        /**
+         * 
+         * @return 
+         */
         public int getID(){
             return ID;
         }
+        
+        /**
+         * 
+         * @param value 
+         */
         public void setOwner(String value){
             this.Owner = value;
         }
+        
+        /**
+         * 
+         * @return 
+         */
         public String getOwner(){
             return Owner;
         }
+        
+        /**
+         * 
+         * @param value 
+         */
         public void setDesign(String value){
             this.Design = value;
         }
+        
+        /**
+         * 
+         * @return 
+         */
         public String getDesign(){
             return Design;
         }
+        
+        /**
+         * 
+         * @param player
+         * @param card1
+         * @param card2
+         * @param card3
+         * @return 
+         */
         public static boolean Trades(Player player,Card card1,Card card2,Card card3){
            Card[] CARDS_TRADES = new Card[3];
            CARDS_TRADES[0] = card1;
@@ -71,6 +127,10 @@ public class Card {
            return true;
         }
         
+        /**
+         * 
+         * @return 
+         */
         public String getString(){            
             return this.Type + "-" + this.Design + "-" + this.Territory.getName();
         }

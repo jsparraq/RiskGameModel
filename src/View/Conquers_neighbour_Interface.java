@@ -1,17 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
 import riskgamemodel.Session;
-import manager.ConquersNeighbourManager;
+import Controller.ConquersNeighbourManager;
 import riskgamemodel.Attack;
 
 /**
  *
- * @author andre
+ * @author UNC Risk Game Model
  */
 public class Conquers_neighbour_Interface extends javax.swing.JFrame {
 
@@ -21,6 +16,11 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
      * Creates new form Interfaz
      */
     
+    /**
+     * 
+     * @param session
+     * @param attack 
+     */
     public Conquers_neighbour_Interface(Session session,Attack attack) {
         sessionstart = session;
         Attack = attack;
@@ -81,10 +81,18 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * 
+     * @param evt 
+     */
     private void Value_armyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Value_armyActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Value_armyActionPerformed
-
+   
+    /**
+     * 
+     * @param evt 
+     */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
         ConquersNeighbourManager.Button_Finish(Attack, this, (String)Value_army.getSelectedItem(),sessionstart);
     }//GEN-LAST:event_Button_FinishActionPerformed

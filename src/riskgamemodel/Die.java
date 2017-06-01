@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package riskgamemodel;
 import java.util.Arrays;
 /**
- *
  * @author Sebastian
  */
 public class Die implements Comparable<Die>{
@@ -18,36 +13,71 @@ public class Die implements Comparable<Die>{
     public void Die(){
         
     }
+    
+    /**
+     * 
+     * @param Type
+     * @param ID
+     * @param Value 
+     */
     public void Die(String Type,int ID,int Value){
         this.Type = Type;
         this.ID = ID;
         this.Value = Value;
     }
     
+    /**
+     * 
+     * @param value 
+     */
     public void setType(String value) {
         this.Type = value;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public String getType() {
         return Type;
     }
 
+    /**
+     * 
+     * @param value 
+     */
     public void setID(int value) {
         this.ID = value;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public int getID() {
         return ID;
     }
 
+    /**
+     * 
+     * @param value 
+     */
     public void setValue(int value) {
         this.Value = value;
     }
 
+    /**
+     * 
+     * @return 
+     */
     public int getValue() {
         return Value;
     }
     
+    /**
+     * 
+     * @param attack 
+     */
     public static void Rolls(Attack attack){
         int I;
         int J;
@@ -115,6 +145,11 @@ public class Die implements Comparable<Die>{
         return (int) ((Math.random()*6)+1);
     }
     
+    /**
+     * 
+     * @param o
+     * @return 
+     */
     @Override
     public int compareTo(Die o) {
             if (Value > o.Value) {
