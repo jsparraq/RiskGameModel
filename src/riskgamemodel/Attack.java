@@ -15,15 +15,15 @@ public class Attack {
      * 
      * @param id
      * @param Army
-     * @param Dices2
-     * @param Dices3
+     * @param Dicesattacks
+     * @param Dicesdefence
      * @param Attacker
      * @param Defender 
      */
-    public Attack(int id, int Army, Die[] Dices2, Die[] Dices3,Territory Attacker,Territory Defender){
+    public Attack(int id, int Army, Die[] Dicesattacks, Die[] Dicesdefence,Territory Attacker,Territory Defender){
         army = Army;
-        Attacks = Dices2; 
-        Defense = Dices3;
+        Attacks = Dicesattacks; 
+        Defense = Dicesdefence;
         attacker = Attacker;
         defender = Defender;
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import View.Place_army_Interface;
@@ -13,10 +8,15 @@ import riskgamemodel.*;
 
 /**
  *
- * @author user
+ * @author UNC Risk Game Model
  */
 public class TradeCardManager {
     
+    /**
+     * 
+     * @param sessionstart
+     * @return 
+     */
     public static String[] cards(Session sessionstart){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();
@@ -42,6 +42,14 @@ public class TradeCardManager {
         return card_string;
     }
     
+    /**
+     * 
+     * @param sessionstart
+     * @param window
+     * @param card1_string
+     * @param card2_string
+     * @param card3_string 
+     */
     public static void Button_Trade(Session sessionstart, JFrame window,String card1_string,String card2_string,String card3_string){
         Card card1 = new Card();
         Card card2 = new Card();
@@ -85,6 +93,13 @@ public class TradeCardManager {
         }
     }
     
+    /**
+     * 
+     * @param first_Card
+     * @param Second_Card
+     * @param Third_Card
+     * @param button 
+     */
     public static void diferents(String first_Card, String Second_Card,String Third_Card, JButton button){
         if(!first_Card.equals(Second_Card) && !first_Card.equals(Third_Card) && !Third_Card.equals(Second_Card)){
             button.setText("Trades cards");

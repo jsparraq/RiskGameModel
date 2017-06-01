@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import View.Conquers_neighbour_Interface;
@@ -12,7 +7,6 @@ import javax.swing.JFrame;
 import riskgamemodel.Attack;
 import riskgamemodel.Die;
 import riskgamemodel.Session;
-import riskgamemodel.Territory;
 
 /**
  *
@@ -20,6 +14,11 @@ import riskgamemodel.Territory;
  */
 public class RollDieManager {
 
+    /**
+     * 
+     * @param attack
+     * @param window 
+     */
     public static void start(Attack attack,Roll_Dice_Interface window){
         Die.Rolls(attack);
         javax.swing.JLabel label;
@@ -52,6 +51,12 @@ public class RollDieManager {
             label.setText("Die " + (i + 1) + " defense " + attack.getDefense()[i].getValue());
         }
     }
+    /**
+     * 
+     * @param sessionstart
+     * @param attack
+     * @param window 
+     */
     public static void Button_Finish(Session sessionstart,Attack attack ,JFrame window) {
         window.setVisible(false);
         if(attack.getDefender().getArmy() == 0){

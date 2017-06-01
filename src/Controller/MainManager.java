@@ -12,19 +12,35 @@ import riskgamemodel.*;
 
 /**
  *
- * @author user
+ * @author UNC Risk Game Model
  */
 public class MainManager {
     
+    /**
+     * 
+     * @param sessionstart
+     * @param window 
+     */
     public static void Button_Attack(Session sessionstart,JFrame window){
         window.setVisible(false);
         new Declare_attack_Interface(sessionstart).setVisible(true);
     }
     
+    /**
+     * 
+     * @param sessionstart
+     * @param window 
+     */
     public static void Button_Moves(Session sessionstart,JFrame window){
         window.setVisible(false);
         new Move_Army_Interface(sessionstart).setVisible(true);
     }
+    
+    /**
+     * 
+     * @param sessionstart
+     * @param window 
+     */
     public static void Button_Pass(Session sessionstart,JFrame window){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();
@@ -40,10 +56,20 @@ public class MainManager {
         System.exit(0);
     }
     
+    /**
+     * 
+     * @param sessionstart
+     * @return 
+     */
     public static String Map(Session sessionstart){
         return "/images/" + sessionstart.getMap().getName() + ".png";
     } 
     
+    /**
+     * 
+     * @param sessionstart
+     * @return 
+     */
     public static boolean stateSession(Session sessionstart){
         return !"START PLACE ARMY".equals(sessionstart.getState());
     }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import View.Main_Interface;
@@ -11,14 +6,24 @@ import riskgamemodel.*;
 
 /**
  *
- * @author user
+ * @author UNC Risk Game Model
  */
 public class ConquersNeighbourManager {
     
+    /**
+     * 
+     * @param sessionstart
+     * @return 
+     */
     public static String Map(Session sessionstart){
         return "/images/" + sessionstart.getMap().getName() + ".png";
     } 
     
+    /**
+     * 
+     * @param attack
+     * @return 
+     */
     public static String[] armies(Attack attack){
         int inicial = attack.getarmy();
         int Final = attack.getAttacker().getArmy();
@@ -31,6 +36,13 @@ public class ConquersNeighbourManager {
         return armies;
     }
     
+    /**
+     * 
+     * @param attack
+     * @param window
+     * @param army
+     * @param sessionstart 
+     */
     public static void Button_Finish(Attack attack,JFrame window,String army,Session sessionstart){
         Player[] players = sessionstart.getPlayers();
         Player playerstart = new Player();
