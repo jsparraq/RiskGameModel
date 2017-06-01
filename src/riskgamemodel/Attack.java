@@ -40,7 +40,7 @@ public class Attack {
     }
     
     /**
-     * 
+     * This method set the value of the army 
      * @param value 
      */
     public void setarmy(int value){

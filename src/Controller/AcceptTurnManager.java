@@ -1,6 +1,7 @@
 package Controller;
 
 import View.Accepts_Turn_Interface;
+import View.Place_army_Interface;
 import View.Trade_Cards_Interface;
 import javax.swing.JFrame;
 import riskgamemodel.*;
@@ -31,8 +32,12 @@ public class AcceptTurnManager {
                 break;
             }
         }
-        Player.accepts(playerstart,session);
         window.setVisible(false);
-        new Trade_Cards_Interface(session).setVisible(true);
+        if("START PLACE ARMY".equals(session.getState())){
+            new Place_army_Interface(session).setVisible(true);
+        }else{
+            Player.accepts(playerstart,session);
+            new Trade_Cards_Interface(session).setVisible(true);
+        }
     }
 }
