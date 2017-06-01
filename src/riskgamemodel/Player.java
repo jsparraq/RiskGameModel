@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package riskgamemodel;
 
 /**
@@ -18,14 +13,18 @@ public class Player {
     private int Army;
     
     /**
-     * 
+     * This method is the constructor of Player class
      */
     public Player(){
-        
+        CaptureState = null;
+        Color = null;
+        TerritoryAmount = 0;
+        CardAmount = 0;
+        Army = 0;
     }
     
     /**
-     * 
+     * This method is the constructor of player class
      * @param turn
      * @param capture
      * @param color
@@ -51,8 +50,7 @@ public class Player {
     }
 
     /**
-     * 
-     * @return 
+     * @return The turn of the player
      */
     public boolean getTurn() {
         return this.Turn;

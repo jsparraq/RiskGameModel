@@ -30,7 +30,7 @@ public class Attack {
     }
     
     /**
-     * 
+     * This method is the constructor of Attack class
      * @param Attacker
      * @param Defender 
      */
@@ -66,7 +66,6 @@ public class Attack {
     }
     
     /**
-     * 
      * @param dice 
      */
     public void setAttacks(Die[] dice){
@@ -81,7 +80,6 @@ public class Attack {
     }
     
     /**
-     * 
      * @param dice  
      */
     public void setDefense(Die[] dice){
@@ -96,7 +94,6 @@ public class Attack {
     }
     
     /**
-     * 
      * @return The attacker territory
      */
     public Territory getAttacker(){

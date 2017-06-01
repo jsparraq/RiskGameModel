@@ -10,9 +10,8 @@ public class Boundary {
     private Territory[] Territories;
     private Territory[] Neighbours;
     
-    
     /**
-     * This method is the constructor of Boundary class
+     * This method is the constructor of Boundary class.
      * @param id
      * @param territories
      * @param Neighbours 
@@ -27,7 +26,6 @@ public class Boundary {
     }
     
     /**
-     * 
      * @param value 
      */
     public void setID(int value) {

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package riskgamemodel;
 
 /**
@@ -15,12 +10,19 @@ public class Card {
         private String Design;
         private Territory Territory;
         
+        /**
+         * This method is the constructor of Card class
+         */
         public Card(){
-            
+            Type = null;
+            ID = 0;
+            Owner = null;
+            Design = null;
+            Territory = null;
         }
         
         /**
-         * 
+         * This method is the constructor of Card class
          * @param type
          * @param id
          * @param owner
@@ -44,8 +46,7 @@ public class Card {
         }
         
         /**
-         * 
-         * @return 
+         * @return The type of the card
          */
         public String getType(){
             return Type;
@@ -60,8 +61,7 @@ public class Card {
         }
         
         /**
-         * 
-         * @return 
+         * @return The ID of the card
          */
         public int getID(){
             return ID;
@@ -76,8 +76,7 @@ public class Card {
         }
         
         /**
-         * 
-         * @return 
+         * @return The owner of the owner
          */
         public String getOwner(){
             return Owner;
@@ -92,8 +91,7 @@ public class Card {
         }
         
         /**
-         * 
-         * @return 
+         * @return The design of the card
          */
         public String getDesign(){
             return Design;
@@ -128,7 +126,6 @@ public class Card {
         }
         
         /**
-         * 
          * @return 
          */
         public String getString(){            

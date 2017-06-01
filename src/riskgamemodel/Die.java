@@ -10,12 +10,17 @@ public class Die implements Comparable<Die>{
     private int ID;
     private int Value;
 
+    /**
+     * This method is the constructor of Die class
+     */
     public void Die(){
-        
+        Type = null;
+        ID = 0;
+        Value = 0;
     }
     
     /**
-     * 
+     * This method is the constructor of Die class
      * @param Type
      * @param ID
      * @param Value 
@@ -35,8 +40,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
-     * 
-     * @return 
+     * @return The type of Die(Attack or Defense)
      */
     public String getType() {
         return Type;
@@ -51,8 +55,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
-     * 
-     * @return 
+     * @return The ID of the die
      */
     public int getID() {
         return ID;
@@ -67,8 +70,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
-     * 
-     * @return 
+     * @return The value of the die(null, 1, 2, 3, 4, 5, 6)
      */
     public int getValue() {
         return Value;
@@ -91,7 +93,7 @@ public class Die implements Comparable<Die>{
         for(int i =I-1; i>-1;i--){
           Die d = new Die();
           d.setType("ATTACK");
-          d.setValue(random()); 
+          d.setValue((int) ((Math.random()*6)+1)); 
           d.setID(ID);
           ID++;
           ATTACKS[i]=d;
@@ -106,7 +108,7 @@ public class Die implements Comparable<Die>{
         for(int i =J-1; i>-1;i--){
           Die d = new Die();
           d.setType("DEFENSE");
-          d.setValue(random()); 
+          d.setValue((int) ((Math.random()*6)+1)); 
           d.setID(ID);
           ID++;
           DEFENSE[i]=d;
@@ -139,10 +141,6 @@ public class Die implements Comparable<Die>{
         }
         attack.setDefense(dice1);  
         attack.setarmy(I);
-    }
-    
-    private static int random(){
-        return (int) ((Math.random()*6)+1);
     }
     
     /**

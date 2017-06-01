@@ -11,7 +11,7 @@ public class Continent {
     private Territory[] Territories;
     
     /**
-     * 
+     * This method is the construct of Continent class
      * @param name
      * @param owner
      * @param army
@@ -25,7 +25,6 @@ public class Continent {
     }
     
     /**
-     * 
      * @param value 
      */
     public void setName(String value){
@@ -33,16 +32,14 @@ public class Continent {
     }
     
     /**
-     * 
-     * @return 
+     * @return The name of the continent 
      */
     public String getName(){
         return Name;
     }
     
     /**
-     * 
-     * @return 
+     * @return The array territory of the continent 
      */
     public Territory[] getTerritory(){
         return Territories;
@@ -57,8 +54,7 @@ public class Continent {
     }
     
     /**
-     * 
-     * @return 
+     * @return The owner of the continent
      */
     public String getOwner(){
         return Owner;
@@ -73,8 +69,7 @@ public class Continent {
     }
     
     /**
-     * 
-     * @return 
+     * @return the army of the continent
      */
     public int getArmy(){
         return Army;

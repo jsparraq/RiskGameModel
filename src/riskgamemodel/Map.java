@@ -24,15 +24,13 @@ public class Map {
     }
     
     /**
-     * 
-     * @return 
+     * @return The boundary of the map
      */
     public Boundary getboundary(){
         return Boundary;
     }
     
     /**
-     * 
      * @param value 
      */
     public void setName(String value){
@@ -40,8 +38,7 @@ public class Map {
     }
     
     /**
-     * 
-     * @return 
+     * @return The name of the map 
      */
     public String getName(){
         return Name;
