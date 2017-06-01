@@ -14,7 +14,9 @@ public class Territory {
      * 
      */
     public Territory(){
-        
+        Name = null;
+        Owner = null;
+        Army = 0;
     }
     
     /**
@@ -39,7 +41,7 @@ public class Territory {
     
     /**
      * 
-     * @return 
+     * @return the name's territory 
      */
     public String getName() {
         return Name;
@@ -54,8 +56,7 @@ public class Territory {
     }
     
     /**
-     * 
-     * @return 
+     * @return The owner's territory
      */
     public String getOwner() {
         return Owner;
@@ -71,16 +72,14 @@ public class Territory {
     
     
     /**
-     * 
-     * @return 
+     * @return The army's territory
      */
     public int getArmy() {
         return Army;
     }
     
     /**
-     * 
-     * @return 
+     * @return The name and army of the territory. If the territory does not have owner then add without owner in the string return  
      */
     public String getString() {
         if(Owner.equals("WHITE")){

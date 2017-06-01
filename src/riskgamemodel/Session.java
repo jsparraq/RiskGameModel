@@ -83,8 +83,7 @@ public class Session {
     }
     
     /**
-     * 
-     * @return 
+     * @return The type of the session
      */
     public String getType(){
         return Type;

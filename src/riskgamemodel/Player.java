@@ -50,7 +50,7 @@ public class Player {
     }
 
     /**
-     * @return The turn of the player
+     * @return The turn's player
      */
     public boolean getTurn() {
         return this.Turn;
@@ -65,8 +65,7 @@ public class Player {
     }
 
     /**
-     * 
-     * @return 
+     * @return The capture state's player  
      */
     public String getCaptureState() {
         return this.CaptureState;
@@ -81,15 +80,13 @@ public class Player {
     }
 
     /**
-     * 
-     * @return 
+     * @return The color's player
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * 
      * @param value 
      */
     public void setTerritoryAmount(int value) {
@@ -97,8 +94,7 @@ public class Player {
     }
 
     /**
-     * 
-     * @return 
+     * @return The territory amount's player 
      */
     public int getTerritoryAmount() {
         return this.TerritoryAmount;
@@ -113,8 +109,7 @@ public class Player {
     }
 
     /**
-     * 
-     * @return 
+     * @return The card amount's player 
      */
     public int getCardAmount() {
         return this.CardAmount;
@@ -130,7 +125,7 @@ public class Player {
 
     /**
      * 
-     * @return 
+     * @return  the army's player
      */
     public int getArmy() {
         return this.Army;
