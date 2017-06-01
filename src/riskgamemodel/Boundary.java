@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package riskgamemodel;
 
 
@@ -14,8 +9,10 @@ public class Boundary {
     private int ID;
     private Territory[] Territories;
     private Territory[] Neighbours;
+    
+    
     /**
-     * 
+     * This method is the constructor of Boundary class
      * @param id
      * @param territories
      * @param Neighbours 
@@ -38,23 +35,21 @@ public class Boundary {
     }
 
     /**
-     * 
-     * @return 
+     * @return The ID of the boundary
      */
     public int getID() {
         return ID;
     }
     
     /**
-     * 
-     * @return 
+     * @return The array territory 
      */
     public Territory[] getTerritories() {
         return this.Territories;
     }
+    
     /**
-     * 
-     * @return 
+     * @return The array getNeighbours
      */
     public  Territory[] getNeighbours() {
         return this.Neighbours;

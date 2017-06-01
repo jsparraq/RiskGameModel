@@ -11,8 +11,9 @@ public class Attack {
     private Territory attacker;
     private Territory defender;
     
+    
     /**
-     * 
+     * This method is the constructor of Attack class
      * @param id
      * @param Army
      * @param Dicesattacks
@@ -47,8 +48,7 @@ public class Attack {
     }
     
     /**
-     * 
-     * @return 
+     * @return The army of the attack
      */
     public int getarmy(){
         return army;
@@ -74,8 +74,7 @@ public class Attack {
     }
     
     /**
-     * 
-     * @return 
+     * @return The array of dice of the attacker territory
      */
     public Die[] getAttacks(){
         return Attacks;
@@ -83,15 +82,14 @@ public class Attack {
     
     /**
      * 
-     * @param dice 
+     * @param dice  
      */
     public void setDefense(Die[] dice){
         Defense = dice;
     }
     
     /**
-     * 
-     * @return 
+     * @return The array of dice of the defender territory
      */
     public Die[] getDefense(){
         return Defense;
@@ -99,15 +97,14 @@ public class Attack {
     
     /**
      * 
-     * @return 
+     * @return The attacker territory
      */
     public Territory getAttacker(){
         return attacker;
     }
     
     /**
-     * 
-     * @return 
+     * @return The defender territory
      */
     public Territory getDefender(){
         return defender;

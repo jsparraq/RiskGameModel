@@ -10,20 +10,23 @@ public class Session {
     private String State;
     private Player[] players;
     private Map map;
+    private String Type;
     
     private Session(){}
+    
     /**
-     * 
+     * This method create a object of Session
      * @param id
      * @param state
      * @param Players
      * @param map1 
      */
-    public Session(int id, String state,Player[] Players, Map map1){
+    public Session(int id, String state,Player[] Players, Map map1, String type){
         ID = id;
         State = state;
         players = Players;
         map = map1;
+        Type = type;
     }
     
     
@@ -36,8 +39,7 @@ public class Session {
     }
     
     /**
-     * 
-     * @return 
+     * @return The ID of the session
      */
     public int getID(){
         return ID;
@@ -47,7 +49,7 @@ public class Session {
      * 
      * @param value 
      */
-    public void setStete(String value){
+    public void setState(String value){
         this.State = value;
     }
     
@@ -60,8 +62,7 @@ public class Session {
     }
     
     /**
-     * 
-     * @return 
+     * @return The players of the session
      */
     public Player[] getPlayers(){
         return players;
@@ -69,9 +70,23 @@ public class Session {
     
     /**
      * 
-     * @return 
+     * @return The map of the session
      */
     public Map getMap(){
         return this.map;
+    }
+    /**
+     * @param value 
+     */
+    public void setType(String value){
+        Type = value;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String getType(){
+        return Type;
     }
 }
