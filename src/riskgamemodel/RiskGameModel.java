@@ -16,10 +16,10 @@ public class RiskGameModel {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player player1 = new Player(false,"non-capture","BLUE",1,2,0);
-        Player player2 = new Player(true,"non-capture","RED",9,2,0);
-        Player player3 = new Player(false,"non-capture","GREEN",1,1,0);
-        Player player4 = new Player(false,"non-capture","PURPLE",1,0,0);
+        Player player1 = new Player(false,"non-capture","BLUE",1,2,0,0);
+        Player player2 = new Player(true,"non-capture","RED",9,2,0,0);
+        Player player3 = new Player(false,"non-capture","GREEN",1,1,0,0);
+        Player player4 = new Player(false,"non-capture","PURPLE",1,0,0,0);
         Player[] players = new Player[]{player1,player2,player3,player4};
         Territory territory1 = new Territory("A","WHITE",0);
         Territory territory2 = new Territory("B","WHITE",0);

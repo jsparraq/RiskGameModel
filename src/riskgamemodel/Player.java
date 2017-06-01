@@ -11,6 +11,7 @@ public class Player {
     private int TerritoryAmount;
     private int CardAmount;
     private int Army;
+    private int ContinentAmount;
     
     /**
      * This method is the constructor of Player class
@@ -21,6 +22,7 @@ public class Player {
         TerritoryAmount = 0;
         CardAmount = 0;
         Army = 0;
+        
     }
     
     /**
@@ -29,16 +31,18 @@ public class Player {
      * @param capture
      * @param color
      * @param territoryamount
+     * @param continentamount
      * @param cardamount
      * @param army 
      */
-    public Player(boolean turn, String capture, String color,int territoryamount, int cardamount, int army){
+    public Player(boolean turn, String capture, String color,int territoryamount,int continentamount, int cardamount, int army){
         Turn = turn;
         CaptureState = capture;
         Color = color;
         TerritoryAmount = territoryamount;
         CardAmount = cardamount;
         Army = army;
+        ContinentAmount = continentamount;
     }
     
     /**
