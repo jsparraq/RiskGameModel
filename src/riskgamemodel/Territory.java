@@ -2,7 +2,7 @@ package riskgamemodel;
 
 /**
  *
- * @author Sebastian
+ * @author UNC Risk Game Model
  */
 public class Territory {
     
@@ -11,7 +11,7 @@ public class Territory {
     private int Army;
     
     /**
-     * 
+     * This method is the constructor of territory class
      */
     public Territory(){
         Name = null;

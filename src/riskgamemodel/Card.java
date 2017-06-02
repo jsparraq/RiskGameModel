@@ -101,6 +101,19 @@ public class Card {
                     player.setArmy(player.getArmy() + values[5] + (player.gettrades() - 6)*5);
                     player.settrades(player.gettrades() + 1);
                 }else{
+                    player.setArmy(player.getArmy() + values[3]);
+                    player.settrades(player.gettrades() + 1);
+                }
+                return true;
+            }else if(CARDS_TRADES[0].getDesign().equals(CARDS_TRADES[1].getDesign()) && CARDS_TRADES[2].getDesign().equals(CARDS_TRADES[1].getDesign())){
+                card1.setOwner("WHITE");
+                card2.setOwner("WHITE");
+                card3.setOwner("WHITE");
+                player.setCardAmount(player.getCardAmount() - 3);
+                if (player.gettrades() > 6){
+                    player.setArmy(player.getArmy() + values[5] + (player.gettrades() - 6)*5);
+                    player.settrades(player.gettrades() + 1);
+                }else{
                     player.setArmy(player.getArmy() + values[player.gettrades() - 1]);
                     player.settrades(player.gettrades() + 1);
                 }
