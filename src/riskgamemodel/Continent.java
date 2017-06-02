@@ -25,7 +25,7 @@ public class Continent {
     }
     
     /**
-     * this method sets the value of the name of the Continet
+     * This method sets the value of the name of the Continet
      * @param value 
      */
     public void setName(String value){
@@ -33,7 +33,7 @@ public class Continent {
     }
     
     /**
-     * this method gets the value of the name of the Continet
+     * This method gets the value of the name of the Continet
      * @return The name of the continent 
      */
     public String getName(){
@@ -41,7 +41,7 @@ public class Continent {
     }
     
     /**
-     * this method gets the value of the territoriy of the Continet
+     * This method gets the value of the territoriy of the Continet
      * @return The array territory of the continent 
      */
     public Territory[] getTerritory(){
@@ -49,7 +49,7 @@ public class Continent {
     }
     
     /**
-     * this method sets the value of the owner of the Continet
+     * This method sets the value of the owner of the Continet
      * @param value 
      */
     public void setOwner(String value){
@@ -57,7 +57,7 @@ public class Continent {
     }
     
     /**
-     * this method gets the value of the owner of the Continet
+     * This method gets the value of the owner of the Continet
      * @return The owner of the continent
      */
     public String getOwner(){
@@ -65,7 +65,7 @@ public class Continent {
     }
     
     /**
-     * this method sets the value of the army of the Continet
+     * This method sets the value of the army of the Continet
      * @param value 
      */
     public void setArmy(int value){
@@ -73,7 +73,7 @@ public class Continent {
     }
     
     /**
-     * this method gets the value of the army of the Continet
+     * This method gets the value of the army of the Continet
      * @return the army of the continent
      */
     public int getArmy(){
