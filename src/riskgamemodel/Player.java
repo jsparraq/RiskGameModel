@@ -199,13 +199,13 @@ public class Player {
     }
       /**
      * 
-     * This methid gets the value of trade of the player
+     * This method gets the value of trade of the player
      */
     public int gettrades(){
         return trades;
     }
       /**
-     * This methid sets the value of trade of the player
+     * This method sets the value of trade of the player
      * @param value 
      */
     public void settrades(int value){

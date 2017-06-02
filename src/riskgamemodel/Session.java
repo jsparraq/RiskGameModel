@@ -15,7 +15,7 @@ public class Session {
     private Session(){}
     
     /**
-     * This method create a object of Session
+     * This method create an object of Session
      * @param id
      * @param state
      * @param Players
@@ -31,7 +31,7 @@ public class Session {
     
     
     /**
-     * 
+     * This method sets the value of the id of the session
      * @param value 
      */
     public void setID(int value){
@@ -39,6 +39,7 @@ public class Session {
     }
     
     /**
+     * This method gets the value of the id of the session
      * @return The ID of the session
      */
     public int getID(){
@@ -46,7 +47,7 @@ public class Session {
     }
     
     /**
-     * 
+     * This method sets the value of the state of the session
      * @param value 
      */
     public void setState(String value){
@@ -54,7 +55,7 @@ public class Session {
     }
     
     /**
-     * 
+     * This method gets the value of the state of the session
      * @return 
      */
     public String getState(){
@@ -62,6 +63,7 @@ public class Session {
     }
     
     /**
+     * This method gets the value of the players of the session
      * @return The players of the session
      */
     public Player[] getPlayers(){
@@ -69,13 +71,14 @@ public class Session {
     }
     
     /**
-     * 
+     * This method gets the value of the map of the session
      * @return The map of the session
      */
     public Map getMap(){
         return this.map;
     }
     /**
+     * This method sets the type value of the session
      * @param value 
      */
     public void setType(String value){
@@ -83,6 +86,7 @@ public class Session {
     }
     
     /**
+     *  This method gets the type value of the session
      * @return The type of the session
      */
     public String getType(){
