@@ -35,7 +35,7 @@ public class Card {
         }
         
         /**
-         * 
+         * this method sets the vlue of Type 
          * @param value 
          */
         public void setType(String value){
@@ -43,6 +43,7 @@ public class Card {
         }
         
         /**
+         * this method gets the value of type 
          * @return The type of the card
          */
         public String getType(){
@@ -50,7 +51,7 @@ public class Card {
         }
         
         /**
-         * 
+         * this method setes the vlue od the owner
          * @param value 
          */
         public void setOwner(String value){
@@ -58,6 +59,7 @@ public class Card {
         }
         
         /**
+         * this method gets the value of the owner
          * @return The owner of the owner
          */
         public String getOwner(){
@@ -65,7 +67,7 @@ public class Card {
         }
         
         /**
-         * 
+         * this method setsnthe value of the Desingn
          * @param value 
          */
         public void setDesign(String value){
@@ -73,6 +75,7 @@ public class Card {
         }
         
         /**
+         * this method gets the value of the disign
          * @return The design of the card
          */
         public String getDesign(){
@@ -80,7 +83,8 @@ public class Card {
         }
         
         /**
-         * 
+         * this method let you trade the cards if you want at the start of the turn and received the army for it. 
+         * changes the owner value to white and fi they have more that 6 card it trades automatically
          * @param player
          * @param card1
          * @param card2
@@ -108,7 +112,7 @@ public class Card {
             }
             return false;
         }
-        /**
+        /**this method let you print the card
          * @return 
          */
         public String getString(){            
