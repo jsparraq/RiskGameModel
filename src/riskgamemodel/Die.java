@@ -11,6 +11,7 @@ public class Die implements Comparable<Die>{
     private int Value;
 
     /**
+     * 
      * This method is the constructor of Die class
      */
     public void Die(){
@@ -32,7 +33,7 @@ public class Die implements Comparable<Die>{
     }
     
     /**
-     * 
+     * this method sets the value of the type
      * @param value 
      */
     public void setType(String value) {
@@ -40,6 +41,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
+     * this method gets the value of the type
      * @return The type of Die(Attack or Defense)
      */
     public String getType() {
@@ -47,7 +49,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
-     * 
+     * this method sets the value of the id
      * @param value 
      */
     public void setID(int value) {
@@ -55,6 +57,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
+     * this method gets the value of the id
      * @return The ID of the die
      */
     public int getID() {
@@ -62,7 +65,7 @@ public class Die implements Comparable<Die>{
     }
 
     /**
-     * 
+     * this method sets the value of the value
      * @param value 
      */
     public void setValue(int value) {
@@ -77,7 +80,8 @@ public class Die implements Comparable<Die>{
     }
     
     /**
-     * 
+     * this method let you know how many dies the attacker can attack and the defender can defend
+     * then let you roll them with the value between 1 and 6, and finally compare the result and subtract the army that lost in the attack
      * @param attack 
      */
     public static void Rolls(Attack attack){
@@ -144,7 +148,7 @@ public class Die implements Comparable<Die>{
     }
     
     /**
-     * 
+     * this method lets organize the dies by the value
      * @param o
      * @return 
      */

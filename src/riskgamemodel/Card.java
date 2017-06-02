@@ -35,7 +35,7 @@ public class Card {
         }
         
         /**
-         * this method sets the vlue of Type 
+         * this method sets the vlue of Type  of the card
          * @param value 
          */
         public void setType(String value){
@@ -43,7 +43,7 @@ public class Card {
         }
         
         /**
-         * this method gets the value of type 
+         * this method gets the value of type  of the card
          * @return The type of the card
          */
         public String getType(){
@@ -51,7 +51,7 @@ public class Card {
         }
         
         /**
-         * this method setes the vlue od the owner
+         * this method setes the vlue od the owner of the card
          * @param value 
          */
         public void setOwner(String value){
@@ -59,7 +59,7 @@ public class Card {
         }
         
         /**
-         * this method gets the value of the owner
+         * this method gets the value of the owner of the card
          * @return The owner of the owner
          */
         public String getOwner(){
@@ -67,7 +67,7 @@ public class Card {
         }
         
         /**
-         * this method setsnthe value of the Desingn
+         * this method setsnthe value of the Desingn of the card
          * @param value 
          */
         public void setDesign(String value){
@@ -75,7 +75,7 @@ public class Card {
         }
         
         /**
-         * this method gets the value of the disign
+         * this method gets the value of the disign of the card
          * @return The design of the card
          */
         public String getDesign(){
