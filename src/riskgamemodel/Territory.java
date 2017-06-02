@@ -20,7 +20,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method creates an object of Territory
      * @param name
      * @param owner
      * @param army 
@@ -32,7 +32,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method sets the value of the territoy
      * @param value 
      */
     public void setName(String value) {
@@ -40,7 +40,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method gets the value of the territoy
      * @return the name's territory 
      */
     public String getName() {
@@ -48,7 +48,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method sets the owner of the territoy
      * @param value 
      */
     public void setOwner(String value) {
@@ -56,6 +56,7 @@ public class Territory {
     }
     
     /**
+     * This method gets the owner of the territoy
      * @return The owner's territory
      */
     public String getOwner() {
@@ -63,7 +64,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method sets the army of the territoy
      * @param value 
      */
     public void setArmy(int value) {
@@ -72,6 +73,7 @@ public class Territory {
     
     
     /**
+     * This method gets the army of the territoy
      * @return The army's territory
      */
     public int getArmy() {
@@ -89,7 +91,7 @@ public class Territory {
     }
     
     /**
-     * 
+     * This method lets move an army from one territory to other.
      * @param TerritoryA
      * @param TerritoryB 
      */

@@ -26,6 +26,7 @@ public class Boundary {
     }
     
     /**
+     * This method sets the value of id of the boundary
      * @param value 
      */
     public void setID(int value) {
@@ -33,6 +34,7 @@ public class Boundary {
     }
 
     /**
+     * This method gets the value of ID of the boundary
      * @return The ID of the boundary
      */
     public int getID() {
@@ -40,6 +42,7 @@ public class Boundary {
     }
     
     /**
+     * This method gets the territories of the boundary
      * @return The array territory 
      */
     public Territory[] getTerritories() {
@@ -47,6 +50,7 @@ public class Boundary {
     }
     
     /**
+     * This method gets the neighbours of the boundary
      * @return The array getNeighbours
      */
     public  Territory[] getNeighbours() {

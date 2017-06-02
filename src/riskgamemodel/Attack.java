@@ -51,6 +51,7 @@ public class Attack {
     }
     
     /**
+     * This method sets the value of the army of the attack
      * @return The army of the attack
      */
     public int getarmy(){
@@ -58,7 +59,7 @@ public class Attack {
     }
     
     /**
-     * 
+     * This method creates an Attack and returns an attack
      * @param TAtaque
      * @param TDefensa
      * @return 
@@ -69,6 +70,7 @@ public class Attack {
     }
     
     /**
+     * This method set the value of the Attacks  of the attack(the dies in the attack).
      * @param dice 
      */
     public void setAttacks(Die[] dice){
@@ -76,6 +78,7 @@ public class Attack {
     }
     
     /**
+     * This method returns the Attacks of the attack (the dies in the attack)
      * @return The array of dice of the attacker territory
      */
     public Die[] getAttacks(){
@@ -83,6 +86,7 @@ public class Attack {
     }
     
     /**
+     * This method set the defense of the attack
      * @param dice  
      */
     public void setDefense(Die[] dice){
@@ -90,6 +94,7 @@ public class Attack {
     }
     
     /**
+     * This method get the defense  of the attack
      * @return The array of dice of the defender territory
      */
     public Die[] getDefense(){
@@ -97,6 +102,7 @@ public class Attack {
     }
     
     /**
+     * This method gets the attacker of the attack
      * @return The attacker territory
      */
     public Territory getAttacker(){
@@ -104,6 +110,7 @@ public class Attack {
     }
     
     /**
+     * This method get the defender of the attack
      * @return The defender territory
      */
     public Territory getDefender(){

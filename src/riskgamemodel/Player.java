@@ -47,7 +47,7 @@ public class Player {
     }
     
     /**
-     * 
+     * This method sets the turn of the player
      * @param value 
      */
     public void setTurn(boolean value) {
@@ -55,6 +55,7 @@ public class Player {
     }
 
     /**
+     * This method gets the turn of the player
      * @return The turn's player
      */
     public boolean getTurn() {
@@ -62,7 +63,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method sets the capture state of the player
      * @param value 
      */
     public void setCaptureState(String value) {
@@ -70,6 +71,7 @@ public class Player {
     }
 
     /**
+     * This method gets the captured state of the player
      * @return The capture state's player  
      */
     public String getCaptureState() {
@@ -77,7 +79,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method sets the color of the player
      * @param value 
      */
     public void setColor(String value) {
@@ -85,6 +87,7 @@ public class Player {
     }
 
     /**
+     * This method gets the color of the player
      * @return The color's player
      */
     public String getColor() {
@@ -92,6 +95,7 @@ public class Player {
     }
 
     /**
+     * This method sets the territory amount of the player
      * @param value 
      */
     public void setTerritoryAmount(int value) {
@@ -99,6 +103,7 @@ public class Player {
     }
 
     /**
+     * This method gets the territory amount of the player
      * @return The territory amount's player 
      */
     public int getTerritoryAmount() {
@@ -106,7 +111,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method sets the cards amount of the player
      * @param value 
      */
     public void setCardAmount(int value) {
@@ -114,6 +119,8 @@ public class Player {
     }
 
     /**
+     * 
+     * This method gets the cards amount of the player
      * @return The card amount's player 
      */
     public int getCardAmount() {
@@ -122,6 +129,7 @@ public class Player {
 
     /**
      * 
+     * This method sets the army of the player
      * @param value 
      */
     public void setArmy(int value) {
@@ -130,6 +138,7 @@ public class Player {
 
     /**
      * 
+     * This method gets the army of the player
      * @return  the army's player
      */
     public int getArmy() {
@@ -137,7 +146,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method let the player accept the turn and get the amount of army that he get in the beginning
      * @param player
      * @param session 
      */
@@ -153,7 +162,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method lets the player finish the turn and gives a card if he can and reset the states needed
      * @param player
      * @param Cards 
      */
@@ -172,7 +181,7 @@ public class Player {
     }
 
     /**
-     * 
+     * This method lets place one army in one territory.
      * @param player
      * @param Territorytoplace 
      */
@@ -188,11 +197,17 @@ public class Player {
         }
 
     }
-    
+      /**
+     * 
+     * This method gets the value of trade of the player
+     */
     public int gettrades(){
         return trades;
     }
-    
+      /**
+     * This method sets the value of trade of the player
+     * @param value 
+     */
     public void settrades(int value){
         trades = value;
     }

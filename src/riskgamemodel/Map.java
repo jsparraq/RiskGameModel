@@ -10,7 +10,7 @@ public class Map {
     private Boundary Boundary;
     
     /**
-     * 
+     *  This method is the constructor of Map class
      * @param name
      * @param continents
      * @param cards
@@ -24,6 +24,7 @@ public class Map {
     }
     
     /**
+     * This method gets the boundary of the map
      * @return The boundary of the map
      */
     public Boundary getboundary(){
@@ -31,6 +32,7 @@ public class Map {
     }
     
     /**
+     * This method sets the name of the map
      * @param value 
      */
     public void setName(String value){
@@ -38,6 +40,7 @@ public class Map {
     }
     
     /**
+     * This method gets the name of the map
      * @return The name of the map 
      */
     public String getName(){
@@ -45,7 +48,7 @@ public class Map {
     }
     
     /**
-     * 
+     * This method gets the continents of the map
      * @return 
      */
     public Continent[] getContinents(){
@@ -53,7 +56,7 @@ public class Map {
     }
     
     /**
-     * 
+     * This method gets the cards of the map
      * @return 
      */
     public Card[] getCards(){
