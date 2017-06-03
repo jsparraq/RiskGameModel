@@ -11,6 +11,15 @@ public class Continent {
     private Territory[] Territories;
     
     /**
+     * 
+     */
+    public Continent(){
+        Name = null;
+        Owner = null;
+        Army = 0;
+        Territories = null;
+    }
+    /**
      * This method is the construct of Continent class
      * @param name
      * @param owner

@@ -100,4 +100,36 @@ public class Territory {
         TerritoryB.setArmy(TerritoryB.getArmy() + 1);
     }
     
+    /**
+     * 
+     * @param attack
+     * @param army
+     * @param sessionstart 
+     */
+    public static void conquers(Attack attack,String army ,Session sessionstart){
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        attack.getDefender().setOwner(playerstart.getColor());        
+        attack.getDefender().setArmy(attack.getDefender().getArmy() + Integer.parseInt(army));
+        attack.getAttacker().setArmy(attack.getAttacker().getArmy() - Integer.parseInt(army));
+        
+        Territory name_conquered = attack.getDefender();
+        Continent name_continent = new Continent();
+        for (int i = 0; i < sessionstart.getMap().getContinents().length; i++) {
+            for (int j = 0; j < sessionstart.getMap().getContinents()[i].getTerritory().length; j++) {
+                if(name_conquered == sessionstart.getMap().getContinents()[i].getTerritory()[j]){
+                    name_continent = sessionstart.getMap().getContinents()[i];
+                }
+            }
+        }
+        
+        
+        playerstart.setCaptureState("CAPTURE");
+    }
+    
 }

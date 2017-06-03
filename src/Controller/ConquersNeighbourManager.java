@@ -44,17 +44,7 @@ public class ConquersNeighbourManager {
      * @param sessionstart 
      */
     public static void Button_Finish(Attack attack,JFrame window,String army,Session sessionstart){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
-        attack.getAttacker().setArmy(attack.getAttacker().getArmy() - Integer.parseInt(army));
-        attack.getDefender().setArmy(attack.getDefender().getArmy() + Integer.parseInt(army));
-        attack.getDefender().setOwner(playerstart.getColor());
-        playerstart.setCaptureState("CAPTURE");
+        Territory.conquers(attack, army, sessionstart);
         window.setVisible(false);
         new Main_Interface(sessionstart).setVisible(true);
     }
