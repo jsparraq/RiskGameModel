@@ -95,6 +95,21 @@ public class Player {
     }
 
     /**
+     * This method sets the Continent amount of the player
+     * @param value 
+     */
+    public void setContinentAmount(int value) {
+        this.ContinentAmount = value;
+    }
+
+    /**
+     * This method gets the Continent amount of the player
+     * @return The Continent amount's player 
+     */
+    public int getContinentAmount() {
+        return this.ContinentAmount;
+    }
+    /**
      * This method sets the territory amount of the player
      * @param value 
      */
