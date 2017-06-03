@@ -120,10 +120,10 @@ public class Territory {
         
         Territory name_conquered = attack.getDefender();
         Continent name_continent = new Continent();
-        for (int i = 0; i < sessionstart.getMap().getContinents().length; i++) {
-            for (int j = 0; j < sessionstart.getMap().getContinents()[i].getTerritory().length; j++) {
-                if(name_conquered == sessionstart.getMap().getContinents()[i].getTerritory()[j]){
-                    name_continent = sessionstart.getMap().getContinents()[i];
+        for (Continent continent : sessionstart.getMap().getContinents()) {
+            for (Territory territory : continent.getTerritory()) {
+                if (name_conquered == territory) {
+                    name_continent = continent;
                 }
             }
         }
@@ -139,10 +139,27 @@ public class Territory {
             }
         }
         if (counter == territory_amount){
-            name_continent.setOwner(playerstart.getColor());
-            playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
+            if(name_continent.getOwner().equals("WHITE")){
+                name_continent.setOwner(playerstart.getColor());
+                playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
+                System.out.println("CONQUISTO " + name_continent.getName());
+            }else{
+                for (Player player : players) {
+                    if (player.getColor().equals(name_continent.getOwner())) {
+                        player.setContinentAmount(player.getContinentAmount() - 1);
+                    }
+                }
+                name_continent.setOwner(playerstart.getColor());
+                playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
+                System.out.println("CONQUISTO " + name_continent.getName());
+            }
         }
         playerstart.setCaptureState("CAPTURE");
+        if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && sessionstart.getType().equals("World domination risk")){
+            System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
+            System.out.println("Ganador");
+        }
+            
     }
     
 }

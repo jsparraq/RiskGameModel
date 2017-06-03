@@ -16,18 +16,18 @@ public class RiskGameModel {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player player1 = new Player(false,"non-capture","BLUE",1,2,0,0,0);
-        Player player2 = new Player(true,"non-capture","RED",9,2,0,0,0);
-        Player player3 = new Player(false,"non-capture","GREEN",1,1,0,0,0);
+        Player player1 = new Player(false,"non-capture","BLUE",4,0,2,0,0);
+        Player player2 = new Player(true,"non-capture","RED",1,0,3,0,0);
+        Player player3 = new Player(false,"non-capture","GREEN",1,0,0,0,0);
         Player player4 = new Player(false,"non-capture","PURPLE",1,0,0,0,0);
         Player[] players = new Player[]{player1,player2,player3,player4};
-        Territory territory1 = new Territory("A","WHITE",0);
-        Territory territory2 = new Territory("B","WHITE",0);
-        Territory territory3 = new Territory("C","RED",1);
-        Territory territory4 = new Territory("D","RED",4);
-        Territory territory5 = new Territory("E","RED",5);
+        Territory territory1 = new Territory("A","RED",1000);
+        Territory territory2 = new Territory("B","BLUE",1);
+        Territory territory3 = new Territory("C","BLUE",1);
+        Territory territory4 = new Territory("D","BLUE",1);
+        Territory territory5 = new Territory("E","BLUE",1);
         Territory territory6 = new Territory("F","GREEN",1);
-        Territory territory7 = new Territory("G","PURPLE",3);
+        Territory territory7 = new Territory("G","PURPLE",1);
         Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
         Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});
         Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory6,territory7});
@@ -42,7 +42,7 @@ public class RiskGameModel {
         Territory[] B = new Territory[]{territory2,territory1,territory3,territory2,territory4,territory3,territory5,territory4,territory6,territory5,territory7,territory6,territory1,territory7};
         Boundary boundary = new Boundary(1,A,B);
         Session session = new Session(1,"RUN",players,new Map("ameroki_pic",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary),"as");
-        new AcceptTurnManager(session);
+        AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
     }
     
 }
