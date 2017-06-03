@@ -36,7 +36,7 @@ public class Player {
      * @param cardamount
      * @param army 
      */
-    public Player(boolean turn, String capture, String color,int territoryamount,int continentamount, int cardamount, int army){
+    public Player(boolean turn, String capture, String color,int territoryamount,int continentamount, int cardamount, int army,int Trades){
         Turn = turn;
         CaptureState = capture;
         Color = color;
@@ -44,6 +44,7 @@ public class Player {
         CardAmount = cardamount;
         Army = army;
         ContinentAmount = continentamount;
+        trades = Trades;
     }
     
     /**
