@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import riskgamemodel.Attack;
 import riskgamemodel.Die;
 import riskgamemodel.Session;
+import riskgamemodel.Territory;
 
 /**
  *

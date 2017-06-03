@@ -127,8 +127,21 @@ public class Territory {
                 }
             }
         }
-        
-        
+        int territory_amount = name_continent.getTerritory().length;
+        int counter = 0;
+        for (Continent continent : sessionstart.getMap().getContinents()) {
+            if (continent == name_continent) {
+                for (Territory territory : continent.getTerritory()) {
+                    if (territory.getOwner().equals(playerstart.getColor())) {
+                        counter++;
+                    }
+                }
+            }
+        }
+        if (counter == territory_amount){
+            name_continent.setOwner(playerstart.getColor());
+            playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
+        }
         playerstart.setCaptureState("CAPTURE");
     }
     
