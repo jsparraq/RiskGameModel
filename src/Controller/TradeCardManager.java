@@ -64,31 +64,36 @@ public class TradeCardManager {
                 card3 = card;
             }
         }
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
-        ArrayList<Card> cards_player = new ArrayList();
-        for (Card card : cards) {
-            if (card.getOwner().equals(playerstart.getColor())) {
-                cards_player.add(card);
-            }
-        }
-        if(cards_player.size() > 6){
-            while(!Card.Trades(playerstart, card1, card2, card3) && cards_player.size() > 6){
-            }
-            window.setVisible(false);
-            new Place_army_Interface(sessionstart).setVisible(true);
-        }else if(cards_player.size() < 3){
+        if(card1.getDesign() == null || card2.getDesign() == null || card3.getDesign() == null){
             window.setVisible(false);
             new Place_army_Interface(sessionstart).setVisible(true);
         }else{
-            Card.Trades(playerstart, card1, card2, card3);
-            window.setVisible(false);
-            new Place_army_Interface(sessionstart).setVisible(true);
+            Player[] players = sessionstart.getPlayers();
+            Player playerstart = new Player();
+            for (Player player : players) {
+                if (player.getTurn()) {
+                    playerstart = player;
+                }
+            }
+            ArrayList<Card> cards_player = new ArrayList();
+            for (Card card : cards) {
+                if (card.getOwner().equals(playerstart.getColor())) {
+                    cards_player.add(card);
+                }
+            }
+            if(cards_player.size() > 6){
+                while(!Card.Trades(playerstart, card1, card2, card3) && cards_player.size() > 6){
+                }
+                window.setVisible(false);
+                new Place_army_Interface(sessionstart).setVisible(true);
+            }else if(cards_player.size() < 3){
+                window.setVisible(false);
+                new Place_army_Interface(sessionstart).setVisible(true);
+            }else{
+                Card.Trades(playerstart, card1, card2, card3);
+                window.setVisible(false);
+                new Place_army_Interface(sessionstart).setVisible(true);
+            }
         }
     }
     

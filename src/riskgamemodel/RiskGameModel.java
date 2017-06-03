@@ -31,11 +31,11 @@ public class RiskGameModel {
         Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
         Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});
         Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory6,territory7});
-        Card card1 = new Card("STANDARD","BLUE","Infantry",territory1);
-        Card card2 = new Card("STANDARD","BLUE","Cavalry",territory2);
-        Card card3 = new Card("STANDARD","RED","Artillery",territory3);
-        Card card4 = new Card("STANDARD","RED","Infantry",territory4);
-        Card card5 = new Card("STANDARD","RED","Cavalry",territory5);
+        Card card1 = new Card("STANDARD","WHITE","Infantry",territory1);
+        Card card2 = new Card("STANDARD","WHITE","Cavalry",territory2);
+        Card card3 = new Card("STANDARD","WHITE","Artillery",territory3);
+        Card card4 = new Card("STANDARD","WHITE","Infantry",territory4);
+        Card card5 = new Card("STANDARD","WHITE","Cavalry",territory5);
         Card card6 = new Card("STANDARD","WHITE","Artillery",territory6);
         Card card7 = new Card("STANDARD","WHITE","Infantry",territory7);
         Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};

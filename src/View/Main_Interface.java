@@ -24,6 +24,14 @@ public class Main_Interface extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+    
+    public Main_Interface(Session session, String a) {
+        sessionstart = session;
+        initComponents();
+        this.setLocationRelativeTo(null);
+        Button_Attack.setEnabled(false);
+        Button_Move_Army.setEnabled(false);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
