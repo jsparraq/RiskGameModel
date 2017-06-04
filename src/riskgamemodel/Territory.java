@@ -137,7 +137,6 @@ public class Territory {
             if(name_continent.getOwner().equals("WHITE")){
                 name_continent.setOwner(playerstart.getColor());
                 playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
-                System.out.println("CONQUISTO " + name_continent.getName());
             }else{
                 Player[] players = sessionstart.getPlayers();
                 for (Player player : players) {
@@ -147,7 +146,6 @@ public class Territory {
                 }
                 name_continent.setOwner(playerstart.getColor());
                 playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
-                System.out.println("CONQUISTO " + name_continent.getName());
             }
         }
         Player[] players = sessionstart.getPlayers();
@@ -158,12 +156,14 @@ public class Territory {
             }
         }
         if (playerenemy.getTerritoryAmount() == 0) {
-            
+            playerenemy.setplaying(false);
         }
         playerstart.setCaptureState("CAPTURE");
-        if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && sessionstart.getType().equals("World domination risk")){
+        if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && (sessionstart.getType().equals("World domination risk") || sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS"))){
             System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
             System.out.println("Ganador");
+        }else{
+            
         }
                    
     }

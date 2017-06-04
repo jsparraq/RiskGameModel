@@ -33,11 +33,7 @@ public class AcceptTurnManager {
             }
         }
         window.setVisible(false);
-        if("START PLACE ARMY".equals(session.getState())){
-            new Place_army_Interface(session,playerstart).setVisible(true);
-        }else{
-            Player.accepts(playerstart,session);
-            new Trade_Cards_Interface(session,playerstart).setVisible(true);
-        }
+        Player.accepts(playerstart,session);
+        new Trade_Cards_Interface(session,playerstart).setVisible(true);
     }
 }
