@@ -123,7 +123,7 @@ public class Card {
                     player.settrades(player.gettrades() + 1);
                 }
                 return true;
-            }else if(CARDS_TRADES[0].Type.equals("WILD") || CARDS_TRADES[1].Type.equals("WILD") || CARDS_TRADES[2].Type.equals("WILD")){
+            }else if(CARDS_TRADES[0].getType().equals("WILD") || CARDS_TRADES[1].getType().equals("WILD") || CARDS_TRADES[2].getType().equals("WILD")){
                 card1.setOwner("WHITE");
                 card2.setOwner("WHITE");
                 card3.setOwner("WHITE");
