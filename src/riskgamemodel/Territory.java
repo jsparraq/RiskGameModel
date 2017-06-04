@@ -105,8 +105,10 @@ public class Territory {
      * @param attack
      * @param army
      * @param sessionstart 
+     * @param playerstart 
      */
     public static void conquers(Attack attack,String army ,Session sessionstart,Player playerstart){
+        String colorenemy = attack.getDefender().getOwner();
         attack.getDefender().setOwner(playerstart.getColor());        
         attack.getDefender().setArmy(attack.getDefender().getArmy() + Integer.parseInt(army));
         attack.getAttacker().setArmy(attack.getAttacker().getArmy() - Integer.parseInt(army));
@@ -148,12 +150,22 @@ public class Territory {
                 System.out.println("CONQUISTO " + name_continent.getName());
             }
         }
+        Player[] players = sessionstart.getPlayers();
+        Player playerenemy = new Player();
+        for (Player player : players) {
+            if (player.getColor().equals(colorenemy)) {
+                playerenemy = player;
+            }
+        }
+        if (playerenemy.getTerritoryAmount() == 0) {
+            
+        }
         playerstart.setCaptureState("CAPTURE");
         if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && sessionstart.getType().equals("World domination risk")){
             System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
             System.out.println("Ganador");
         }
-            
+                   
     }
     
 }

@@ -42,6 +42,7 @@ public class ConquersNeighbourManager {
      * @param window
      * @param army
      * @param sessionstart 
+     * @param playerstart 
      */
     public static void Button_Finish(Attack attack,JFrame window,String army,Session sessionstart,Player playerstart){
         Territory.conquers(attack, army, sessionstart,playerstart);

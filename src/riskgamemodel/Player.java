@@ -6,6 +6,7 @@ package riskgamemodel;
 public class Player {
 
     private boolean Turn;
+    private boolean playing;
     private String CaptureState;
     private String Color;
     private int TerritoryAmount;
@@ -37,8 +38,9 @@ public class Player {
      * @param army 
      * @param Trades 
      */
-    public Player(boolean turn, String capture, String color,int territoryamount,int continentamount, int cardamount, int army,int Trades){
+    public Player(boolean turn,boolean Playing, String capture, String color,int territoryamount,int continentamount, int cardamount, int army,int Trades){
         Turn = turn;
+        playing = Playing;
         CaptureState = capture;
         Color = color;
         TerritoryAmount = territoryamount;
@@ -217,6 +219,7 @@ public class Player {
       /**
      * 
      * This method gets the value of trade of the player
+     * @return 
      */
     public int gettrades(){
         return trades;
@@ -227,6 +230,14 @@ public class Player {
      */
     public void settrades(int value){
         trades = value;
+    }
+    
+    public void setplaying(boolean value){
+        playing = value;
+    }
+    
+    public boolean getplaying(){
+        return playing;
     }
 
 }
