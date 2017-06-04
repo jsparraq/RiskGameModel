@@ -20,10 +20,11 @@ public class MainManager {
      * 
      * @param sessionstart
      * @param window 
+     * @param playerstart 
      */
-    public static void Button_Attack(Session sessionstart,JFrame window){
+    public static void Button_Attack(Session sessionstart,JFrame window,Player playerstart){
         window.setVisible(false);
-        new Declare_attack_Interface(sessionstart).setVisible(true);
+        new Declare_attack_Interface(sessionstart,playerstart).setVisible(true);
     }
     
     /**

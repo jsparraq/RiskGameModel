@@ -17,14 +17,7 @@ public class AttackManager {
      * @param sessionstart
      * @return 
      */
-    public static String[] Territories(Session sessionstart) {
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
+    public static String[] Territories(Session sessionstart,Player playerstart) {
         ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
@@ -48,15 +41,7 @@ public class AttackManager {
      * @param territory
      * @return 
      */
-    public static String[] neighbours(Session sessionstart, String territory) {
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-                break;
-            }
-        }
+    public static String[] neighbours(Session sessionstart, String territory,Player playerstart) {
         Territory territoryA = new Territory();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
@@ -99,9 +84,9 @@ public class AttackManager {
      * @param window
      * @param sessionstart 
      */
-    public static void button_Finish(JFrame window, Session sessionstart) {
+    public static void button_Finish(JFrame window, Session sessionstart,Player playerstart) {
         window.setVisible(false);
-        new Main_Interface(sessionstart).setVisible(true);
+        new Main_Interface(sessionstart,playerstart).setVisible(true);
     }
 
     
@@ -112,7 +97,7 @@ public class AttackManager {
      * @param TerrAtt
      * @param TerrDef 
      */
-    public static void button_RollDie(JFrame window, Session sessionstart, String TerrAtt, String TerrDef) {
+    public static void button_RollDie(JFrame window, Session sessionstart, String TerrAtt, String TerrDef,Player playerstart) {
 
         Continent[] continents = sessionstart.getMap().getContinents();
         Territory territoryattack = new Territory();
@@ -130,6 +115,6 @@ public class AttackManager {
         
         Attack attack = Attack.Declares(territoryattack, territorydefend);
         window.setVisible(false);
-        new Roll_Dice_Interface(sessionstart,attack).setVisible(true);
+        new Roll_Dice_Interface(sessionstart,attack,playerstart).setVisible(true);
     }
 }

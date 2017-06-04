@@ -106,14 +106,7 @@ public class Territory {
      * @param army
      * @param sessionstart 
      */
-    public static void conquers(Attack attack,String army ,Session sessionstart){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
+    public static void conquers(Attack attack,String army ,Session sessionstart,Player playerstart){
         attack.getDefender().setOwner(playerstart.getColor());        
         attack.getDefender().setArmy(attack.getDefender().getArmy() + Integer.parseInt(army));
         attack.getAttacker().setArmy(attack.getAttacker().getArmy() - Integer.parseInt(army));
@@ -144,6 +137,7 @@ public class Territory {
                 playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
                 System.out.println("CONQUISTO " + name_continent.getName());
             }else{
+                Player[] players = sessionstart.getPlayers();
                 for (Player player : players) {
                     if (player.getColor().equals(name_continent.getOwner())) {
                         player.setContinentAmount(player.getContinentAmount() - 1);

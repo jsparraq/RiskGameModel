@@ -3,6 +3,7 @@ package View;
 import riskgamemodel.Session;
 import Controller.ConquersNeighbourManager;
 import riskgamemodel.Attack;
+import riskgamemodel.Player;
 
 /**
  *
@@ -12,6 +13,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     Attack Attack;
+    Player playerstart;
     /**
      * Creates new form Interfaz
      */
@@ -21,7 +23,8 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
      * @param session
      * @param attack 
      */
-    public Conquers_neighbour_Interface(Session session,Attack attack) {
+    public Conquers_neighbour_Interface(Session session,Attack attack,Player player) {
+        playerstart = player;
         sessionstart = session;
         Attack = attack;
         initComponents();
@@ -94,7 +97,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        ConquersNeighbourManager.Button_Finish(Attack, this, (String)Value_army.getSelectedItem(),sessionstart);
+        ConquersNeighbourManager.Button_Finish(Attack, this, (String)Value_army.getSelectedItem(),sessionstart,playerstart);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

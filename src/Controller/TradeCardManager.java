@@ -50,7 +50,7 @@ public class TradeCardManager {
      * @param card2_string
      * @param card3_string 
      */
-    public static void Button_Trade(Session sessionstart, JFrame window,String card1_string,String card2_string,String card3_string){
+    public static void Button_Trade(Session sessionstart, JFrame window,String card1_string,String card2_string,String card3_string, Player playerstart){
         Card card1 = new Card();
         Card card2 = new Card();
         Card card3 = new Card();
@@ -66,15 +66,8 @@ public class TradeCardManager {
         }
         if(card1.getDesign() == null || card2.getDesign() == null || card3.getDesign() == null){
             window.setVisible(false);
-            new Place_army_Interface(sessionstart).setVisible(true);
+            new Place_army_Interface(sessionstart,playerstart).setVisible(true);
         }else{
-            Player[] players = sessionstart.getPlayers();
-            Player playerstart = new Player();
-            for (Player player : players) {
-                if (player.getTurn()) {
-                    playerstart = player;
-                }
-            }
             ArrayList<Card> cards_player = new ArrayList();
             for (Card card : cards) {
                 if (card.getOwner().equals(playerstart.getColor())) {
@@ -85,14 +78,14 @@ public class TradeCardManager {
                 while(!Card.Trades(playerstart, card1, card2, card3) && cards_player.size() > 6){
                 }
                 window.setVisible(false);
-                new Place_army_Interface(sessionstart).setVisible(true);
+                new Place_army_Interface(sessionstart,playerstart).setVisible(true);
             }else if(cards_player.size() < 3){
                 window.setVisible(false);
-                new Place_army_Interface(sessionstart).setVisible(true);
+                new Place_army_Interface(sessionstart,playerstart).setVisible(true);
             }else{
                 Card.Trades(playerstart, card1, card2, card3);
                 window.setVisible(false);
-                new Place_army_Interface(sessionstart).setVisible(true);
+                new Place_army_Interface(sessionstart,playerstart).setVisible(true);
             }
         }
     }

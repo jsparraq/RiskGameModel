@@ -72,17 +72,9 @@ public class PlaceArmyManager {
      * @param sessionstart
      * @param window
      * @param name_territory 
+     * @param playerstart 
      */
-    public static void Button_Finish(Session sessionstart, JFrame window, String name_territory){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-                break;
-            }
-        }
-        
+    public static void Button_Finish(Session sessionstart, JFrame window, String name_territory, Player playerstart){
         ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
@@ -104,9 +96,9 @@ public class PlaceArmyManager {
         Player.Places(playerstart, territory);
         window.setVisible(false);
         if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
-            new Place_army_Interface(sessionstart).setVisible(true);
+            new Place_army_Interface(sessionstart,playerstart).setVisible(true);
         }else{
-            new Main_Interface(sessionstart).setVisible(true);
+            new Main_Interface(sessionstart,playerstart).setVisible(true);
         }  
     }
 }

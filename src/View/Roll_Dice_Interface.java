@@ -7,6 +7,7 @@ package View;
 
 import Controller.RollDieManager;
 import riskgamemodel.Attack;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -20,13 +21,15 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
      */
     Session sessionstart;
     Attack attack;
+    Player playerstart;
 
     /**
      * 
      * @param session
      * @param attack 
      */
-    public Roll_Dice_Interface(Session session,Attack attack) {
+    public Roll_Dice_Interface(Session session,Attack attack,Player player) {
+        playerstart = player;
         sessionstart = session;
         this.attack = attack;
         initComponents();
@@ -109,7 +112,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        RollDieManager.Button_Finish(sessionstart, attack,this);
+        RollDieManager.Button_Finish(sessionstart, attack,this,playerstart);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     /**

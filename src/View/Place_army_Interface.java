@@ -2,6 +2,7 @@ package View;
 
 import riskgamemodel.Session;
 import Controller.PlaceArmyManager;
+import riskgamemodel.Player;
 
 /**
  *
@@ -10,6 +11,7 @@ import Controller.PlaceArmyManager;
 public class Place_army_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Player playerstart;
     /**
      * Creates new form Interfaz
      */
@@ -18,7 +20,8 @@ public class Place_army_Interface extends javax.swing.JFrame {
      * 
      * @param session 
      */
-    public Place_army_Interface(Session session) {
+    public Place_army_Interface(Session session, Player player) {
+        playerstart = player;
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
@@ -88,7 +91,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
      */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
-        PlaceArmyManager.Button_Finish(sessionstart, this, name_territory);
+        PlaceArmyManager.Button_Finish(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

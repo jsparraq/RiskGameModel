@@ -1,6 +1,7 @@
 package View;
 
 import Controller.MainManager;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -10,6 +11,7 @@ import riskgamemodel.Session;
 public class Main_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Player playerstart;
     /**
      * Creates new form Interfaz
      * @param session
@@ -19,7 +21,8 @@ public class Main_Interface extends javax.swing.JFrame {
      * 
      * @param session 
      */
-    public Main_Interface(Session session) {
+    public Main_Interface(Session session,Player player) {
+        playerstart = player;
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
@@ -97,7 +100,7 @@ public class Main_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_AttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AttackActionPerformed
-        MainManager.Button_Attack(sessionstart, this);
+        MainManager.Button_Attack(sessionstart, this,playerstart);
     }//GEN-LAST:event_Button_AttackActionPerformed
 
     /**

@@ -112,6 +112,6 @@ public class MoveArmyManager {
         }
         Territory.Moves(territoryA, territoryB);
         window.setVisible(false);
-        new Main_Interface(sessionstart).setVisible(true);
+        new Main_Interface(sessionstart,"a").setVisible(true);
     }
 }

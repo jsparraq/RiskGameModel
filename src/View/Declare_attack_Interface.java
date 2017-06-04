@@ -1,6 +1,7 @@
 package View;
 
 import Controller.AttackManager;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -10,6 +11,7 @@ import riskgamemodel.Session;
 public class Declare_attack_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Player playerstart;
     /**
      * Creates new form Interfaz
      */
@@ -18,7 +20,8 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
      * 
      * @param session 
      */
-    public Declare_attack_Interface(Session session) {
+    public Declare_attack_Interface(Session session,Player player) {
+        playerstart = player;
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
@@ -49,7 +52,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 210, 80));
 
-        Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart))));
+        Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart,playerstart))));
         Territory_attacker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Territory_attackerActionPerformed(evt);
@@ -63,6 +66,11 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
 
         Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));
         Territory_Defender.setEnabled(false);
+        Territory_Defender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Territory_DefenderActionPerformed(evt);
+            }
+        });
         getContentPane().add(Territory_Defender, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 290, -1));
 
         Button_Roll_Dice.setText("Roll Dice");
@@ -73,7 +81,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Roll_Dice, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 550, 110, 30));
 
-        Button_finish.setText("Finish");
+        Button_finish.setText("Back");
         Button_finish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_finishActionPerformed(evt);
@@ -93,7 +101,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
      */
     private void Territory_attackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_attackerActionPerformed
         Territory_Defender.setEnabled(true);
-        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem())));
+        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem(),playerstart)));
     }//GEN-LAST:event_Territory_attackerActionPerformed
 
     /**
@@ -103,7 +111,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
         String terrAt = (String)Territory_attacker.getSelectedItem();
         String terrdef = (String)Territory_Defender.getSelectedItem();
-        AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef);
+        AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef,playerstart);
     }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
     /**
@@ -111,8 +119,12 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
-        AttackManager.button_Finish(this, sessionstart);
+        AttackManager.button_Finish(this, sessionstart,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
+
+    private void Territory_DefenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_DefenderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Territory_DefenderActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

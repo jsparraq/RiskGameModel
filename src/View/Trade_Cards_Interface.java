@@ -5,9 +5,8 @@
  */
 package View;
 
-import java.util.ArrayList;
 import Controller.TradeCardManager;
-import riskgamemodel.Card;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 
 /**
@@ -17,11 +16,13 @@ import riskgamemodel.Session;
 public class Trade_Cards_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
+    Player playerstart;
     /**
      * Creates new form Interfaz
      */
     
-    public Trade_Cards_Interface(Session session) {
+    public Trade_Cards_Interface(Session session, Player player) {
+        playerstart = player;
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
@@ -110,7 +111,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
         String card1_string = (String)Trade_Card_1.getSelectedItem();
         String card2_string = (String)Trade_Card_2.getSelectedItem();
         String card3_string = (String)Trade_Card_3.getSelectedItem();
-        TradeCardManager.Button_Trade(sessionstart, this, card1_string, card2_string, card3_string);
+        TradeCardManager.Button_Trade(sessionstart, this, card1_string, card2_string, card3_string, playerstart);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     private void Trade_Card_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Trade_Card_3ActionPerformed

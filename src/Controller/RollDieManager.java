@@ -6,6 +6,7 @@ import View.Roll_Dice_Interface;
 import javax.swing.JFrame;
 import riskgamemodel.Attack;
 import riskgamemodel.Die;
+import riskgamemodel.Player;
 import riskgamemodel.Session;
 import riskgamemodel.Territory;
 
@@ -58,12 +59,12 @@ public class RollDieManager {
      * @param attack
      * @param window 
      */
-    public static void Button_Finish(Session sessionstart,Attack attack ,JFrame window) {
+    public static void Button_Finish(Session sessionstart,Attack attack ,JFrame window,Player playerstart) {
         window.setVisible(false);
         if(attack.getDefender().getArmy() == 0){
-            new Conquers_neighbour_Interface(sessionstart,attack).setVisible(true);
+            new Conquers_neighbour_Interface(sessionstart,attack,playerstart).setVisible(true);
         }else{
-            new Main_Interface(sessionstart).setVisible(true);
+            new Main_Interface(sessionstart,playerstart).setVisible(true);
         }
     }
 }
