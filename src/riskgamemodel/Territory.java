@@ -1,5 +1,7 @@
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author UNC Risk Game Model
@@ -9,6 +11,7 @@ public class Territory {
     private String Name;
     private String Owner;
     private int Army;
+    private boolean Capital;
     
     /**
      * This method is the constructor of territory class
@@ -25,10 +28,11 @@ public class Territory {
      * @param owner
      * @param army 
      */
-    public Territory(String name, String owner, int army){
+    public Territory(String name, String owner, int army,boolean capital){
         Name = name;
         Owner = owner;
         Army = army;
+        Capital = capital;
     }
     
     /**
@@ -80,6 +84,14 @@ public class Territory {
         return Army;
     }
     
+    
+    public boolean getCapital(){
+        return Capital;
+    }
+    
+    public void setCapital(boolean value){
+        Capital = value;
+    }
     /**
      * @return The name and army of the territory. If the territory does not have owner then add without owner in the string return  
      */
@@ -163,7 +175,26 @@ public class Territory {
             System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
             System.out.println("Ganador");
         }else{
-            
+            if(attack.getDefender().getCapital()){
+                ArrayList<Territory> capitals = new ArrayList();
+                Continent[] continents = sessionstart.getMap().getContinents();
+                for (Continent continent : continents) {
+                    for (Territory territory : continent.getTerritory()) {
+                        if (territory.getCapital()) {
+                            capitals.add(territory);
+                        }
+                    }
+                }
+                counter = 0;
+                for (int i = 0; i < capitals.size(); i++) {
+                    if(capitals.get(i).getOwner().equals(playerstart.getColor())){
+                        counter++;
+                    }
+                }
+                if(counter == capitals.size()){
+                    System.out.println("ganador");
+                }
+            }
         }
                    
     }
