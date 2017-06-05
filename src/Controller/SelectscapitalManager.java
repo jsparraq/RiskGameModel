@@ -70,6 +70,6 @@ public class SelectscapitalManager {
             }
         } 
         window.setVisible(false);
-        new Main_Interface(sessionstart,playerstart).setVisible(true);
+        new Main_Interface(sessionstart,"").setVisible(true);
     }
 }

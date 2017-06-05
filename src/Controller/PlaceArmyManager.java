@@ -61,6 +61,37 @@ public class PlaceArmyManager {
         return territoriesplayer;
     }
     
+    
+    /**
+     * 
+     * @param sessionstart
+     * @return 
+     */
+    public static String[] Territoriesneutral(Session sessionstart){
+        Player[] players = sessionstart.getPlayers();
+        Player playerstart = new Player();
+        for (Player player : players) {
+            if (player.getTurn()) {
+                playerstart = player;
+            }
+        }
+        ArrayList<Territory> territoryplayer = new ArrayList();
+        Continent[] continents = sessionstart.getMap().getContinents();
+        for (Continent continent : continents) {
+            Territory[] territories = continent.getTerritory();
+            for (Territory territorie : territories) {
+                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
+                    territoryplayer.add(territorie);
+                }
+            }
+        }
+        String[] territoriesplayer = new String[territoryplayer.size()];
+        for (int i = 0; i < territoryplayer.size(); i++) {
+            territoriesplayer[i] = territoryplayer.get(i).getString();
+        }
+        return territoriesplayer;
+    }
+    
     /**
      * 
      * @param sessionstart
@@ -78,22 +109,24 @@ public class PlaceArmyManager {
      * @param playerstart 
      */
     public static void Button_Finish(Session sessionstart, JFrame window, String name_territory, Player playerstart){
-        ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
+        Territory territory = new Territory();
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
-                    territoryplayer.add(territorie);
+                if(name_territory.equals(territorie.getString())){
+                    territory = territorie;
+                    break;
                 }
             }
         }
-        Territory territory = new Territory();
-        for (int i = 0; i < territoryplayer.size(); i++) {
-            if(name_territory.equals(territoryplayer.get(i).getString())){
-                territory = territoryplayer.get(i);
-                break;
-            }
+        if(sessionstart.getState().equals("TWO PLACE ARMY")){
+            Player.Places(playerstart, territory);
+            ((Place_army_Interface)window).getlabel().setText("SELECTS OTHER TERRITORY");
+            ((Place_army_Interface)window).getTerritories().setModel((new javax.swing.DefaultComboBoxModel(Territories(sessionstart))));
+            ((Place_army_Interface)window).getarmies().setText((armies(sessionstart)));
+            
+            
         }
         Player.Places(playerstart, territory);
         window.setVisible(false);

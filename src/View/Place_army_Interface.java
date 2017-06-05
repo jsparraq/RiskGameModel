@@ -25,8 +25,25 @@ public class Place_army_Interface extends javax.swing.JFrame {
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
+        Button_aux.setVisible(false);
+        Button_aux.setEnabled(false);
     }
     
+    public javax.swing.JLabel getlabel(){
+        return jLabel1;
+    }
+    
+    public javax.swing.JLabel getarmies(){
+        return Army_player;
+    }
+    
+    public String getTerritory(){
+        return (String)Territory.getSelectedItem();
+    }
+    
+    public javax.swing.JComboBox getTerritories(){
+        return Territory;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,8 +56,10 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
         Army_player = new javax.swing.JLabel();
         Button_finish = new javax.swing.JButton();
+        Button_aux = new javax.swing.JButton();
         Territory = new javax.swing.JComboBox();
         Map = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
@@ -60,6 +79,14 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
 
+        Button_aux.setText("Finish");
+        Button_aux.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_auxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Button_aux, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
+
         Territory.setModel((new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territories(sessionstart))));
         Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +97,10 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
         Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("SELECTS THE TERRITORY");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, 200, -1));
 
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
@@ -94,12 +125,18 @@ public class Place_army_Interface extends javax.swing.JFrame {
         PlaceArmyManager.Button_Finish(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
+    private void Button_auxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_auxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_auxActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Army_player;
     private javax.swing.JLabel Background;
+    private javax.swing.JButton Button_aux;
     private javax.swing.JButton Button_finish;
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
     private javax.swing.JComboBox Territory;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
