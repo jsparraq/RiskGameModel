@@ -1,8 +1,6 @@
 package Controller;
 
-import View.Main_Interface;
-import View.Place_army_Interface;
-import View.Selects_capital_Interface;
+import View.*;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import riskgamemodel.*;

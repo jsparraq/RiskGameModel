@@ -1,7 +1,6 @@
 package Controller;
 
 import View.Place_army_Interface;
-import View.Selects_capital_Interface;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
