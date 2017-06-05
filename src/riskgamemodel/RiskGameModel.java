@@ -116,14 +116,12 @@ public class RiskGameModel {
         Card card39 = new Card("STANDARD","WHITE","Cavalry",territory39);
         Card card40 = new Card("STANDARD","WHITE","Artillery",territory40);
         Card card41 = new Card("STANDARD","WHITE","Infantry",territory41);
-        Card card42 = new Card("STANDARD","WHITE","Cavalry",null);
-        Card card43 = new Card("STANDARD","WHITE","Artillery",null);
+        Card card42 = new Card("WILD","WHITE","Cavalry",null);
+        Card card43 = new Card("WILD","WHITE","Artillery",null);
         
-        Card[] cards = new Card[]{card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26,card27,card28,card29,card30,card31,card32,card33,card34,card35,card36,card37,card37,card38,card39,card40,card41,card42,card43};
+        Card[] cards = new Card[]{card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26,card27,card28,card29,card30,card31,card32,card33,card34,card35,card36,card37,card37,card38,card39,card40,card41,card42,card43};
         
-        Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};
-        Territory[] B = new Territory[]{territory2,territory1,territory3,territory2,territory4,territory3,territory5,territory4,territory6,territory5,territory7,territory6,territory1,territory7};
-        Boundary boundary = new Boundary(1,A,B);
+        Boundary boundary = new Boundary(1);
         Session session = new Session(1,"TWO PLACE ARMY",players,new Map("Classic",new Continent[]{continent1,continent2,continent3,continent4,continent5,continent6},cards,boundary),"RISK_FOR_TWO_PLAYERS");
         AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
     }

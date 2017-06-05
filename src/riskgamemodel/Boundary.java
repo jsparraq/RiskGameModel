@@ -7,8 +7,8 @@ package riskgamemodel;
 public class Boundary {
 
     private int ID;
-    private Territory[] Territories;
-    private Territory[] Neighbours;
+    private final Territory[] Territories = new Territory[]{};
+    private final Territory[] Neighbours = new Territory[]{};
     
     /**
      * This method is the constructor of Boundary class.
@@ -16,13 +16,8 @@ public class Boundary {
      * @param territories
      * @param Neighbours 
      */
-    public Boundary(int id, Territory[] territories, Territory[] Neighbours1){
+    public Boundary(int id){
         ID = id;
-        Territories = territories;
-        Neighbours = new Territory[Neighbours1.length];
-        for (int i = 0; i < Neighbours.length; i++) {
-            this.Neighbours[i] = Neighbours1[i];
-        }
     }
     
     /**
