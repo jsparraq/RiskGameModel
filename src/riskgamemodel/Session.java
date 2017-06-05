@@ -92,4 +92,6 @@ public class Session {
     public String getType(){
         return Type;
     }
+    
+    
 }

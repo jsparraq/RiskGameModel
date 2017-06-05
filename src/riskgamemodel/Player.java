@@ -1,5 +1,7 @@
 package riskgamemodel;
 
+import java.util.ArrayList;
+
 /**
  * @author UNC Risk Game Model
  */
@@ -184,8 +186,9 @@ public class Player {
      * This method lets the player finish the turn and gives a card if he can and reset the states needed
      * @param player
      * @param Cards 
+     * @param sessionstart 
      */
-    public static void Passes(Player player,Card[] Cards) {
+    public static void Passes(Player player,Card[] Cards,Session sessionstart) {
         if("CAPTURE".equals(player.getCaptureState())){            
             for (Card Card : Cards) {
                 if ("WHITE".equals(Card.getOwner())) {
@@ -193,10 +196,56 @@ public class Player {
                     player.setCaptureState("NON-CAPTURE");
                     break;
                 }
-            }
-            
+            } 
         }
-        
+        if(sessionstart.getState().equals("START PLACE ARMY") && sessionstart.getType().equals("WORLD_DOMINATION_RISK")){
+            int counter = 0;
+            Player[] players = sessionstart.getPlayers();
+            for (Player player1 : players) {
+                if (player1.getArmy() == 0) {
+                    counter++;
+                }
+            }
+            if (counter == players.length){
+                sessionstart.setState("RUN");
+            }
+        }else if(sessionstart.getState().equals("TWO PLACE ARMY") && sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS")){
+            int counter = 0;
+            Player[] players = sessionstart.getPlayers();
+            for (Player player1 : players) {
+                if (player1.getArmy() == 0) {
+                    counter++;
+                }
+            }
+            if (counter == players.length){
+                sessionstart.setState("RUN");
+            }
+        }else if(sessionstart.getState().equals("START PLACE ARMY") && sessionstart.getType().equals("CAPITAL_RISK")){
+            int counter = 0;
+            Player[] players = sessionstart.getPlayers();
+            for (Player player1 : players) {
+                if (player1.getArmy() == 0) {
+                    counter++;
+                }
+            }
+            if (counter == players.length){
+                sessionstart.setState("SELECT CAPITAL");
+            }
+        }else if(sessionstart.getState().equals("SELECT CAPITAL") && sessionstart.getType().equals("CAPITAL_RISK")){
+            Player[] players = sessionstart.getPlayers();
+            ArrayList<Territory> capitals = new ArrayList();
+            Continent[] continents = sessionstart.getMap().getContinents();
+            for (Continent continent : continents) {
+                for (Territory territory : continent.getTerritory()) {
+                    if (territory.getCapital()) {
+                        capitals.add(territory);
+                    }
+                }
+            }
+            if(capitals.size() == players.length){
+                sessionstart.setState("RUN");
+            }
+        }
     }
 
     /**
