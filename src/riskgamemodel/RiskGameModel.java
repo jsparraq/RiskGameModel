@@ -123,7 +123,8 @@ public class RiskGameModel {
         
         Boundary boundary = new Boundary(1);
         Session session = new Session(1,"SELECT CAPITAL",players,new Map("Classic",new Continent[]{continent1,continent2,continent3,continent4,continent5,continent6},cards,boundary),"CAPITAL_RISK");
-        AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
+        //AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
+        
     }
     
 }

@@ -62,12 +62,12 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Button_FinishActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 120, 40));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 120, 40));
 
         Text.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         Text.setForeground(new java.awt.Color(255, 255, 255));
         Text.setText("Select your cards");
-        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 180, 30));
+        getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 180, 30));
 
         Trade_Card_1.setModel((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart))));
         Trade_Card_1.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +75,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Trade_Card_1ActionPerformed(evt);
             }
         });
-        getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 210, -1));
+        getContentPane().add(Trade_Card_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 340, -1));
 
         Trade_Card_2.setModel(((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart)))));
         Trade_Card_2.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +83,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Trade_Card_2ActionPerformed(evt);
             }
         });
-        getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 210, -1));
+        getContentPane().add(Trade_Card_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 340, -1));
 
         Trade_Card_3.setModel(((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart)))));
         Trade_Card_3.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class Trade_Cards_Interface extends javax.swing.JFrame {
                 Trade_Card_3ActionPerformed(evt);
             }
         });
-        getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 210, -1));
+        getContentPane().add(Trade_Card_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 340, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
