@@ -54,10 +54,12 @@ public class RiskGameModel {
         Territory territory27 = new Territory("AFGHANISTAN","WHITE",0,false);
         Continent continent3 = new Continent("AZIO","WHITE",10,new Territory[]{territory17,territory18,territory19,territory20,territory21,territory22,territory23,territory24,territory25,territory26,territory27});
         
-        Territory territory7 = new Territory("G","WHITE",0,false);
-        Territory territory1 = new Territory("A","WHITE",0,false);
-        Territory territory2 = new Territory("B","WHITE",0,false);
-        Territory territory3 = new Territory("C","WHITE",0,false);
+        Territory territory28 = new Territory("NIEUW-GUINEA","WHITE",0,false);
+        Territory territory29 = new Territory("INDONESIË","WHITE",0,false);
+        Territory territory30 = new Territory("WEST-AUSTRALIË","WHITE",0,false);
+        Territory territory31 = new Territory("OOST-AUSTRALIË","WHITE",0,false);
+        Continent continent4 = new Continent("UISTRALIA","WHITE",4,new Territory[]{territory28,territory29,territory30,territory31});
+        
         Territory territory4 = new Territory("D","WHITE",0,false);
         Territory territory5 = new Territory("E","WHITE",0,false);
         Territory territory6 = new Territory("F","WHITE",0,false);
