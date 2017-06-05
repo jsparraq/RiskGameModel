@@ -13,8 +13,6 @@ public class Boundary {
     /**
      * This method is the constructor of Boundary class.
      * @param id
-     * @param territories
-     * @param Neighbours 
      */
     public Boundary(int id){
         ID = id;

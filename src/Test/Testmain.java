@@ -3,19 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package riskgamemodel;
-import Controller.AcceptTurnManager;
+package Test;
+
+import Controller.ConvertJson;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import riskgamemodel.*;
 
 /**
  *
  * @author Sebastian
  */
-public class RiskGameModel {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+public class Testmain {
+    
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+        
+        BufferedReader readJson = new BufferedReader(new FileReader("jsonTest.json"));
+        String line = null;
+        StringBuilder jsonTest = new StringBuilder();
+        while ((line = readJson.readLine()) != null) {
+            jsonTest.append(line);
+        }
+        ConvertJson.createSession(jsonTest.toString());
+        
+        /*
         Player player1 = new Player(true,true,"non-capture","BLUE",0,0,0,2,0);
         Player player2 = new Player(false,true,"non-capture","RED",0,0,0,2,0);
         Player player3 = new Player(false,true,"non-capture","GREEN",0,0,0,2,0);
@@ -124,7 +138,6 @@ public class RiskGameModel {
         Boundary boundary = new Boundary(1);
         Session session = new Session(1,"SELECT CAPITAL",players,new Map("Classic",new Continent[]{continent1,continent2,continent3,continent4,continent5,continent6},cards,boundary),"CAPITAL_RISK");
         //AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
-        
+        */
     }
-    
 }
