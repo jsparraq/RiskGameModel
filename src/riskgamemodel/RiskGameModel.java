@@ -41,17 +41,19 @@ public class RiskGameModel {
         Territory territory16 = new Territory("GROENLAND","WHITE",0,false);
         Continent continent2 = new Continent("AMEROKI","WHITE",9,new Territory[]{territory8,territory9,territory10,territory11,territory12,territory13,territory14,territory15,territory16});
         
-        Territory territory3 = new Territory("C","WHITE",0,false);
-        Territory territory4 = new Territory("D","WHITE",0,false);
-        Territory territory5 = new Territory("E","WHITE",0,false);
-        Territory territory6 = new Territory("F","WHITE",0,false);
-        Territory territory7 = new Territory("G","WHITE",0,false);
-        Territory territory1 = new Territory("A","WHITE",0,false);
-        Territory territory2 = new Territory("B","WHITE",0,false);
-        Territory territory3 = new Territory("C","WHITE",0,false);
-        Territory territory4 = new Territory("D","WHITE",0,false);
-        Territory territory5 = new Territory("E","WHITE",0,false);
-        Territory territory6 = new Territory("F","WHITE",0,false);
+        Territory territory17 = new Territory("SIBERIË","WHITE",0,false);
+        Territory territory18 = new Territory("IRKOETSK","WHITE",0,false);
+        Territory territory19 = new Territory("INDIA","WHITE",0,false);
+        Territory territory20 = new Territory("JAPON","WHITE",0,false);
+        Territory territory21 = new Territory("JAKOETSK","WHITE",0,false);
+        Territory territory22 = new Territory("MONGOLOË","WHITE",0,false);
+        Territory territory23 = new Territory("CHINA","WHITE",0,false);
+        Territory territory24 = new Territory("MIDDEN-OOSTEN","WHITE",0,false);
+        Territory territory25 = new Territory("ZEIDOOST-AZIË","WHITE",0,false);
+        Territory territory26 = new Territory("KAMTAJARKA","WHITE",0,false);
+        Territory territory27 = new Territory("AFGHANISTAN","WHITE",0,false);
+        Continent continent3 = new Continent("AZIO","WHITE",10,new Territory[]{territory17,territory18,territory19,territory20,territory21,territory22,territory23,territory24,territory25,territory26,territory27});
+        
         Territory territory7 = new Territory("G","WHITE",0,false);
         Territory territory1 = new Territory("A","WHITE",0,false);
         Territory territory2 = new Territory("B","WHITE",0,false);
