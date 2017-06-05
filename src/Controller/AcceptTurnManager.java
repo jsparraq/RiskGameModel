@@ -1,7 +1,7 @@
 package Controller;
 
 import View.Accepts_Turn_Interface;
-import View.Place_army_Interface;
+import View.Selects_capital_Interface;
 import View.Trade_Cards_Interface;
 import javax.swing.JFrame;
 import riskgamemodel.*;

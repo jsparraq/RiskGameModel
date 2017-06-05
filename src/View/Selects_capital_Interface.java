@@ -2,13 +2,14 @@ package View;
 
 import riskgamemodel.Session;
 import Controller.PlaceArmyManager;
+import Controller.SelectscapitalManager;
 import riskgamemodel.Player;
 
 /**
  *
  * @author UNC Risk Game Model
  */
-public class Place_army_Interface extends javax.swing.JFrame {
+public class Selects_capital_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     Player playerstart;
@@ -20,7 +21,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
      * 
      * @param session 
      */
-    public Place_army_Interface(Session session, Player player) {
+    public Selects_capital_Interface(Session session, Player player) {
         playerstart = player;
         sessionstart = session;
         initComponents();
@@ -37,9 +38,9 @@ public class Place_army_Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Army_player = new javax.swing.JLabel();
         Button_finish = new javax.swing.JButton();
         Territory = new javax.swing.JComboBox();
+        Selectscapital = new javax.swing.JLabel();
         Map = new javax.swing.JLabel();
         Logo_Risk = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
@@ -48,25 +49,25 @@ public class Place_army_Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Army_player.setForeground(new java.awt.Color(255, 255, 255));
-        Army_player.setText((PlaceArmyManager.armies(sessionstart)));
-        getContentPane().add(Army_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 130, 20));
-
         Button_finish.setText("Finish");
         Button_finish.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Button_finishActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 550, 110, -1));
+        getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 550, 130, -1));
 
-        Territory.setModel((new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territories(sessionstart))));
+        Territory.setModel((new javax.swing.DefaultComboBoxModel(SelectscapitalManager.Territories(sessionstart))));
         Territory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TerritoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 220, -1));
+        getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 300, -1));
+
+        Selectscapital.setForeground(new java.awt.Color(255, 255, 255));
+        Selectscapital.setText("Selects the capital\n");
+        getContentPane().add(Selectscapital, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 520, 160, -1));
 
         Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
@@ -91,15 +92,15 @@ public class Place_army_Interface extends javax.swing.JFrame {
      */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
-        PlaceArmyManager.Button_Finish(sessionstart, this, name_territory,playerstart);
+        SelectscapitalManager.Button_Finish(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Army_player;
     private javax.swing.JLabel Background;
     private javax.swing.JButton Button_finish;
     private javax.swing.JLabel Logo_Risk;
     private javax.swing.JLabel Map;
+    private javax.swing.JLabel Selectscapital;
     private javax.swing.JComboBox Territory;
     // End of variables declaration//GEN-END:variables
 }

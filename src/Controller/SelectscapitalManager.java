@@ -1,35 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Controller;
 
 import View.Main_Interface;
-import View.Place_army_Interface;
 import View.Selects_capital_Interface;
 import java.util.ArrayList;
 import javax.swing.JFrame;
-import riskgamemodel.*;
+import riskgamemodel.Continent;
+import riskgamemodel.Player;
+import riskgamemodel.Session;
+import riskgamemodel.Territory;
+
 /**
  *
- * @author UNC Risk Game Model
+ * @author Sebastian
  */
-public class PlaceArmyManager {
-    
-    /**
-     * 
-     * @param sessionstart
-     * @return 
-     */
-    public static String armies(Session sessionstart){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
-        if(playerstart.getArmy() == 0){
-            return "You don´t have army";
-        }
-        return "Your army are " + playerstart.getArmy();
-    }
+public class SelectscapitalManager {
     
     /**
      * 
@@ -61,6 +50,7 @@ public class PlaceArmyManager {
         return territoriesplayer;
     }
     
+    
     /**
      * 
      * @param sessionstart
@@ -68,42 +58,19 @@ public class PlaceArmyManager {
      */
     public static String Map(Session sessionstart){
         return "/images/" + sessionstart.getMap().getName() + ".png";
-    } 
+    }
     
-    /**
-     * 
-     * @param sessionstart
-     * @param window
-     * @param name_territory 
-     * @param playerstart 
-     */
     public static void Button_Finish(Session sessionstart, JFrame window, String name_territory, Player playerstart){
-        ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
-                    territoryplayer.add(territorie);
+                if (territorie.getString().equals(name_territory)) {
+                    territorie.setCapital(true);
                 }
             }
-        }
-        Territory territory = new Territory();
-        for (int i = 0; i < territoryplayer.size(); i++) {
-            if(name_territory.equals(territoryplayer.get(i).getString())){
-                territory = territoryplayer.get(i);
-                break;
-            }
-        }
-        Player.Places(playerstart, territory);
+        } 
         window.setVisible(false);
-        if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
-            new Place_army_Interface(sessionstart,playerstart).setVisible(true);
-        }else if(sessionstart.getState().equals("SELECT CAPITAL")){
-            new Selects_capital_Interface(sessionstart,playerstart).setVisible(true);
-        }
-        else{
-            new Main_Interface(sessionstart,playerstart).setVisible(true);
-        }  
+        new Main_Interface(sessionstart,playerstart);
     }
 }

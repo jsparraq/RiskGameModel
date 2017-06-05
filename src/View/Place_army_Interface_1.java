@@ -49,7 +49,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Army_player.setForeground(new java.awt.Color(255, 255, 255));
-        Army_player.setText((PlaceArmyManager.armies(sessionstart)));
+        Army_player.setText(("Your armies are " + Integer.toString(PlaceArmyManager.armies(sessionstart))));
         getContentPane().add(Army_player, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 130, 20));
 
         Button_finish.setText("Finish");

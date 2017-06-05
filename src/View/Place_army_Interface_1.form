@@ -32,7 +32,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(PlaceArmyManager.armies(sessionstart))" type="code"/>
+          <Connection code="(&quot;Your armies are &quot; + Integer.toString(PlaceArmyManager.armies(sessionstart)))" type="code"/>
         </Property>
       </Properties>
       <Constraints>
