@@ -224,7 +224,7 @@ public class Player {
             if (counter == players.length){
                 sessionstart.setState("RUN");
             }
-        }else if(sessionstart.getState().equals("START PLACE ARMY") && sessionstart.getType().equals("CAPITAL_RISK")){
+        }else if(sessionstart.getState().equals("START PLACE ARMY") && sessionstart.getType().equals("CAPITAL RISK")){
             int counter = 0;
             Player[] players = sessionstart.getPlayers();
             for (Player player1 : players) {
@@ -235,7 +235,7 @@ public class Player {
             if (counter == players.length){
                 sessionstart.setState("SELECT CAPITAL");
             }
-        }else if(sessionstart.getState().equals("SELECT CAPITAL") && sessionstart.getType().equals("CAPITAL_RISK")){
+        }else if(sessionstart.getState().equals("SELECT CAPITAL") && sessionstart.getType().equals("CAPITAL RISK")){
             Player[] players = sessionstart.getPlayers();
             ArrayList<Territory> capitals = new ArrayList();
             Continent[] continents = sessionstart.getMap().getContinents();
