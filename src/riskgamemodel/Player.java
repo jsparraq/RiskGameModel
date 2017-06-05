@@ -250,18 +250,27 @@ public class Player {
                 sessionstart.setState("RUN");
             }
         }
-        
         Player[] players = sessionstart.getPlayers();
-        for (int i = 0; i < players.length; i++) {
-            if(players[i].getTurn()){
-                if (i == players.length - 1){
-                    players[0].setTurn(true);
+        if(sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS")){
+            if(players[0].getTurn()){
+                players[1].setTurn(true);
+                players[0].setTurn(false);
+            }else{
+                players[0].setTurn(true);
+                players[1].setTurn(false);
+            }
+        }else{
+            for (int i = 0; i < players.length; i++) {
+                if(players[i].getTurn()){
+                    if (i == players.length - 1){
+                        players[0].setTurn(true);
+                        players[i].setTurn(false);
+                        break;
+                    }
                     players[i].setTurn(false);
+                    players[i + 1].setTurn(true);
                     break;
                 }
-                players[i].setTurn(false);
-                players[i + 1].setTurn(true);
-                break;
             }
         }
     }

@@ -19,7 +19,7 @@ public class RiskGameModel {
         Player player1 = new Player(true,true,"non-capture","BLUE",0,0,0,2,0);
         Player player2 = new Player(false,true,"non-capture","RED",0,0,0,2,0);
         Player player3 = new Player(false,true,"non-capture","GREEN",0,0,0,2,0);
-        Player[] players = new Player[]{player1,player2};
+        Player[] players = new Player[]{player1,player2,player3};
         Territory territory1 = new Territory("A","WHITE",0,false);
         Territory territory2 = new Territory("B","WHITE",0,false);
         Territory territory3 = new Territory("C","WHITE",0,false);

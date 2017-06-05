@@ -120,6 +120,10 @@ public class PlaceArmyManager {
             ((Place_army_Interface)window).getTerritories().setModel((new javax.swing.DefaultComboBoxModel(Territories(sessionstart))));
             ((Place_army_Interface)window).getarmies().setText((armies(sessionstart)));
             ((Place_army_Interface)window).change();
+        }else if(!((Place_army_Interface)window).Control()){
+            window.setVisible(false);
+            Player.Places(sessionstart.getPlayers()[2], territory);
+            new Main_Interface(sessionstart,"").setVisible(true);
         }else{
             Player.Places(playerstart, territory);
             window.setVisible(false);
@@ -127,8 +131,6 @@ public class PlaceArmyManager {
                 new Place_army_Interface(sessionstart,playerstart).setVisible(true);
             }else if(sessionstart.getState().equals("SELECT CAPITAL")){
                 new Selects_capital_Interface(sessionstart,playerstart).setVisible(true);
-            }else if(sessionstart.getState().equals("TWO PLACE ARMY")){
-                new Main_Interface(sessionstart,"").setVisible(true);
             }else{
                 new Main_Interface(sessionstart,playerstart).setVisible(true);
             }
@@ -156,6 +158,7 @@ public class PlaceArmyManager {
             }
         }
         Player.Places(playerstart, territory);
+        window.setVisible(false);
         new Place_army_Interface(sessionstart,playerstart,"NO").setVisible(true);
     }
 }
