@@ -112,6 +112,10 @@ public class Territory {
         TerritoryB.setArmy(TerritoryB.getArmy() + 1);
     }
     
+    public static void Selects(Territory territory){
+        territory.setCapital(true);
+    }
+    
     /**
      * 
      * @param attack

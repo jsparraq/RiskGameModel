@@ -6,7 +6,6 @@
 package Controller;
 
 import View.Main_Interface;
-import View.Selects_capital_Interface;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import riskgamemodel.Continent;
@@ -66,7 +65,7 @@ public class SelectscapitalManager {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
                 if (territorie.getString().equals(name_territory)) {
-                    territorie.setCapital(true);
+                    Territory.Selects(territorie);
                 }
             }
         } 
