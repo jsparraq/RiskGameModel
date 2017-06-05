@@ -12,6 +12,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
     Session sessionstart;
     Player playerstart;
+    String control = "SI";
     /**
      * Creates new form Interfaz
      */
@@ -29,6 +30,18 @@ public class Place_army_Interface extends javax.swing.JFrame {
         Button_aux.setEnabled(false);
     }
     
+    public Place_army_Interface(Session session, Player player,String a) {
+        control = a;
+        playerstart = player;
+        sessionstart = session;
+        initComponents();
+        this.setLocationRelativeTo(null);
+        Territory.setModel((new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territoriesneutral(sessionstart))));
+        Army_player.setText("");
+        jLabel1.setText("SELECT THE TERRITORY NEUTRAL");
+    }
+    
+    
     public javax.swing.JLabel getlabel(){
         return jLabel1;
     }
@@ -44,6 +57,21 @@ public class Place_army_Interface extends javax.swing.JFrame {
     public javax.swing.JComboBox getTerritories(){
         return Territory;
     }
+    
+    
+    public boolean Control(){
+        return "SI".equals(control);
+    }
+    
+    
+    public void change(){
+        Button_aux.setVisible(true);
+        Button_aux.setEnabled(true);
+        Button_finish.setVisible(false);
+        Button_finish.setEnabled(false);
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -127,6 +155,8 @@ public class Place_army_Interface extends javax.swing.JFrame {
 
     private void Button_auxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_auxActionPerformed
         // TODO add your handling code here:
+        String name_territory = (String)Territory.getSelectedItem();
+        PlaceArmyManager.Button_aux(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_auxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

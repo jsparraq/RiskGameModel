@@ -32,6 +32,7 @@ public class Player {
     /**
      * This method is the constructor of player class
      * @param turn
+     * @param Playing
      * @param capture
      * @param color
      * @param territoryamount
@@ -172,7 +173,7 @@ public class Player {
      * @param session 
      */
     public static void accepts(Player player,Session session) {
-        player.Army = player.TerritoryAmount / 3;
+        player.Army = player.Army + player.TerritoryAmount / 3;
         Map map = session.getMap();
         Continent[] Continents = map.getContinents();
         for (Continent Continent : Continents) {

@@ -25,6 +25,7 @@ public class PlaceArmyManager {
                 playerstart = player;
             }
         }
+        
         if(playerstart.getArmy() == 0){
             return "You don´t have army";
         }
@@ -68,19 +69,12 @@ public class PlaceArmyManager {
      * @return 
      */
     public static String[] Territoriesneutral(Session sessionstart){
-        Player[] players = sessionstart.getPlayers();
-        Player playerstart = new Player();
-        for (Player player : players) {
-            if (player.getTurn()) {
-                playerstart = player;
-            }
-        }
         ArrayList<Territory> territoryplayer = new ArrayList();
         Continent[] continents = sessionstart.getMap().getContinents();
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
+                if (territorie.getOwner().equals("GREEN") || territorie.getArmy() == 0) {
                     territoryplayer.add(territorie);
                 }
             }
@@ -120,23 +114,48 @@ public class PlaceArmyManager {
                 }
             }
         }
-        if(sessionstart.getState().equals("TWO PLACE ARMY")){
+        if(sessionstart.getState().equals("TWO PLACE ARMY") && ((Place_army_Interface)window).Control()){
             Player.Places(playerstart, territory);
             ((Place_army_Interface)window).getlabel().setText("SELECTS OTHER TERRITORY");
             ((Place_army_Interface)window).getTerritories().setModel((new javax.swing.DefaultComboBoxModel(Territories(sessionstart))));
             ((Place_army_Interface)window).getarmies().setText((armies(sessionstart)));
-            
-            
+            ((Place_army_Interface)window).change();
+        }else{
+            Player.Places(playerstart, territory);
+            window.setVisible(false);
+            if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
+                new Place_army_Interface(sessionstart,playerstart).setVisible(true);
+            }else if(sessionstart.getState().equals("SELECT CAPITAL")){
+                new Selects_capital_Interface(sessionstart,playerstart).setVisible(true);
+            }else if(sessionstart.getState().equals("TWO PLACE ARMY")){
+                new Main_Interface(sessionstart,"").setVisible(true);
+            }else{
+                new Main_Interface(sessionstart,playerstart).setVisible(true);
+            }
+        }
+    }
+    
+    
+    /**
+     * 
+     * @param sessionstart
+     * @param window
+     * @param name_territory 
+     * @param playerstart 
+     */
+    public static void Button_aux(Session sessionstart, JFrame window, String name_territory, Player playerstart){
+        Continent[] continents = sessionstart.getMap().getContinents();
+        Territory territory = new Territory();
+        for (Continent continent : continents) {
+            Territory[] territories = continent.getTerritory();
+            for (Territory territorie : territories) {
+                if(name_territory.equals(territorie.getString())){
+                    territory = territorie;
+                    break;
+                }
+            }
         }
         Player.Places(playerstart, territory);
-        window.setVisible(false);
-        if(playerstart.getArmy() > 0 && sessionstart.getState().equals("RUN")){
-            new Place_army_Interface(sessionstart,playerstart).setVisible(true);
-        }else if(sessionstart.getState().equals("SELECT CAPITAL")){
-            new Selects_capital_Interface(sessionstart,playerstart).setVisible(true);
-        }
-        else{
-            new Main_Interface(sessionstart,playerstart).setVisible(true);
-        }  
+        new Place_army_Interface(sessionstart,playerstart,"NO").setVisible(true);
     }
 }
