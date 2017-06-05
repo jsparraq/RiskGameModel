@@ -11,7 +11,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import riskgamemodel.*;
-import view.*;
+import View.*;
 /**
  *
  * @author UNC Risk Game Model
@@ -21,7 +21,7 @@ public class ConvertJson {
     
     public void createSession(String json){
         JSONParser parser = new JSONParser();
-        
+        String jsonToString = "[" + json + "]";
     }    
     
 }
