@@ -12,7 +12,16 @@ public class Session {
     private Map map;
     private String Type;
     
-    private Session(){}
+    /**
+     * 
+     */
+    private Session(){
+        ID = 0;
+        State = null;
+        players = null;
+        map = null;
+        Type = null;
+    }
     
     /**
      * This method create an object of Session
