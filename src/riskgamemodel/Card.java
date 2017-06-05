@@ -31,7 +31,12 @@ public class Card {
             Type = type;
             Owner = owner;
             Design = design;
-            Territory = territory;
+            if(territory == null){
+                Territory = new Territory();
+            }else{
+                Territory = territory;
+            }
+            
         }
         
         /**

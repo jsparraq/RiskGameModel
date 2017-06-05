@@ -17,7 +17,7 @@ public class Territory {
      * This method is the constructor of territory class
      */
     public Territory(){
-        Name = null;
+        Name = "";
         Owner = null;
         Army = 0;
     }
