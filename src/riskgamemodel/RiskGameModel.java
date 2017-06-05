@@ -60,24 +60,19 @@ public class RiskGameModel {
         Territory territory31 = new Territory("OOST-AUSTRALIË","WHITE",0,false);
         Continent continent4 = new Continent("UISTRALIA","WHITE",4,new Territory[]{territory28,territory29,territory30,territory31});
         
-        Territory territory4 = new Territory("D","WHITE",0,false);
-        Territory territory5 = new Territory("E","WHITE",0,false);
-        Territory territory6 = new Territory("F","WHITE",0,false);
-        Territory territory7 = new Territory("G","WHITE",0,false);
-        Territory territory1 = new Territory("A","WHITE",0,false);
-        Territory territory2 = new Territory("B","WHITE",0,false);
-        Territory territory3 = new Territory("C","WHITE",0,false);
-        Territory territory4 = new Territory("D","WHITE",0,false);
-        Territory territory5 = new Territory("E","WHITE",0,false);
-        Territory territory6 = new Territory("F","WHITE",0,false);
-        Territory territory7 = new Territory("G","WHITE",0,false);
+        Territory territory32 = new Territory("ZUID-AFRIKA","WHITE",0,false);
+        Territory territory33 = new Territory("CENTRAAL-AFRIKA","WHITE",0,false);
+        Territory territory34 = new Territory("OOST-AFRIKA","WHITE",0,false);
+        Territory territory35 = new Territory("NOORD-AFRIKA","WHITE",0,false);
+        Territory territory36 = new Territory("EGYPTE","WHITE",0,false);
+        Territory territory37 = new Territory("MADAGASCAR","WHITE",0,false);
+        Continent continent5 = new Continent("AFROKI","WHITE",2,new Territory[]{territory32,territory33,territory34,territory35,territory36,territory37});
         
-        
-        Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});
-        Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory6,territory7});
-        Continent continent4 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
-        Continent continent5 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});
-        Continent continent6 = new Continent("ContinentC","WHITE",2,new Territory[]{territory6,territory7});
+        Territory territory38 = new Territory("BRASILIË","WHITE",0,false);
+        Territory territory39 = new Territory("PERU","WHITE",0,false);
+        Territory territory40 = new Territory("VENEZUELA","WHITE",0,false);
+        Territory territory41 = new Territory("ARGENTINË","WHITE",0,false);
+        Continent continent6 = new Continent("AMERPOLU","WHITE",2,new Territory[]{territory38,territory39,territory40,territory41});
        
         
         Card card1 = new Card("STANDARD","WHITE","Infantry",territory1);
@@ -87,10 +82,49 @@ public class RiskGameModel {
         Card card5 = new Card("STANDARD","WHITE","Cavalry",territory5);
         Card card6 = new Card("STANDARD","WHITE","Artillery",territory6);
         Card card7 = new Card("STANDARD","WHITE","Infantry",territory7);
+        Card card8 = new Card("STANDARD","WHITE","Infantry",territory8);
+        Card card9 = new Card("STANDARD","WHITE","Cavalry",territory9);
+        Card card10 = new Card("STANDARD","WHITE","Artillery",territory10);
+        Card card11 = new Card("STANDARD","WHITE","Infantry",territory11);
+        Card card12 = new Card("STANDARD","WHITE","Cavalry",territory12);
+        Card card13 = new Card("STANDARD","WHITE","Artillery",territory13);
+        Card card14 = new Card("STANDARD","WHITE","Infantry",territory14);
+        Card card15 = new Card("STANDARD","WHITE","Cavalry",territory15);
+        Card card16 = new Card("STANDARD","WHITE","Artillery",territory16);
+        Card card17 = new Card("STANDARD","WHITE","Infantry",territory17);
+        Card card18 = new Card("STANDARD","WHITE","Cavalry",territory18);
+        Card card19 = new Card("STANDARD","WHITE","Artillery",territory19);
+        Card card20 = new Card("STANDARD","WHITE","Infantry",territory20);
+        Card card21 = new Card("STANDARD","WHITE","Cavalry",territory21);
+        Card card22 = new Card("STANDARD","WHITE","Artillery",territory22);
+        Card card23 = new Card("STANDARD","WHITE","Infantry",territory23);
+        Card card24 = new Card("STANDARD","WHITE","Cavalry",territory24);
+        Card card25 = new Card("STANDARD","WHITE","Artillery",territory25);
+        Card card26 = new Card("STANDARD","WHITE","Infantry",territory26);
+        Card card27 = new Card("STANDARD","WHITE","Cavalry",territory27);
+        Card card28 = new Card("STANDARD","WHITE","Artillery",territory28);
+        Card card29 = new Card("STANDARD","WHITE","Infantry",territory29);
+        Card card30 = new Card("STANDARD","WHITE","Cavalry",territory30);
+        Card card31 = new Card("STANDARD","WHITE","Artillery",territory31);
+        Card card32 = new Card("STANDARD","WHITE","Infantry",territory32);
+        Card card33 = new Card("STANDARD","WHITE","Cavalry",territory33);
+        Card card34 = new Card("STANDARD","WHITE","Artillery",territory34);
+        Card card35 = new Card("STANDARD","WHITE","Infantry",territory35);
+        Card card36 = new Card("STANDARD","WHITE","Cavalry",territory36);
+        Card card37 = new Card("STANDARD","WHITE","Artillery",territory37);
+        Card card38 = new Card("STANDARD","WHITE","Infantry",territory38);
+        Card card39 = new Card("STANDARD","WHITE","Cavalry",territory39);
+        Card card40 = new Card("STANDARD","WHITE","Artillery",territory40);
+        Card card41 = new Card("STANDARD","WHITE","Infantry",territory41);
+        Card card42 = new Card("STANDARD","WHITE","Cavalry",null);
+        Card card43 = new Card("STANDARD","WHITE","Artillery",null);
+        
+        Card[] cards = new Card[]{card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15,card16,card17,card18,card19,card20,card21,card22,card23,card24,card25,card26,card27,card28,card29,card30,card31,card32,card33,card34,card35,card36,card37,card37,card38,card39,card40,card41,card42,card43};
+        
         Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};
         Territory[] B = new Territory[]{territory2,territory1,territory3,territory2,territory4,territory3,territory5,territory4,territory6,territory5,territory7,territory6,territory1,territory7};
         Boundary boundary = new Boundary(1,A,B);
-        Session session = new Session(1,"TWO PLACE ARMY",players,new Map("Classic",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary),"RISK_FOR_TWO_PLAYERS");
+        Session session = new Session(1,"TWO PLACE ARMY",players,new Map("Classic",new Continent[]{continent1,continent2,continent3,continent4,continent5,continent6},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary),"RISK_FOR_TWO_PLAYERS");
         AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
     }
     
