@@ -173,12 +173,14 @@ public class Player {
      * @param session 
      */
     public static void accepts(Player player,Session session) {
-        player.Army = player.Army + player.TerritoryAmount / 3;
-        Map map = session.getMap();
-        Continent[] Continents = map.getContinents();
-        for (Continent Continent : Continents) {
-            if (Continent.getOwner().equals(player.Color)) {
-                player.Army = player.Army + Continent.getArmy();
+        if(session.getState().equals("RUN")){
+            player.Army = player.TerritoryAmount / 3;
+            Map map = session.getMap();
+            Continent[] Continents = map.getContinents();
+            for (Continent Continent : Continents) {
+                if (Continent.getOwner().equals(player.Color)) {
+                    player.Army = player.Army + Continent.getArmy();
+                }
             }
         }
     }
@@ -194,6 +196,7 @@ public class Player {
             for (Card Card : Cards) {
                 if ("WHITE".equals(Card.getOwner())) {
                     Card.setOwner(player.getColor());
+                    player.setCardAmount(player.getCardAmount() + 1);
                     player.setCaptureState("NON-CAPTURE");
                     break;
                 }
@@ -247,6 +250,20 @@ public class Player {
                 sessionstart.setState("RUN");
             }
         }
+        
+        Player[] players = sessionstart.getPlayers();
+        for (int i = 0; i < players.length; i++) {
+            if(players[i].getTurn()){
+                if (i == players.length - 1){
+                    players[0].setTurn(true);
+                    players[i].setTurn(false);
+                    break;
+                }
+                players[i].setTurn(false);
+                players[i + 1].setTurn(true);
+                break;
+            }
+        }
     }
 
     /**
@@ -258,6 +275,7 @@ public class Player {
         if (player.getArmy() > 0) {
             if (Territorytoplace.getArmy() == 0) {
                 Territorytoplace.setOwner(player.getColor());
+                player.setTerritoryAmount(player.getTerritoryAmount() + 1);
             }
             if (Territorytoplace.getOwner().equals(player.getColor())) {
                 player.setArmy(player.getArmy() - 1);

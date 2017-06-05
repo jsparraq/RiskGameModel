@@ -16,18 +16,17 @@ public class RiskGameModel {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player player1 = new Player(false,true,"non-capture","BLUE",4,0,2,0,0);
-        Player player2 = new Player(true,true,"non-capture","RED",1,0,3,2,0);
-        Player player3 = new Player(false,true,"non-capture","GREEN",1,0,0,0,0);
-        Player player4 = new Player(false,true,"non-capture","PURPLE",1,0,0,0,0);
-        Player[] players = new Player[]{player1,player2,player3,player4};
-        Territory territory1 = new Territory("A","RED",1000,false);
-        Territory territory2 = new Territory("B","BLUE",1,false);
-        Territory territory3 = new Territory("C","BLUE",1,false);
-        Territory territory4 = new Territory("D","BLUE",1,false);
-        Territory territory5 = new Territory("E","BLUE",1,false);
-        Territory territory6 = new Territory("F","GREEN",1,false);
-        Territory territory7 = new Territory("G","PURPLE",1,false);
+        Player player1 = new Player(true,true,"non-capture","BLUE",0,0,0,4,0);
+        Player player2 = new Player(false,true,"non-capture","RED",0,0,0,4,0);
+        Player player3 = new Player(false,true,"non-capture","GREEN",0,0,0,4,0);
+        Player[] players = new Player[]{player1,player2,player3};
+        Territory territory1 = new Territory("A","WHITE",0,false);
+        Territory territory2 = new Territory("B","WHITE",0,false);
+        Territory territory3 = new Territory("C","WHITE",0,false);
+        Territory territory4 = new Territory("D","WHITE",0,false);
+        Territory territory5 = new Territory("E","WHITE",0,false);
+        Territory territory6 = new Territory("F","WHITE",0,false);
+        Territory territory7 = new Territory("G","WHITE",0,false);
         Continent continent1 = new Continent("ContinentA","WHITE",3,new Territory[]{territory1,territory2,territory3});
         Continent continent2 = new Continent("ContinentB","WHITE",2,new Territory[]{territory5,territory4});
         Continent continent3 = new Continent("ContinentC","WHITE",2,new Territory[]{territory6,territory7});
@@ -41,7 +40,7 @@ public class RiskGameModel {
         Territory[] A = new Territory[]{territory1,territory2,territory2,territory3,territory3,territory4,territory4,territory5,territory5,territory6,territory6,territory7,territory7,territory1};
         Territory[] B = new Territory[]{territory2,territory1,territory3,territory2,territory4,territory3,territory5,territory4,territory6,territory5,territory7,territory6,territory1,territory7};
         Boundary boundary = new Boundary(1,A,B);
-        Session session = new Session(1,"TWO PLACE ARMY",players,new Map("ameroki_pic",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary),"as");
+        Session session = new Session(1,"START PLACE ARMY",players,new Map("ameroki_pic",new Continent[]{continent1,continent2,continent3},new Card[]{card1,card2,card3,card4,card5,card6,card7},boundary),"WORLD_DOMINATION_RISK");
         AcceptTurnManager acceptTurnManager = new AcceptTurnManager(session);
     }
     

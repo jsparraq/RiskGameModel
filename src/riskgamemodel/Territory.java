@@ -125,9 +125,18 @@ public class Territory {
      */
     public static void conquers(Attack attack,String army ,Session sessionstart,Player playerstart){
         String colorenemy = attack.getDefender().getOwner();
+        Player[] players = sessionstart.getPlayers();
+        Player playerenemy = new Player();
+        for (Player player : players) {
+            if (player.getColor().equals(colorenemy)) {
+                playerenemy = player;
+            }
+        }
         attack.getDefender().setOwner(playerstart.getColor());        
         attack.getDefender().setArmy(attack.getDefender().getArmy() + Integer.parseInt(army));
         attack.getAttacker().setArmy(attack.getAttacker().getArmy() - Integer.parseInt(army));
+        playerstart.setTerritoryAmount(playerstart.getTerritoryAmount() + 1);
+        playerenemy.setTerritoryAmount(playerenemy.getTerritoryAmount() - 1);
         
         Territory name_conquered = attack.getDefender();
         Continent name_continent = new Continent();
@@ -154,7 +163,6 @@ public class Territory {
                 name_continent.setOwner(playerstart.getColor());
                 playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
             }else{
-                Player[] players = sessionstart.getPlayers();
                 for (Player player : players) {
                     if (player.getColor().equals(name_continent.getOwner())) {
                         player.setContinentAmount(player.getContinentAmount() - 1);
@@ -164,13 +172,7 @@ public class Territory {
                 playerstart.setContinentAmount(playerstart.getContinentAmount() + 1);
             }
         }
-        Player[] players = sessionstart.getPlayers();
-        Player playerenemy = new Player();
-        for (Player player : players) {
-            if (player.getColor().equals(colorenemy)) {
-                playerenemy = player;
-            }
-        }
+        
         if (playerenemy.getTerritoryAmount() == 0) {
             playerenemy.setplaying(false);
         }

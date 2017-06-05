@@ -50,7 +50,7 @@ public class PlaceArmyManager {
         for (Continent continent : continents) {
             Territory[] territories = continent.getTerritory();
             for (Territory territorie : territories) {
-                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0) {
+                if (territorie.getOwner().equals(playerstart.getColor()) || territorie.getArmy() == 0 || territorie.getOwner().equals("WHITE")) {
                     territoryplayer.add(territorie);
                 }
             }
