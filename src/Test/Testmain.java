@@ -22,7 +22,7 @@ public class Testmain {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        BufferedReader readJson = new BufferedReader(new FileReader("start_session.json"));
+        BufferedReader readJson = new BufferedReader(new FileReader("jsonTest.json"));
         String line = null;
         StringBuilder jsonTest = new StringBuilder();
         while ((line = readJson.readLine()) != null) {
