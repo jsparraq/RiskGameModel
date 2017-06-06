@@ -113,7 +113,7 @@ public class ConvertJson {
                 Card aux = new Card(type,owner,design,terr);
                 cards1[j] = aux;
             }
-            Map map1 = new Map(name_map,continents1,cards1,new Boundary(3));
+            Map map1 = new Map(name_map,continents1,cards1,new Boundary(3,TERRITORIES));
             Session sessionstart = new Session(id,state,players1,map1,type_);
             AcceptTurnManager acceptTurnManager = new AcceptTurnManager(sessionstart);
         }
