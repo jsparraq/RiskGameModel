@@ -88,9 +88,9 @@ public class MainManager {
         
         int tam = sessionstart.getPlayers().length;
         JSONArray players = new JSONArray(); 
-        
-        for (int i = 0; i < tam; i++) {
-            JSONObject player1 = new JSONObject();
+        JSONObject player1 = new JSONObject();
+        for (int i = 0; i < tam; i++) { 
+            JSONObject playeri = new JSONObject();
             player1.put("turn", String.valueOf(sessionstart.getPlayers()[i].getTurn()));
             player1.put("playing",String.valueOf(sessionstart.getPlayers()[i].getplaying()));
             player1.put("color",sessionstart.getPlayers()[i].getColor());
@@ -100,9 +100,9 @@ public class MainManager {
             player1.put("card_amount",String.valueOf(sessionstart.getPlayers()[i].getCardAmount()));
             player1.put("trades",String.valueOf(sessionstart.getPlayers()[i].gettrades()));
             player1.put("army",String.valueOf(sessionstart.getPlayers()[i].getArmy()));
-                        
-            players.add(player1);
+            playeri.put("Player"+(i+1), player1);
         }
+        players.add(player1);
         JSONObject inner_map = new JSONObject();
         inner_map.put("name", sessionstart.getMap().getName());
         
