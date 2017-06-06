@@ -16,6 +16,10 @@ public class Map {
      * @param cards
      * @param boundary 
      */
+    public Map(){
+        
+    }
+    
     public Map(String name,Continent[] continents, Card[] cards, Boundary boundary){
         Name = name;
         Continents = continents;
@@ -31,6 +35,9 @@ public class Map {
         return Boundary;
     }
     
+    public void setboundary(Boundary aa){
+        Boundary = aa;
+    }
     /**
      * This method sets the name of the map
      * @param value 
@@ -55,12 +62,19 @@ public class Map {
         return Continents;
     }
     
+    public void setContinents(Continent[] a){
+        Continents = a;
+    }
     /**
      * This method gets the cards of the map
      * @return 
      */
     public Card[] getCards(){
         return Cards;
+    }
+    
+    public void setCards(Card[] aa){
+        Cards = aa;
     }
     
 }

@@ -100,17 +100,13 @@ public class MainManager {
             player1.put("card_amount",String.valueOf(sessionstart.getPlayers()[i].getCardAmount()));
             player1.put("trades",String.valueOf(sessionstart.getPlayers()[i].gettrades()));
             player1.put("army",String.valueOf(sessionstart.getPlayers()[i].getArmy()));
-            
-            JSONObject jugadori = new JSONObject();
-            jugadori.put("Player" + (i + 1), player1);
-            
-            players.add(jugadori);
+                        
+            players.add(player1);
         }
         JSONObject inner_map = new JSONObject();
         inner_map.put("name", sessionstart.getMap().getName());
         
         JSONArray cards = new JSONArray();
-        JSONObject cartai = new JSONObject();
         for (int i = 0; i < sessionstart.getMap().getCards().length; i++) {
             JSONObject carta1 = new JSONObject();
         
@@ -119,23 +115,19 @@ public class MainManager {
             carta1.put("type", sessionstart.getMap().getCards()[i].getType());
             carta1.put("territory",sessionstart.getMap().getCards()[i].getTerritory().getName());
 
-            cartai.put("Card" + (i + 1), carta1);
-
-            cards.add(cartai);
+            cards.add(carta1);
         }
         inner_map.put("cards", cards);
         
         
         JSONArray continents = new JSONArray();
-        JSONObject continenti = new JSONObject();
        
         
         for (int i = 0; i < sessionstart.getMap().getContinents().length; i++) {
             
             JSONArray territories = new JSONArray();
-            JSONObject territoriesi = new JSONObject();
-            
             JSONObject continent1 = new JSONObject();
+            continent1 = new JSONObject();
             continent1.put("name", sessionstart.getMap().getContinents()[i].getName());
             continent1.put("army", String.valueOf(sessionstart.getMap().getContinents()[i].getArmy()));
             continent1.put("owner", sessionstart.getMap().getContinents()[i].getOwner());
@@ -147,12 +139,13 @@ public class MainManager {
                 territory1.put("owner", sessionstart.getMap().getContinents()[i].getTerritory()[j].getOwner());
                 territory1.put("capital", String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getCapital()));
                 territory1.put("army", String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getArmy()));
-                territoriesi.put("Territory"+(j+1),territory1);
-                territories.add(territoriesi);
+                territories.add(territory1);
             }
+              
             continent1.put("territories", territories);
-            continents.add(continenti);
+            continents.add(continent1);
         }
+        
         inner_map.put("continents",continents);
         
         innerObj.put("map", inner_map);

@@ -10,6 +10,9 @@ public class Card {
         private String Design;
         private Territory Territory;
         
+        public void setTerritory(Territory aa){
+            Territory = aa;
+        }
         /**
          * This method is the constructor of Card class
          */

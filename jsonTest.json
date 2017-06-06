@@ -1,98 +1,28 @@
-{"session" :
-   {
-      "ID":"3",
-      "type":"World domination risk",
-      "state":"START PLACE ARMY"
-      "players": 
-         [
-            {"Player1":
-               {
-               "turn":"true",
-               "capital":"true",
-               "color":"Yellow",
-               "capturestate":"non-capture",
-               "territory_amount": "4",
-               "continent_amount":"1",
-               "card_amount":"3",
-               "trades": "3",
-               "army":"0",
-               }
-            },
-            {"Player2":
-               {
-               "turn":"false",
-               "color":"blue",
-               "capital":"false",
-               "capturestate":"non-capture",
-               "territory_amount": "4",
-               "continent_amount":"1",
-               "card_amount":"3",
-               "trades": "3",
-               "army":"0",
-               }
-            },
-         ],  
-      "map": 
-         {
-            "name":"Classic"
-            "cards": 
-               [
-                  {"Card1":
-                     {
-                     "design":"artillery"
-                     "owner": "yellow"
-                     "type": "Standard"
-                     "territory": "Colombia"
-                     }
-                  }, 
-                  {"Card2":
-                     {
-                     "design":"artillery"
-                     "owner": "blue"
-                     "type": "Standard"
-                     "territory": "Argentina"
-                     }
-                  }, 
-               ],
-            "continents": 
-               [
-                  {"Continent1":
-                     {
-                        "name":"America",
-                        "army":"3",
-                        "owner":"White",
-                        "territories": 
-                           [
-                              {"Territory1":
-                                 {
-                                    "name": "Colombia",
-                                    "owner":"yellow",
-                                    "capital":"true",
-                                    "army":"3"
-                                 }
-                              }
-                           ]
-                     } 
-                  }, 
-                  {"Continent2":
-                     {
-                        "name":"Europa",
-                        "army":"3",
-                        "owner":"White",
-                        "territories":
-                           [
-                           {"Territory1":
-                              {
-                              "name": "España",
-                              "owner":"yellow",
-                              "capital":"true",
-                              "army":"3"
-                              }
-                           },
-                        ]
-                     } 
-                  }
-               ] 
-         }
-   }
-} 
+{  
+   "players":[  
+      {  
+         "numberOfSessionsWon":0,
+         "color":"PURPLE",
+         "type":"PLAYER",
+         "percentajeOfWins":0.0,
+         "numberOfSessionLost":0,
+         "email":"dacanoc@unal.edu.co",
+         "username":"dacanoc",
+         "status":"PLAYING"
+      },
+      {  
+         "numberOfSessionsWon":0,
+         "color":"YELLOW",
+         "type":"HOST",
+         "percentajeOfWins":0.0,
+         "numberOfSessionLost":0,
+         "email":"hernan@unal.edu.co",
+         "username":"hernan",
+         "status":"ONLINE"
+      }
+   ],
+   "id":3,
+   "type":"WORLD_DOMINATION_RISK",
+   "map":"Classic"
+}
+

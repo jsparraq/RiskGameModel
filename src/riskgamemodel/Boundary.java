@@ -19,6 +19,7 @@ public class Boundary {
         Neighbours = neig;
     }
     
+    
     /**
      * This method is the constructor of Boundary class.
      * @param id

@@ -1,0 +1,98 @@
+{"session" :
+   {
+      "ID":"3",
+      "type":"World domination risk",
+      "state":"START PLACE ARMY"
+      "players": 
+         [
+            {"Player1":
+               {
+               "turn":"true",
+               "playing":"true",
+               "color":"orange",
+               "capturestate":"non-capture",
+               "territory_amount": "3",
+               "continent_amount":"2",
+               "card_amount":"3",
+               "trades": "3",
+               "army":"0",
+               }
+            },
+            {"Player2":
+               {
+               "turn":"false",
+               "color":"blue",
+               "playing":"false",
+               "capturestate":"non-capture",
+               "territory_amount": "4",
+               "continent_amount":"1",
+               "card_amount":"3",
+               "trades": "3",
+               "army":"0",
+               }
+            },
+         ],  
+      "map": 
+         {
+            "name":"Classic"
+            "cards": 
+               [
+                  {"Card1":
+                     {
+                     "design":"artillery"
+                     "owner": "blue"
+                     "type": "Standard"
+                     "territory": "Venezuela"
+                     }
+                  }, 
+                  {"Card2":
+                     {
+                     "design":"artillery"
+                     "owner": "orange"
+                     "type": "Standard"
+                     "territory": "España"
+                     }
+                  }, 
+               ],
+            "continents": 
+               [
+                  {"Continent1":
+                     {
+                        "name":"Asia",
+                        "army":"5",
+                        "owner":"White",
+                        "territories": 
+                           [
+                              {"Territory1":
+                                 {
+                                    "name": "Venezuela",
+                                    "owner":"yellow",
+                                    "capital":"true",
+                                    "army":"3"
+                                 }
+                              }
+                           ]
+                     } 
+                  }, 
+                  {"Continent2":
+                     {
+                        "name":"Europa",
+                        "army":"3",
+                        "owner":"White",
+                        "territories":
+                           [
+                           {"Territory1":
+                              {
+                              "name": "España",
+                              "owner":"yellow",
+                              "capital":"true",
+                              "army":"3"
+                              }
+                           },
+                        ]
+                     } 
+                  }
+               ] 
+         }
+   }
+} 

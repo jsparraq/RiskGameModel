@@ -10,6 +10,10 @@ public class Continent {
     private int Army;
     private Territory[] Territories;
     
+    
+    public void setterritories(Territory[] aux){
+        Territories = aux;
+    }
     /**
      * 
      */
