@@ -5,7 +5,7 @@
  */
 package Test;
 
-import Controller.ConvertJson;
+import Controller.AcceptTurnManager;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,14 +21,14 @@ public class Testmain {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        BufferedReader readJson = new BufferedReader(new FileReader("jsonTest.json"));
+        BufferedReader readJson = new BufferedReader(new FileReader("start_session.json"));
         String line = null;
         StringBuilder jsonTest = new StringBuilder();
         while ((line = readJson.readLine()) != null) {
             jsonTest.append(line);
         }
-        ConvertJson.createSession(jsonTest.toString());
-        
+        //AcceptTurnManager.createstateSession(jsonTest.toString());
+        AcceptTurnManager.createSession(jsonTest.toString());
         /*
         Player player1 = new Player(true,true,"non-capture","BLUE",0,0,0,2,0);
         Player player2 = new Player(false,true,"non-capture","RED",0,0,0,2,0);

@@ -13,6 +13,12 @@ public class Boundary {
     private final Territory[] Neighbours ;
     
     
+    public Boundary(int id, Territory[] terr, Territory[] neig){
+        ID = id;
+        Territories = terr;
+        Neighbours = neig;
+    }
+    
     /**
      * This method is the constructor of Boundary class.
      * @param id

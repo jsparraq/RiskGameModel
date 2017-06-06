@@ -1,0 +1,28 @@
+{  
+   "players":[  
+      {  
+         "numberOfSessionsWon":0,
+         "color":"PURPLE",
+         "type":"PLAYER",
+         "percentajeOfWins":0.0,
+         "numberOfSessionLost":0,
+         "email":"dacanoc@unal.edu.co",
+         "username":"dacanoc",
+         "status":"PLAYING"
+      },
+      {  
+         "numberOfSessionsWon":0,
+         "color":"YELLOW",
+         "type":"HOST",
+         "percentajeOfWins":0.0,
+         "numberOfSessionLost":0,
+         "email":"hernan@unal.edu.co",
+         "username":"hernan",
+         "status":"ONLINE"
+      }
+   ],
+   "id":3,
+   "type":"SECRET_MISSION_RISK",
+   "map":"Classic"
+}
+
