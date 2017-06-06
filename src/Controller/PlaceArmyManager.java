@@ -21,6 +21,7 @@ public class PlaceArmyManager {
         for (Player player : players) {
             if (player.getTurn()) {
                 playerstart = player;
+                break;
             }
         }
         
@@ -41,6 +42,7 @@ public class PlaceArmyManager {
         for (Player player : players) {
             if (player.getTurn()) {
                 playerstart = player;
+                break;
             }
         }
         ArrayList<Territory> territoryplayer = new ArrayList();

@@ -23,6 +23,7 @@ public class TradeCardManager {
         for (Player player : players) {
             if (player.getTurn()) {
                 playerstart = player;
+                break;
             }
         }
         ArrayList<Card> cards_player = new ArrayList();

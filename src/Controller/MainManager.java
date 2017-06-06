@@ -73,4 +73,8 @@ public class MainManager {
     public static boolean stateSession(Session sessionstart){
         return !"START PLACE ARMY".equals(sessionstart.getState());
     }
+    
+    public static void finishturn(Session session){
+        
+    }
 }

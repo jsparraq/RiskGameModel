@@ -62,7 +62,7 @@ public class AcceptTurnManager {
                     String nombre = "Player"+(i+1);                    
                     JSONObject jugadorsito = (JSONObject)jugador.get(nombre);                                
                     boolean turn = Boolean.parseBoolean((String) jugadorsito.get("turn"));                    
-                    boolean capital = Boolean.parseBoolean((String) jugadorsito.get("capital"));                    
+                    boolean capital = Boolean.parseBoolean((String) jugadorsito.get("playing"));                    
                     String color = (String)jugadorsito.get("color");                    
                     String capturestate = (String)jugadorsito.get("capturestate");
                     int territory_amount = Integer.parseInt((String)jugadorsito.get("territory_amount"));                    
@@ -163,7 +163,12 @@ public class AcceptTurnManager {
             }else{
                 army = 21;
             }
-            Player[] players1 = new Player[players.size()];
+            Player[] players1;
+            if(players.size() == 2){
+                players1 = new Player[players.size() + 1];
+            }else{
+                players1 = new Player[players.size()];
+            }            
             for (int i = 0; i < players.size(); i++) {
                 JSONObject jugador = (JSONObject) players.get(i);
                 String color = (String)jugador.get("color");
@@ -366,19 +371,21 @@ public class AcceptTurnManager {
 									territory23, territory15
 									};
             Boundary boundary = new Boundary(1,terr,neigh);
-            int id = Integer.parseInt((String)jsonObject.get("type"));
+            Long id = (Long)jsonObject.get("id");
             String type = (String)jsonObject.get("type");
             String map1 = (String)jsonObject.get("map");
             
             Map map = new Map(map1,new Continent[]{continent1,continent2,continent3,continent4,continent5,continent6},cards,boundary);
             String state;
-            if(players1.length > 2){
+            if(players.size() > 2){
                 state = "START PLACE ARMY";
             }else{
                 state = "TWO PLACE ARMY";
+                Player player = new Player(false,true,"non-capture","GREEN",0,0,0,0,0);
+                players1[2] = player;
             }
             
-            Session sessionstart = new Session(id,state,players1,map,type);
+            Session sessionstart = new Session(id.intValue(),state,players1,map,type);
             AcceptTurnManager acceptTurnManager = new AcceptTurnManager(sessionstart);
             
             
