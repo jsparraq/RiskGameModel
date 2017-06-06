@@ -51,133 +51,96 @@ public class AcceptTurnManager {
             
             JSONObject session = (JSONObject)jsonObject.get("session");
             
-            Integer id = Integer.parseInt((String) session.get("ID"));
-            System.out.println(id);
-            
-            String type_ = (String) session.get("type");
-            System.out.println(type_);
-            
+            int id = Integer.parseInt((String) session.get("ID"));            
+            String type_ = (String) session.get("type");            
             String state = (String) session.get("state"); 
-            System.out.println(state);
             
             JSONArray players = (JSONArray) session.get("players");
-                             
-            Player[] players1 = new Player[players.size()];
-            for (int i=0; i < players.size();i++) {               
-                    
+            JSONObject asd = (JSONObject)players.get(0);
+            Player[] players1 = new Player[asd.size()];         
+            for (int i=0; i < asd.size();i++) {  
+                    String nombre = "Player"+(i+1);                    
+                    JSONObject jugadorsito = (JSONObject)asd.get(nombre);
                     players1[i] = new Player();
-                    JSONObject jugador = (JSONObject) players.get(i);                                    
-                                                          
-                    String nombre = "Player"+(i+1);
-                    System.out.println("el nombre es: " + nombre);
-                    
-                    JSONObject jugadorsito = (JSONObject)jugador.get(nombre);
-                                
-                    players1[i].setTurn(Boolean.valueOf((String) jugadorsito.get("turn")));
-                    
-                    players1[i].setplaying(Boolean.parseBoolean((String) jugadorsito.get("playing")));
-                    
-                    players1[i].setColor((String)jugadorsito.get("color"));
-                    
-                    players1[i].setCaptureState((String)jugadorsito.get("capturestate"));
-                    
-                    players1[i].setTerritoryAmount(Integer.parseInt((String)jugadorsito.get("territory_amount")));
-
-                    players1[i].setContinentAmount(Integer.parseInt((String)jugadorsito.get("continent_amount")));
-                                        
-                    players1[i].setCardAmount(Integer.parseInt((String)jugadorsito.get("card_amount")));
-                    
-                    players1[i].settrades(Integer.parseInt((String)jugadorsito.get("trades")));
-                    
-                    players1[i].setArmy(Integer.parseInt((String)jugadorsito.get("army")));  
+                    boolean turn = Boolean.parseBoolean((String) jugadorsito.get("turn"));  
+                    players1[i].setTurn(turn);
+                    boolean capital = Boolean.parseBoolean((String) jugadorsito.get("playing"));
+                    players1[i].setplaying(capital);
+                    String color = (String)jugadorsito.get("color");   
+                    players1[i].setColor(color);
+                    String capturestate = (String)jugadorsito.get("capturestate");
+                    players1[i].setCaptureState(capturestate);
+                    int territory_amount = Integer.parseInt((String)jugadorsito.get("territoryamount"));
+                    players1[i].setTerritoryAmount(territory_amount);
+                    int continent_amount = Integer.parseInt((String)jugadorsito.get("continentamount"));
+                    players1[i].setContinentAmount(continent_amount);
+                    int card_amount = Integer.parseInt((String)jugadorsito.get("cardamount"));
+                    players1[i].setCardAmount(card_amount);
+                    int trades = Integer.parseInt((String)jugadorsito.get("trades"));
+                    players1[i].settrades(trades);
+                    int army = Integer.parseInt((String)jugadorsito.get("army"));
+                    players1[i].setArmy(army);
                     
             }
             
-                  
             JSONObject map = (JSONObject)session.get("map");
-            Map map1 = new Map();
-            map1.setName((String)map.get("name")); 
-            ArrayList<Territory> terrs = new ArrayList<>();
+            
+            String name_map = (String)map.get("name"); 
+            
+            ArrayList<Territory> TERRITORIES = new ArrayList();
             JSONArray continents = (JSONArray) map.get("continents");
-            
-            Continent[] continents1 = new Continent[continents.size()];
-            
-            for (int i=0; i < continents.size();i++) {
-                continents1[i] = new Continent();
-                JSONObject continente = (JSONObject) continents.get(i);
+            JSONObject asd1 = (JSONObject)continents.get(0);
+            Continent[] continents1 = new Continent[asd1.size()];
+            for (int i=0; i < asd1.size();i++) {                                
+                String nombre_continente = "Continent"+(i+1);                
+                JSONObject continentico = (JSONObject)asd1.get(nombre_continente);
+                String continent_name = (String)continentico.get("name");
+                int continent_army = Integer.parseInt((String)continentico.get("army"));                
+                String continent_owner = (String)continentico.get("owner");                
                 
-                String nombre_continente = "Continent"+(i+1);
-                System.out.println("el nombre del continente es : " + nombre_continente);
-                
-                JSONObject continentico = (JSONObject)continente.get(nombre_continente);
-                
-                continents1[i].setName((String)continentico.get("name"));
-                
-                continents1[i].setArmy(Integer.parseInt((String)continentico.get("army")));
-                
-                continents1[i].setOwner((String)continentico.get("owner"));
-                
-                
-                JSONArray territories = (JSONArray) continentico.get("territories");
-                Territory[] territories1 = new Territory[territories.size()];
-                for (int j = 0;j < territories.size(); j++) {
-                        territories1[j] = new Territory();
-                        JSONObject territorio = (JSONObject)territories.get(j);
-                                            
+                JSONArray territories = (JSONArray) continentico.get("Territories");
+                System.out.println(territories.size());
+                JSONObject asd2 = (JSONObject)territories.get(0);
+                Territory[] territories1 = new Territory[asd2.size()];
+                for (int j = 0;j < asd2.size(); j++) {
+                        JSONObject territorio = (JSONObject)asd2.get(j);
                         String nombre_territorios = "Territory"+(j+1);
-                        System.out.println("el nombre del territorio es : " + nombre_territorios);
-                
-                        JSONObject mini_territorio = (JSONObject)territorio.get(nombre_territorios);
+                        JSONObject mini_territorio = (JSONObject)asd2.get(nombre_territorios);
+                        String territory_name = (String)mini_territorio.get("name");                        
+                        String territory_owner = (String)mini_territorio.get("owner");                        
+                        boolean territory_capital = Boolean.parseBoolean((String)mini_territorio.get("capital"));  
+                        int territory_army = Integer.parseInt((String)mini_territorio.get("army"));
+                        territories1[j] = new Territory(territory_name,territory_owner,territory_army,territory_capital);
                         
-                        territories1[j].setName((String)mini_territorio.get("name"));
-                        
-                        territories1[j].setOwner((String)mini_territorio.get("owner"));
-                        
-                        territories1[j].setCapital(Boolean.valueOf((String)mini_territorio.get("capital")));
-                        
-                        territories1[j].setArmy(Integer.parseInt((String)mini_territorio.get("army")));
-                        terrs.add(territories1[j]);
-                        
-                }
-                
-                continents1[i].setterritories(territories1);
+                        TERRITORIES.add(territories1[j]);
+                }   
+                continents1[i] = new Continent(continent_name,continent_owner,continent_army,territories1);
+            }       
             
-            } 
-            
-            map1.setContinents(continents1);
             JSONArray cards = (JSONArray) map.get("cards");
-            
-            String territory;
-            
-            Card[] cards1 = new Card[cards.size()];
-            for (int j = 0; j< cards.size(); j++) {
-                cards1[j] = new Card();
-                JSONObject carta = (JSONObject) cards.get(j);
-                
+            JSONObject asd3 = (JSONObject)cards.get(0);
+            Card[] cards1 = new Card[asd3.size()];
+            for (int j = 0; j< asd3.size(); j++) {                
+                JSONObject carta = (JSONObject) asd3.get(j);                
                 String nombre_carta = "Card"+(j+1);
-                System.out.println("el nombre de la carta es : " + nombre_carta);
                  
-                JSONObject cartica = (JSONObject)carta.get(nombre_carta);
-                 
-                cards1[j].setDesign((String)cartica.get("design"));
-                 
-                cards1[j].setOwner((String)cartica.get("owner"));
-                 
-                cards1[j].setType((String)cartica.get("type"));
-                territory = (String)cartica.get("territory");
-                
-                for (int i = 0; i < terrs.size(); i++) {
-                    if(terrs.get(i).getName().equals(territory)){
-                        cards1[j].setTerritory(terrs.get(i));
+                JSONObject cartica = (JSONObject)asd3.get(nombre_carta);
+                String design = (String)cartica.get("design");
+                String owner = (String)cartica.get("owner");
+                String type = (String)cartica.get("type");                 
+                String territory = (String)cartica.get("territory");
+                Territory terr = new Territory();
+                for (int i = 0; i < TERRITORIES.size(); i++) {
+                    if(TERRITORIES.get(i).getName().equals(territory)){
+                        terr = TERRITORIES.get(i);
                         break;
                     }
-                }                
-                 
+                }
+                cards1[j] = new Card(type,owner,design,terr);
             }
-            map1.setCards(cards1);
-            map1.setboundary(new Boundary(1,terrs));
+            Map map1 = new Map(name_map,continents1,cards1,new Boundary(3,TERRITORIES));
             Session sessionstart = new Session(id,state,players1,map1,type_);
-            new Accepts_Turn_Interface(sessionstart).setVisible(true);
+            AcceptTurnManager acceptTurnManager = new AcceptTurnManager(sessionstart);
         }
         catch(Exception e)
         {
@@ -220,37 +183,37 @@ public class AcceptTurnManager {
                 String type = (String)jugador.get("type");
                 Player player1;
                 if("HOST".equals(type)){
-                    player1 = new Player(true,true,"non-capture",color,0,0,0,army,0);
+                    player1 = new Player(true,true,"non-capture",color,0,5,0,army,0);
                 }else{
                     player1 = new Player(false,true,"non-capture",color,0,0,0,army,0);
                 }
                 players1[i] = player1;
             }
-            Territory territory1 = new Territory("OEKRAINË","WHITE",0,false);
-            Territory territory2 = new Territory("IJSLAND","WHITE",0,false);
-            Territory territory3 = new Territory("SCANDINAVIË","WHITE",0,false);
-            Territory territory4 = new Territory("WEST-EUROPA","WHITE",0,false);
-            Territory territory5 = new Territory("GROOT-BRITTANIË","WHITE",0,false);
-            Territory territory6 = new Territory("ZUID-EUROPA","WHITE",0,false);
-            Territory territory7 = new Territory("NOORD-EUROPA","WHITE",0,false);
+            Territory territory1 = new Territory("OEKRAINË","YELLOW",100,false);
+            Territory territory2 = new Territory("IJSLAND","ORANGE",1,false);
+            Territory territory3 = new Territory("SCANDINAVIË","YELLOW",0,false);
+            Territory territory4 = new Territory("WEST-EUROPA","YELLOW",0,false);
+            Territory territory5 = new Territory("GROOT-BRITTANIË","YELLOW",0,false);
+            Territory territory6 = new Territory("ZUID-EUROPA","YELLOW",0,false);
+            Territory territory7 = new Territory("NOORD-EUROPA","YELLOW",0,false);
             Continent continent1 = new Continent("UIROPA","WHITE",7,new Territory[]{territory1,territory2,territory3,territory4,territory5,territory6,territory7});
 
-            Territory territory8 = new Territory("VARENIGDE-STATEM(OOST)","WHITE",0,false);
-            Territory territory9 = new Territory("VARENIGDE-STATEM(WEST)","WHITE",0,false);
-            Territory territory10 = new Territory("NORTHWEST-TERRITORIES","WHITE",0,false);
-            Territory territory11 = new Territory("ALBERTA","WHITE",0,false);
-            Territory territory12 = new Territory("MIDDEN-AMERIKA","WHITE",0,false);
-            Territory territory13 = new Territory("ALASKA","WHITE",0,false);
-            Territory territory14 = new Territory("ONTARIO","WHITE",0,false);
-            Territory territory15 = new Territory("QUEBEC","WHITE",0,false);
-            Territory territory16 = new Territory("GROENLAND","WHITE",0,false);
-            Continent continent2 = new Continent("AMEROKI","WHITE",9,new Territory[]{territory8,territory9,territory10,territory11,territory12,territory13,territory14,territory15,territory16});
+            Territory territory8 = new Territory("VARENIGDE-STATEM(OOST)","YELLOW",0,false);
+            Territory territory9 = new Territory("VARENIGDE-STATEM(WEST)","YELLOW",0,false);
+            Territory territory10 = new Territory("NORTHWEST-TERRITORIES","YELLOW",0,false);
+            Territory territory11 = new Territory("ALBERTA","YELLOW",0,false);
+            Territory territory12 = new Territory("MIDDEN-AMERIKA","YELLOW",0,false);
+            Territory territory13 = new Territory("ALASKA","YELLOW",0,false);
+            Territory territory14 = new Territory("ONTARIO","YELLOW",0,false);
+            Territory territory15 = new Territory("QUEBEC","YELLOW",0,false);
+            Territory territory16 = new Territory("GROENLAND","YELLOW",0,false);
+            Continent continent2 = new Continent("AMEROKI","YELLOW",9,new Territory[]{territory8,territory9,territory10,territory11,territory12,territory13,territory14,territory15,territory16});
 
-            Territory territory17 = new Territory("SIBERIË","WHITE",0,false);
-            Territory territory18 = new Territory("IRKOETSK","WHITE",0,false);
-            Territory territory19 = new Territory("INDIA","WHITE",0,false);
-            Territory territory20 = new Territory("JAPON","WHITE",0,false);
-            Territory territory21 = new Territory("JAKOETSK","WHITE",0,false);
+            Territory territory17 = new Territory("SIBERIË","YELLOW",0,false);
+            Territory territory18 = new Territory("IRKOETSK","YELLOW",0,false);
+            Territory territory19 = new Territory("INDIA","YELLOW",0,false);
+            Territory territory20 = new Territory("JAPON","YELLOW",0,false);
+            Territory territory21 = new Territory("JAKOETSK","YELLOW",0,false);
             Territory territory22 = new Territory("MONGOLOË","WHITE",0,false);
             Territory territory23 = new Territory("CHINA","WHITE",0,false);
             Territory territory24 = new Territory("MIDDEN-OOSTEN","WHITE",0,false);
@@ -281,9 +244,9 @@ public class AcceptTurnManager {
             Continent continent6 = new Continent("AMERPOLU","WHITE",4,new Territory[]{territory38,territory39,territory40,territory41});
 
 
-            Card card1 = new Card("STANDARD","WHITE","Infantry",territory1);
-            Card card2 = new Card("STANDARD","WHITE","Cavalry",territory2);
-            Card card3 = new Card("STANDARD","WHITE","Artillery",territory3);
+            Card card1 = new Card("STANDARD","YELLOW","Infantry",territory1);
+            Card card2 = new Card("STANDARD","YELLOW","Cavalry",territory2);
+            Card card3 = new Card("STANDARD","YELLOW","Artillery",territory3);
             Card card4 = new Card("STANDARD","WHITE","Infantry",territory4);
             Card card5 = new Card("STANDARD","WHITE","Cavalry",territory5);
             Card card6 = new Card("STANDARD","WHITE","Artillery",territory6);
@@ -430,7 +393,7 @@ public class AcceptTurnManager {
                 players1[2] = player;
             }
             
-            Session sessionstart = new Session(id.intValue(),state,players1,map,type);
+            Session sessionstart = new Session(id.intValue(),"RUN",players1,map,type);
             AcceptTurnManager acceptTurnManager = new AcceptTurnManager(sessionstart);
         }catch(Exception e)
         {
