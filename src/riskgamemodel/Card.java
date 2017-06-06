@@ -87,6 +87,10 @@ public class Card {
             return Design;
         }
         
+        
+        public Territory getTerritory(){
+            return Territory;
+        }
         /**
          * This method let you trade the cards if you want at the start of the turn and received the army for it. 
          * changes the owner value to white and fi they have more that 6 card it trades automatically

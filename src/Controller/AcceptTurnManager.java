@@ -227,13 +227,13 @@ public class AcceptTurnManager {
             Territory territory35 = new Territory("NOORD-AFRIKA","WHITE",0,false);
             Territory territory36 = new Territory("EGYPTE","WHITE",0,false);
             Territory territory37 = new Territory("MADAGASCAR","WHITE",0,false);
-            Continent continent5 = new Continent("AFROKI","WHITE",2,new Territory[]{territory32,territory33,territory34,territory35,territory36,territory37});
+            Continent continent5 = new Continent("AFROKI","WHITE",6,new Territory[]{territory32,territory33,territory34,territory35,territory36,territory37});
 
             Territory territory38 = new Territory("BRASILIË","WHITE",0,false);
             Territory territory39 = new Territory("PERU","WHITE",0,false);
             Territory territory40 = new Territory("VENEZUELA","WHITE",0,false);
             Territory territory41 = new Territory("ARGENTINË","WHITE",0,false);
-            Continent continent6 = new Continent("AMERPOLU","WHITE",2,new Territory[]{territory38,territory39,territory40,territory41});
+            Continent continent6 = new Continent("AMERPOLU","WHITE",4,new Territory[]{territory38,territory39,territory40,territory41});
 
 
             Card card1 = new Card("STANDARD","WHITE","Infantry",territory1);
