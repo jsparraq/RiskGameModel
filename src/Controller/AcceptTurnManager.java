@@ -189,31 +189,31 @@ public class AcceptTurnManager {
                 }
                 players1[i] = player1;
             }
-            Territory territory1 = new Territory("OEKRAINË","YELLOW",100,false);
-            Territory territory2 = new Territory("IJSLAND","ORANGE",1,false);
-            Territory territory3 = new Territory("SCANDINAVIË","YELLOW",0,false);
-            Territory territory4 = new Territory("WEST-EUROPA","YELLOW",0,false);
-            Territory territory5 = new Territory("GROOT-BRITTANIË","YELLOW",0,false);
-            Territory territory6 = new Territory("ZUID-EUROPA","YELLOW",0,false);
-            Territory territory7 = new Territory("NOORD-EUROPA","YELLOW",0,false);
+            Territory territory1 = new Territory("OEKRAINË","WHITE",100,false);
+            Territory territory2 = new Territory("IJSLAND","WHITE",1,false);
+            Territory territory3 = new Territory("SCANDINAVIË","WHITE",0,false);
+            Territory territory4 = new Territory("WEST-EUROPA","WHITE",0,false);
+            Territory territory5 = new Territory("GROOT-BRITTANIË","WHITE",0,false);
+            Territory territory6 = new Territory("ZUID-EUROPA","WHITE",0,false);
+            Territory territory7 = new Territory("NOORD-EUROPA","WHITE",0,false);
             Continent continent1 = new Continent("UIROPA","WHITE",7,new Territory[]{territory1,territory2,territory3,territory4,territory5,territory6,territory7});
 
-            Territory territory8 = new Territory("VARENIGDE-STATEM(OOST)","YELLOW",0,false);
-            Territory territory9 = new Territory("VARENIGDE-STATEM(WEST)","YELLOW",0,false);
-            Territory territory10 = new Territory("NORTHWEST-TERRITORIES","YELLOW",0,false);
-            Territory territory11 = new Territory("ALBERTA","YELLOW",0,false);
-            Territory territory12 = new Territory("MIDDEN-AMERIKA","YELLOW",0,false);
-            Territory territory13 = new Territory("ALASKA","YELLOW",0,false);
-            Territory territory14 = new Territory("ONTARIO","YELLOW",0,false);
-            Territory territory15 = new Territory("QUEBEC","YELLOW",0,false);
-            Territory territory16 = new Territory("GROENLAND","YELLOW",0,false);
-            Continent continent2 = new Continent("AMEROKI","YELLOW",9,new Territory[]{territory8,territory9,territory10,territory11,territory12,territory13,territory14,territory15,territory16});
+            Territory territory8 = new Territory("VARENIGDE-STATEM(OOST)","WHITE",0,false);
+            Territory territory9 = new Territory("VARENIGDE-STATEM(WEST)","WHITE",0,false);
+            Territory territory10 = new Territory("NORTHWEST-TERRITORIES","WHITE",0,false);
+            Territory territory11 = new Territory("ALBERTA","WHITE",0,false);
+            Territory territory12 = new Territory("MIDDEN-AMERIKA","WHITE",0,false);
+            Territory territory13 = new Territory("ALASKA","WHITE",0,false);
+            Territory territory14 = new Territory("ONTARIO","WHITE",0,false);
+            Territory territory15 = new Territory("QUEBEC","WHITE",0,false);
+            Territory territory16 = new Territory("GROENLAND","WHITE",0,false);
+            Continent continent2 = new Continent("AMEROKI","WHITE",9,new Territory[]{territory8,territory9,territory10,territory11,territory12,territory13,territory14,territory15,territory16});
 
-            Territory territory17 = new Territory("SIBERIË","YELLOW",0,false);
-            Territory territory18 = new Territory("IRKOETSK","YELLOW",0,false);
-            Territory territory19 = new Territory("INDIA","YELLOW",0,false);
-            Territory territory20 = new Territory("JAPON","YELLOW",0,false);
-            Territory territory21 = new Territory("JAKOETSK","YELLOW",0,false);
+            Territory territory17 = new Territory("SIBERIË","WHITE",0,false);
+            Territory territory18 = new Territory("IRKOETSK","WHITE",0,false);
+            Territory territory19 = new Territory("INDIA","WHITE",0,false);
+            Territory territory20 = new Territory("JAPON","WHITE",0,false);
+            Territory territory21 = new Territory("JAKOETSK","WHITE",0,false);
             Territory territory22 = new Territory("MONGOLOË","WHITE",0,false);
             Territory territory23 = new Territory("CHINA","WHITE",0,false);
             Territory territory24 = new Territory("MIDDEN-OOSTEN","WHITE",0,false);
@@ -244,9 +244,9 @@ public class AcceptTurnManager {
             Continent continent6 = new Continent("AMERPOLU","WHITE",4,new Territory[]{territory38,territory39,territory40,territory41});
 
 
-            Card card1 = new Card("STANDARD","YELLOW","Infantry",territory1);
-            Card card2 = new Card("STANDARD","YELLOW","Cavalry",territory2);
-            Card card3 = new Card("STANDARD","YELLOW","Artillery",territory3);
+            Card card1 = new Card("STANDARD","WHITE","Infantry",territory1);
+            Card card2 = new Card("STANDARD","WHITE","Cavalry",territory2);
+            Card card3 = new Card("STANDARD","WHITE","Artillery",territory3);
             Card card4 = new Card("STANDARD","WHITE","Infantry",territory4);
             Card card5 = new Card("STANDARD","WHITE","Cavalry",territory5);
             Card card6 = new Card("STANDARD","WHITE","Artillery",territory6);

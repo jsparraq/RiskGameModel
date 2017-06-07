@@ -22,12 +22,7 @@ public class Testmain {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        BufferedReader readJson = new BufferedReader(new FileReader("start.json"));
-        String line = null;
-        StringBuilder jsonTest = new StringBuilder();
-        while ((line = readJson.readLine()) != null) {
-            jsonTest.append(line);
-        }
+        
         System.out.println("# RISK GAME MODEL TEST #");
         StringBuilder menu = new StringBuilder();
         menu.append("code: 1 - Continue session\n");
@@ -38,9 +33,22 @@ public class Testmain {
         int method = entrada.nextInt();
         switch (method) {
             case 1:
+                BufferedReader readJson = new BufferedReader(new FileReader("jsonTest.json"));
+                String line = null;
+                StringBuilder jsonTest = new StringBuilder();
+                while ((line = readJson.readLine()) != null) {
+                    jsonTest.append(line);
+                }
                 AcceptTurnManager.createstateSession(jsonTest.toString());
                 break;
             case 2:
+                
+                readJson = new BufferedReader(new FileReader("start.json"));
+                line = null;
+                jsonTest = new StringBuilder();
+                while ((line = readJson.readLine()) != null) {
+                    jsonTest.append(line);
+                }
                 AcceptTurnManager.createSession(jsonTest.toString());
                 break;
         }
