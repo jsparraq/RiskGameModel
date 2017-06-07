@@ -1,1 +1,3 @@
-# Prueba-json
+# Risk
+  
+El proyecto consiste en jugar un turno del juego de risk donde puede recibir dos tipos de json el primero es cuando se va a empezar a jugar y se recibe la cantidad de jugadores con sus atributos y las características del juego de risk en un archivo json (hay un archivo ejemplo del json inicial que se llama start.json dentro del proyecto) y se ejecuta una interfaz para un turno y al terminar el turno se crea un json con el nombre jsonTest que devuelve nuevo estado de la partida el segundo json que se puede recibir es el del estado de la partida hay un ejemplo dentro del proyecto . Los territorios ya están definidos anteriormente con el mapa elegido para el juego. Para ejecutar el proyecto se debe ejecutar la clase Testmain dentro del paquete Test
