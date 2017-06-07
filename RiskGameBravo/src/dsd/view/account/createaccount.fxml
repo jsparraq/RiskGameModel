@@ -75,11 +75,11 @@
                                     
                                     </Label>
                                     <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
-                                        <TextField id="textField1" fx:id="password" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" >
+                                        <PasswordField id="textField1" fx:id="password" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" >
                                             <GridPane.margin>
                                                 <Insets left="113.0" />
                                             </GridPane.margin>
-                                        </TextField>
+                                        </PasswordField>
                                     </GridPane>
                                 </children>
                             </HBox>
