@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="createaccount" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="dsd.controller.account.CreateAccountController">
+    <children>
+        <AnchorPane id="anchorPane1" prefHeight="371.0" prefWidth="500.0" styleClass="top-segment" AnchorPane.bottomAnchor="129.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView id="app-login-logo" layoutY="0.0" layoutX="140">
+                    <image>
+                        <Image url="@../images/RISK-LOGO_EMEA.png" preserveRatio="true" smooth="true" />
+                    </image>
+                </ImageView>
+                <VBox id="VBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="12.5" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">
+                            <Label id="welocme" styleClass="profileTitle" text="Create Account" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                <GridPane.margin>
+                                    <Insets top="70.0" left="100" />
+                                </GridPane.margin>   
+                            </Label>
+                        </GridPane>
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="user"  prefHeight="25.0" prefWidth="418.0"  >
+                                <GridPane.margin>
+                                    <Insets top="20.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Label id="createtxt" styleClass="profileTitle" text="Username" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                    
+                                    </Label>
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        <TextField id="textField1" fx:id="username" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0" >
+                                            <GridPane.margin>
+                                                <Insets left="110.0" />
+                                            </GridPane.margin>
+                                        </TextField>
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane> 
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="mail"  prefHeight="25.0" prefWidth="418.0"  >
+                                <GridPane.margin>
+                                    <Insets top="20.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Label id="createtxt" styleClass="profileTitle" text="Email" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                    
+                                    </Label>
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        <TextField id="textField1" fx:id="email" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" >
+                                            <GridPane.margin>
+                                                <Insets left="148.0" />
+                                            </GridPane.margin>
+                                        </TextField>
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane>   
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="pass"  prefHeight="25.0" prefWidth="418.0"  >
+                                <GridPane.margin>
+                                    <Insets top="20.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Label id="createtxt" styleClass="profileTitle" text="Password" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                    
+                                    </Label>
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        <TextField id="textField1" fx:id="password" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" >
+                                            <GridPane.margin>
+                                                <Insets left="113.0" />
+                                            </GridPane.margin>
+                                        </TextField>
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane>   
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="firm"  prefHeight="25.0" prefWidth="425.0"  >
+                                <GridPane.margin>
+                                    <Insets top="20.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Label id="createtxt" styleClass="profileTitle" text="Confirm Password" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                    
+                                    </Label>
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        
+                                        <PasswordField id="passwordField1" fx:id="confirmpass" layoutY="130.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"  >
+                                            <GridPane.margin>
+                                                <Insets left="45.0" />
+                                            </GridPane.margin>
+                                        </PasswordField>
+                                        
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane>   
+                        
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="hBox1" alignment="CENTER" prefHeight="25.0" prefWidth="418.0"  >
+                                <GridPane.margin>
+                                    <Insets top="60.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Button id="button1" fx:id="backbtn" defaultButton="true" onAction="#back" prefHeight="30.0" prefWidth="150.0" text="Back" />
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        <Button id="button1" fx:id="createbtn" defaultButton="true" onAction="#create" prefHeight="30.0" prefWidth="150.0" text="Create"  >
+                                            <GridPane.margin>
+                                                <Insets left="60.0" />
+                                            </GridPane.margin>
+                                        </Button>
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane>  
+                    </children>
+                </VBox>
+               
+            </children>
+            
+        </AnchorPane>
+       
+    </children>
+    <stylesheets>
+         <URL value="@../dsdrisk.css" />
+    </stylesheets>
+</AnchorPane>
+

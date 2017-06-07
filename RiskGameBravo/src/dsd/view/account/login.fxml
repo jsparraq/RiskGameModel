@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane id="login" maxHeight="500" maxWidth="520" minHeight="500" minWidth="520" prefHeight="500.0" prefWidth="520.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="dsd.controller.account.LoginController">
+    <children>
+        <AnchorPane id="anchorPane2" prefHeight="300.0" prefWidth="520.0" styleClass="top-segment" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox id="VBox" alignment="CENTER" prefHeight="300.0" prefWidth="421.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane id="AnchorPane" prefHeight="180.0" prefWidth="430.0" >
+                            <children>
+                                <Label id="username" layoutX="14.0" layoutY="110.0" text="Username" />
+                                <TextField id="textField1" fx:id="userId" layoutY="140.0" prefWidth="340.0" prefHeight="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
+                                <Label id="password" layoutX="14.0" layoutY="200.0" text="Password" />
+                                <PasswordField id="passwordField1" fx:id="password" layoutY="230.0" prefWidth="350.0" prefHeight="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0"  />
+             
+                                <ImageView id="app-login-logo" layoutY="-30.0" layoutX="140">
+                                    <image>
+                                        <Image url="@../images/RISK-LOGO_EMEA.png" preserveRatio="true" smooth="true" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        
+                            
+                        <HBox id="hBox1" alignment="CENTER" prefHeight="25.0" prefWidth="418.0"  AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.bottomAnchor="40.0">
+                            <children>
+                                <GridPane id="GridPane" hgap="5.0" vgap="5.0">
+                                    <Label id="error" fx:id="errorMessage" >
+                                        <GridPane.margin>
+                                            <Insets top="15.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                </GridPane>
+                            </children>
+                        </HBox>
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">
+                            <Button id="login" fx:id="login" defaultButton="true" onAction="#processLogin"  prefHeight="50.0" prefWidth="435.0" text="Login" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" >
+                                <GridPane.margin>
+                                    <Insets top="45.0" left="15" />
+                                </GridPane.margin>
+                            </Button>
+                       
+                        </GridPane>
+                        <Hyperlink id="forgotpass" alignment="CENTER" text="Forgot Password" onAction="#forgotPassword"  layoutY="-10"  />
+                       
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <HBox id="hBox1" alignment="CENTER" prefHeight="25.0" prefWidth="418.0" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+            <children>
+                <Label id="acc" layoutX="14.0" layoutY="200.0" text="Don't have an account?" />
+            </children>
+        </HBox>
+          
+        <Button id="button1" fx:id="createacc" defaultButton="true" onAction="#createAccount" prefHeight="50.0" prefWidth="350.0" text="Create Account" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+       
+
+    </children>
+     
+    <stylesheets>
+        <URL value="@../dsdrisk.css" />
+    </stylesheets>
+  
+</AnchorPane>
+
+ 

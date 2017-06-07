@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.*?>
+<?import dsd.model.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+
+<AnchorPane id="manageaccount" prefWidth="600.0" styleClass="background"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="dsd.controller.gamesetup.ManageContactController">
+    <children>
+        <AnchorPane id="anchorPane1" prefWidth="600.0" styleClass="manageaccount" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+               
+                <VBox id="VBox" alignment="CENTER"  spacing="5.0" AnchorPane.bottomAnchor="32.5" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0">
+                    <children> 
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                            <Label id="welocme" fx:id="welocme" text="My Contact" >
+                                <padding>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="30.0" />
+                                </padding> 
+                            </Label>
+                        </GridPane>
+                        
+                        <HBox id="HBox" spacing="0.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                            <children>
+                            <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                                <TableView fx:id="contactTable" GridPane.columnIndex="0"  GridPane.rowIndex="0" prefWidth="360.0" >
+                                    <columns>
+                                        <TableColumn fx:id="contactColumn" prefWidth="180.0" text="Contact" >
+                                            <cellValueFactory>
+                                                <PropertyValueFactory property="" />
+                                            </cellValueFactory>
+                                        </TableColumn>
+                                            
+                                        <TableColumn fx:id="deleteColumn" prefWidth="150.0" text="" />
+                                    </columns>
+                                    <sortOrder>
+                                        <fx:reference source="contactColumn"/>
+                                    </sortOrder>
+                                </TableView>
+                                <padding>
+                                    <Insets bottom="0" left="50.0" right="0.0" top="0.0" />
+                                </padding> 
+                            </GridPane>
+                            </children>
+                        </HBox>
+                            
+                      
+                        <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                            <Label id="welocme" fx:id="addcontact" text="Add Contact" >
+                                <padding>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" top="30.0" />
+                                </padding> 
+                            </Label>
+                        </GridPane>
+                                        
+                        <HBox id="pass"  prefHeight="50.0" prefWidth="400.0"  >
+                            <children>
+                                <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                                    <Label id="emailtxt" styleClass="profileTitle" text="Email" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                        <padding>
+                                            <Insets left="50.0" right="30.0"/>
+                                        </padding>
+                                    </Label>
+                                </GridPane>
+                                
+                                    <TextField id="textField1" fx:id="username" layoutY="130.0" prefWidth="230.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" >
+                                       
+                                    </TextField>
+                              
+                                    
+                            </children>
+                        </HBox>
+                     
+                        <GridPane id="GridPane" hgap="5.0" vgap="5.0">                   
+                            <HBox id="hBox1" alignment="CENTER" prefHeight="50.0" prefWidth="418.0"  >
+                                <GridPane.margin>
+                                    <Insets top="60.0" />
+                                </GridPane.margin>
+                                <children>
+                                    <Button id="button1" fx:id="editbtn" defaultButton="true" onAction="#backToProfile" prefHeight="30.0" prefWidth="150.0" text="Back" />
+                                    <GridPane id="GridPane" hgap="5.0" vgap="5.0"> 
+                                        <Button id="button1" fx:id="backbtn" defaultButton="true" onAction="#addContact" prefHeight="30.0" prefWidth="160.0" text="Add"  >
+                                            <GridPane.margin>
+                                                <Insets left="30.0" />
+                                            </GridPane.margin>
+                                        </Button>
+                                    </GridPane>
+                                </children>
+                            </HBox>
+                        </GridPane>  
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        
+    </children>
+    <stylesheets>
+         <URL value="@../dsdrisk.css" />
+    </stylesheets>
+</AnchorPane>
