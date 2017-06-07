@@ -83,13 +83,14 @@ public class MainManager {
     public static void finishturn(Session sessionstart){
         
         JSONObject json = new JSONObject();
-            json.put("ID",String.valueOf(sessionstart.getID()));
-            json.put("type",sessionstart.getType());
-            json.put("state",sessionstart.getState());
-            Player[] players = sessionstart.getPlayers();
-            JSONArray ply = new JSONArray();
-            JSONObject aux = new JSONObject();
-            for (int i = 0; i < players.length; i++) {
+        json.put("ID",String.valueOf(sessionstart.getID()));
+        json.put("type",sessionstart.getType());
+        json.put("state",sessionstart.getState());
+        Player[] players = sessionstart.getPlayers();
+        //Add the players 
+        JSONArray ply = new JSONArray();
+        JSONObject aux = new JSONObject();
+        for (int i = 0; i < players.length; i++) {
             JSONObject pla = new JSONObject();
             pla.put("turn",String.valueOf(players[i].getTurn()));
             pla.put("playing",String.valueOf(players[i].getplaying()));
@@ -101,55 +102,61 @@ public class MainManager {
             pla.put("trades",String.valueOf(players[i].gettrades()));
             pla.put("army",String.valueOf(players[i].getArmy()));
             aux.put("Player"+(i+1),pla);
+        }
+        ply.add(aux);
+
+        json.put("players",ply);
+
+        JSONObject map = new JSONObject();
+        //Create the map
+        map.put("name", sessionstart.getMap().getName());
+        JSONArray ab = new JSONArray();
+        JSONObject cards = new JSONObject();
+        //Add the cards
+        for(int i = 0; i < sessionstart.getMap().getCards().length; i++){
+            JSONObject card = new JSONObject();
+            card.put("desing",sessionstart.getMap().getCards()[i].getDesign());
+            card.put("owner",sessionstart.getMap().getCards()[i].getOwner());
+            card.put("type",sessionstart.getMap().getCards()[i].getType());
+            card.put("territory",sessionstart.getMap().getCards()[i].getTerritory().getName());
+            cards.put("Card"+(i+1),card);
+        }
+        ab.add(cards);
+        map.put("cards",ab);
+        JSONArray a = new JSONArray();
+        JSONObject continent = new JSONObject();
+        //Add the continents
+        for(int i = 0; i < sessionstart.getMap().getContinents().length; i++){
+            JSONObject con = new JSONObject();
+            con.put("name",sessionstart.getMap().getContinents()[i].getName());
+            con.put("army",String.valueOf(sessionstart.getMap().getContinents()[i].getArmy()));
+            con.put("owner",sessionstart.getMap().getContinents()[i].getOwner());
+
+            JSONArray aux2 = new JSONArray();
+            JSONObject territory = new JSONObject();
+            //Add the territories
+            for(int j = 0; j < sessionstart.getMap().getContinents()[i].getTerritory().length; j++){
+                JSONObject ter = new JSONObject();
+                ter.put("name",sessionstart.getMap().getContinents()[i].getTerritory()[j].getName());
+                ter.put("owner",sessionstart.getMap().getContinents()[i].getTerritory()[j].getOwner());
+                ter.put("capital",String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getCapital()));
+                ter.put("army",String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getArmy()));
+                territory.put("Territory"+(j+1),ter);
             }
-            ply.add(aux);
-            
-            json.put("players",ply);
-            
-            JSONObject map = new JSONObject();
-            map.put("name", sessionstart.getMap().getName());
-            JSONArray ab = new JSONArray();
-            JSONObject cards = new JSONObject();
-            for(int i = 0; i < sessionstart.getMap().getCards().length; i++){
-                JSONObject card = new JSONObject();
-                card.put("desing",sessionstart.getMap().getCards()[i].getDesign());
-                card.put("owner",sessionstart.getMap().getCards()[i].getOwner());
-                card.put("type",sessionstart.getMap().getCards()[i].getType());
-                card.put("territory",sessionstart.getMap().getCards()[i].getTerritory().getName());
-                cards.put("Card"+(i+1),card);
-            }
-            ab.add(cards);
-            map.put("cards",ab);
-            JSONArray a = new JSONArray();
-            JSONObject continent = new JSONObject();
-            for(int i = 0; i < sessionstart.getMap().getContinents().length; i++){
-                JSONObject con = new JSONObject();
-                con.put("name",sessionstart.getMap().getContinents()[i].getName());
-                con.put("army",String.valueOf(sessionstart.getMap().getContinents()[i].getArmy()));
-                con.put("owner",sessionstart.getMap().getContinents()[i].getOwner());
-                
-                JSONArray aux2 = new JSONArray();
-                JSONObject territory = new JSONObject();
-                for(int j = 0; j < sessionstart.getMap().getContinents()[i].getTerritory().length; j++){
-                    JSONObject ter = new JSONObject();
-                    ter.put("name",sessionstart.getMap().getContinents()[i].getTerritory()[j].getName());
-                    ter.put("owner",sessionstart.getMap().getContinents()[i].getTerritory()[j].getOwner());
-                    ter.put("capital",String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getCapital()));
-                    ter.put("army",String.valueOf(sessionstart.getMap().getContinents()[i].getTerritory()[j].getArmy()));
-                    territory.put("Territory"+(j+1),ter);
-                }
-                aux2.add(territory);
-                con.put("Territories", aux2);
-                continent.put("Continent"+(i+1),con);
-            }
-            a.add(continent);
-            
-            map.put("continents", a);
-            json.put("map",map);
-            JSONObject json2 = new JSONObject();
-            json2.put("session",json);
-            System.out.println(json);
-            try{
+            aux2.add(territory);
+            con.put("Territories", aux2);
+            continent.put("Continent"+(i+1),con);
+        }
+        a.add(continent);
+
+        map.put("continents", a);
+        //Add the map
+        json.put("map",map);
+        JSONObject json2 = new JSONObject();
+        //Create the session
+        json2.put("session",json);
+        System.out.println(json);
+        try{
             PrintWriter writer = new PrintWriter("jsonPrueba.json", "UTF-8");
             writer.println(json2);
             writer.close();
