@@ -36,5 +36,6 @@ public class ManageAccountController extends AnchorPane implements Initializable
         
     }
     public void editAccount(ActionEvent event){
+        
     }
 }

@@ -54,7 +54,7 @@ public class LoginController extends AnchorPane implements Initializable {
     }
 
    private boolean userLogging(String userId, String password) throws IOException, FileNotFoundException, ParseException {
-        System.out.println(dsd.controller.clientapi.Createjson.userlogging(userId, password));
+        System.out.println(dsd.controller.clientapi.Account.userlogging(userId, password));
         if (Authenticator.validate(userId, password)) {
              controller.gotoProfile();
             return true;

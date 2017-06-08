@@ -20,7 +20,7 @@ import org.json.simple.parser.ParseException;
  *
  * @author Sebastian
  */
-public class Createjson {
+public class Account {
     
     
     public static String CreateAccount(String username,String email,String password) throws ParseException, FileNotFoundException, IOException{
@@ -70,4 +70,30 @@ public class Createjson {
         JSONArray array = (JSONArray) parser.parse("[" + response + "]");
         return (String) (((JSONObject) (array.get(0))).get("message"));
     }
+    
+    public static String forgotPassword(String email) throws FileNotFoundException, IOException, ParseException{
+        JSONObject obj = new org.json.simple.JSONObject();
+        obj.put("email", email);
+        
+        try{
+            PrintWriter writer = new PrintWriter("forgotPassword.json", "UTF-8");
+            writer.println(obj.toJSONString());
+            writer.close();
+        } catch (IOException e) {
+           // do something
+        }
+        
+        System.out.println("JSON response to create Account is required");
+        JSONParser parser = new JSONParser();
+        BufferedReader readJson = new BufferedReader(new FileReader("respondsforgotPassword.json"));
+        JSONObject response = (JSONObject) parser.parse(readJson);
+        //String s = (new Scanner(System.in)).nextLine();
+        //JSONObject response = (JSONObject) parser.parse(s);
+        JSONArray array = (JSONArray) parser.parse("[" + response + "]");
+        return (String) (((JSONObject) (array.get(0))).get("message"));
+    }
+    
+    
+    
+    
 }

@@ -40,7 +40,7 @@ public class CreateAccountController extends AnchorPane implements Initializable
     
     public void create(ActionEvent event) throws ParseException, IOException {
         if(password.getText().equals(confirmpass.getText())){
-            String confirm = dsd.controller.clientapi.Createjson.CreateAccount(username.getText(),email.getText(),password.getText());
+            String confirm = dsd.controller.clientapi.Account.CreateAccount(username.getText(),email.getText(),password.getText());
             JOptionPane.showOptionDialog(null, confirm, "Message",
                         JOptionPane.INFORMATION_MESSAGE, JOptionPane.INFORMATION_MESSAGE,
                         null, new Object[]{"Accept"}, null);
