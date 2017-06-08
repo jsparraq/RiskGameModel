@@ -47,4 +47,27 @@ public class Createjson {
         JSONArray array = (JSONArray) parser.parse("[" + response + "]");
         return (String) (((JSONObject) (array.get(0))).get("message"));
     }
+    
+    public static String userlogging(String username,String password) throws FileNotFoundException, IOException, ParseException{
+        JSONObject obj = new org.json.simple.JSONObject();
+        obj.put("username", username);
+        obj.put("password", password);
+        
+        try{
+            PrintWriter writer = new PrintWriter("UserLogging.json", "UTF-8");
+            writer.println(obj.toJSONString());
+            writer.close();
+        } catch (IOException e) {
+           // do something
+        }
+        
+        System.out.println("JSON response to create Account is required");
+        JSONParser parser = new JSONParser();
+        BufferedReader readJson = new BufferedReader(new FileReader("respondsUserLogging.json"));
+        JSONObject response = (JSONObject) parser.parse(readJson);
+        //String s = (new Scanner(System.in)).nextLine();
+        //JSONObject response = (JSONObject) parser.parse(s);
+        JSONArray array = (JSONArray) parser.parse("[" + response + "]");
+        return (String) (((JSONObject) (array.get(0))).get("message"));
+    }
 }

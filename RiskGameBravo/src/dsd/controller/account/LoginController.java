@@ -15,6 +15,9 @@ import dsd.Risk;
 import dsd.controller.ClientController;
 import dsd.model.game.Account;
 import dsd.security.Authenticator;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import org.json.simple.parser.ParseException;
 
 
 public class LoginController extends AnchorPane implements Initializable {
@@ -50,7 +53,8 @@ public class LoginController extends AnchorPane implements Initializable {
         return loggedUser;
     }
 
-   private boolean userLogging(String userId, String password) {
+   private boolean userLogging(String userId, String password) throws IOException, FileNotFoundException, ParseException {
+        System.out.println(dsd.controller.clientapi.Createjson.userlogging(userId, password));
         if (Authenticator.validate(userId, password)) {
              controller.gotoProfile();
             return true;
@@ -71,7 +75,7 @@ public class LoginController extends AnchorPane implements Initializable {
     public void createAccount(ActionEvent event){
         controller.createAccount();
     }
-    public void processLogin(ActionEvent event) {
+    public void processLogin(ActionEvent event) throws IOException, FileNotFoundException, ParseException {
         if (application == null){
             errorMessage.setText("Hello " + userId.getText());
         } else {
