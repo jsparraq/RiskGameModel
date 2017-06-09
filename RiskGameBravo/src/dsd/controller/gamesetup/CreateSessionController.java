@@ -245,8 +245,7 @@ public class CreateSessionController extends AnchorPane implements Initializable
     }
 
     public void startGame() {
-         
-
+        
         //controller.gotoRiskModel(session);
     }
 

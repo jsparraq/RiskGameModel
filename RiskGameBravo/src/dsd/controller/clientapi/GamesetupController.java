@@ -19,7 +19,7 @@ import org.json.simple.parser.ParseException;
  *
  * @author Sebastian
  */
-public class Gamesetup {
+public class GamesetupController {
     
     public static String addContact(String email) throws FileNotFoundException, IOException, ParseException{
         JSONObject obj = new org.json.simple.JSONObject();

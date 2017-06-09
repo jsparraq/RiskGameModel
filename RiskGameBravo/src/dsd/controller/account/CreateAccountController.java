@@ -45,7 +45,7 @@ public class CreateAccountController extends AnchorPane implements Initializable
     public void create(ActionEvent event) throws ParseException, IOException {
         String confirm;
         if(password.getText().equals(confirmpass.getText())){
-            confirm = dsd.controller.clientapi.Account.CreateAccount(username.getText(),email.getText(),password.getText());
+            confirm = dsd.controller.clientapi.AccountController.CreateAccount(username.getText(),email.getText(),password.getText());
         }else{
             confirm = "The password and confirm password are diferent"; 
         }

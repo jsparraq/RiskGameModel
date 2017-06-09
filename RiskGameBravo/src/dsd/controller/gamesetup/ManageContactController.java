@@ -134,7 +134,7 @@ public class ManageContactController implements Initializable {
     }
 
     public void addContact() throws IOException, FileNotFoundException, ParseException {
-        String confirm = dsd.controller.clientapi.Gamesetup.addContact(username.getText());
+        String confirm = dsd.controller.clientapi.GamesetupController.addContact(username.getText());
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Add Contact");
         alert.setContentText(confirm);

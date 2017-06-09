@@ -20,7 +20,7 @@ import org.json.simple.parser.ParseException;
  *
  * @author Sebastian
  */
-public class Account {
+public class AccountController {
     
     
     public static String CreateAccount(String username,String email,String password) throws ParseException, FileNotFoundException, IOException{

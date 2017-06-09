@@ -180,7 +180,7 @@ public class Territory {
         if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && (sessionstart.getType().equals("WORLD_DOMINATION_RISK") || sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS"))){
             System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
             System.out.println("Ganador");
-        }else if(sessionstart.getType().equals("WORLD_DOMINATION_RISK")){
+        }else if(sessionstart.getType().equals("CAPITAL_RISK")){
             if(attack.getDefender().getCapital()){
                 ArrayList<Territory> capitals = new ArrayList();
                 Continent[] continents = sessionstart.getMap().getContinents();

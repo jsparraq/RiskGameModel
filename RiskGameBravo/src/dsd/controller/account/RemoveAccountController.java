@@ -58,7 +58,7 @@ public class RemoveAccountController extends AnchorPane implements Initializable
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
-            String responds = dsd.controller.clientapi.Account.removeAccount(username.getText(),password.getText());
+            String responds = dsd.controller.clientapi.AccountController.removeAccount(username.getText(),password.getText());
             
             if(responds.equals("Account remove")){
                 Alert alert1 = new Alert(AlertType.INFORMATION);

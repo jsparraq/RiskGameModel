@@ -38,7 +38,7 @@ public class ForgotpassController extends AnchorPane implements Initializable {
     }
     
     public void sendmail(ActionEvent event) throws IOException, FileNotFoundException, ParseException {
-        String confirm = dsd.controller.clientapi.Account.forgotPassword(email.getText());
+        String confirm = dsd.controller.clientapi.AccountController.forgotPassword(email.getText());
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Forgot password");
         alert.setContentText(confirm + " to " + email.getText());
