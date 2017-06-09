@@ -250,7 +250,6 @@ public class Player {
                 sessionstart.setState("RUN");
             }
         }
-        /*
         Player[] players = sessionstart.getPlayers();
         if(sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS")){
             if(players[0].getTurn()){
@@ -274,7 +273,6 @@ public class Player {
                 }
             }
         }
-        */
     }
 
     /**
