@@ -92,7 +92,8 @@ public class PlaceArmyManager {
      * @return 
      */
     public static String Map(Session sessionstart){
-        return "/dsd/view/images/" + sessionstart.getMap().getName() + ".png";
+        System.out.println(sessionstart.getMap().getName());
+        return "src/dsd/view/images/" + sessionstart.getMap().getName() + ".png";
     } 
     
     /**

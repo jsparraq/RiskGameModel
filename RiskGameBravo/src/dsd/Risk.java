@@ -87,8 +87,4 @@ public class Risk extends Application {
         stage.hide();
     }
 
-    
-    
- 
-
 }

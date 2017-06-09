@@ -99,7 +99,6 @@ public class GameModelController {
                 String continent_owner = (String)continentico.get("owner");                
                 
                 JSONArray territories = (JSONArray) continentico.get("Territories");
-                System.out.println(territories.size());
                 JSONObject asd2 = (JSONObject)territories.get(0);
                 Territory[] territories1 = new Territory[asd2.size()];
                 for (int j = 0;j < asd2.size(); j++) {
@@ -187,8 +186,8 @@ public class GameModelController {
                 }
                 players1[i] = player1;
             }
-            Territory territory1 = new Territory("OEKRAINË","WHITE",100,false);
-            Territory territory2 = new Territory("IJSLAND","WHITE",1,false);
+            Territory territory1 = new Territory("OEKRAINË","WHITE",0,false);
+            Territory territory2 = new Territory("IJSLAND","WHITE",0,false);
             Territory territory3 = new Territory("SCANDINAVIË","WHITE",0,false);
             Territory territory4 = new Territory("WEST-EUROPA","WHITE",0,false);
             Territory territory5 = new Territory("GROOT-BRITTANIË","WHITE",0,false);

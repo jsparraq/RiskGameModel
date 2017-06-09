@@ -1,1 +1,15 @@
-{"players":[{"numberOfSessionsWon":0,"color":"ORANGE","type":"PLAYER","percentajeOfWins":0.0,"numberOfSessionLost":0,"email":"berta@unal.edu.co","username":"berta","status":"PLAYING"},{"numberOfSessionsWon":0,"color":"PURPLE","type":"PLAYER","percentajeOfWins":0.0,"numberOfSessionLost":0,"email":"casimiro@unal.edu.co","username":"casimiro","status":"PLAYING"},{"numberOfSessionsWon":0,"color":"YELLOW","type":"HOST","percentajeOfWins":0.0,"numberOfSessionLost":0,"email":"hernan@unal.edu.co","username":"hernan","status":"ONLINE"}],"id":3,"type":"WORLD_DOMINATION_RISK","map":"CLASSIC"}
+{"players":
+	[
+
+		{"numberOfSessionsWon":0,
+		"color":"ORANGE",
+		"type":"PLAYER",
+		"percentajeOfWins":0.0,
+		"numberOfSessionLost":0,
+		"email":"berta@unal.edu.co",
+		"username":"berta",
+		"status":"PLAYING"
+		},
+		{"numberOfSessionsWon":0,
+		"color":"PURPLE","type":"PLAYER","percentajeOfWins":0.0,"numberOfSessionLost":0,"email":"casimiro@unal.edu.co","username":"casimiro","status":"PLAYING"},{"numberOfSessionsWon":0,"color":"YELLOW","type":"HOST","percentajeOfWins":0.0,"numberOfSessionLost":0,"email":"hernan@unal.edu.co","username":"hernan","status":"ONLINE"}],"id":3,"type":"WORLD_DOMINATION_RISK","map":"Classic
+	"}

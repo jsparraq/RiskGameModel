@@ -86,7 +86,7 @@ public class Main_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 170, 30));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.MainManager.Map(sessionstart)))));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N

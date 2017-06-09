@@ -60,8 +60,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, 290, -1));
 
-        Map.setIcon(((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.AttackManager.Map(sessionstart)))))
-        );
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-----" }));

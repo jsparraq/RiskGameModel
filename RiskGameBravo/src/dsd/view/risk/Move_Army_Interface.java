@@ -55,7 +55,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Button_FinishActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 160, 30));
+        getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, 160, 30));
 
         Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "----" }));
         Final_Territory.setEnabled(false);
@@ -64,7 +64,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Final_TerritoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 310, 20));
+        getContentPane().add(Final_Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 310, 20));
 
         Starting_territory.setModel((new javax.swing.DefaultComboBoxModel(MoveArmyManager.Territories(sessionstart))));
         Starting_territory.addActionListener(new java.awt.event.ActionListener() {
@@ -72,9 +72,9 @@ public class Move_Army_Interface extends javax.swing.JFrame {
                 Starting_territoryActionPerformed(evt);
             }
         });
-        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 310, -1));
+        getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 310, -1));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.MoveArmyManager.Map(sessionstart)))));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N

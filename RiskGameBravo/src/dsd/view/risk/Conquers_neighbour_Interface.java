@@ -75,7 +75,7 @@ public class Conquers_neighbour_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Value_army, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, 160, 30));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.ConquersNeighbourManager.Map(sessionstart)))));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N

@@ -46,7 +46,7 @@ public class Selects_capital_Interface extends javax.swing.JFrame {
         Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
 
-        map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.SelectscapitalManager.Map(sessionstart)))));
+        map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Territory.setModel((new javax.swing.DefaultComboBoxModel(SelectscapitalManager.Territories(sessionstart))));

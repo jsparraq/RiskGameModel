@@ -123,7 +123,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 220, -1));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.PlaceArmyManager.Map(sessionstart)))));
+        Map.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/Classic.png"))); // NOI18N
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
