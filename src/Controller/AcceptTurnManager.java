@@ -183,14 +183,14 @@ public class AcceptTurnManager {
                 String type = (String)jugador.get("type");
                 Player player1;
                 if("HOST".equals(type)){
-                    player1 = new Player(true,true,"non-capture",color,0,5,0,army,0);
+                    player1 = new Player(true,true,"non-capture",color,0,0,0,army,0);
                 }else{
                     player1 = new Player(false,true,"non-capture",color,0,0,0,army,0);
                 }
                 players1[i] = player1;
             }
-            Territory territory1 = new Territory("OEKRAINË","WHITE",100,false);
-            Territory territory2 = new Territory("IJSLAND","WHITE",1,false);
+            Territory territory1 = new Territory("OEKRAINË","WHITE",0,false);
+            Territory territory2 = new Territory("IJSLAND","WHITE",0,false);
             Territory territory3 = new Territory("SCANDINAVIË","WHITE",0,false);
             Territory territory4 = new Territory("WEST-EUROPA","WHITE",0,false);
             Territory territory5 = new Territory("GROOT-BRITTANIË","WHITE",0,false);
@@ -393,7 +393,7 @@ public class AcceptTurnManager {
                 players1[2] = player;
             }
             
-            Session sessionstart = new Session(id.intValue(),"RUN",players1,map,type);
+            Session sessionstart = new Session(id.intValue(),state,players1,map,type);
             AcceptTurnManager acceptTurnManager = new AcceptTurnManager(sessionstart);
         }catch(Exception e)
         {

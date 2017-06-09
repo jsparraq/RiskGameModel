@@ -6,12 +6,14 @@
 package Test;
 
 import Controller.AcceptTurnManager;
+import java.awt.Panel;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 import riskgamemodel.*;
 
 /**
@@ -21,8 +23,6 @@ import riskgamemodel.*;
 public class Testmain {
     
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        
-        
         System.out.println("# RISK GAME MODEL TEST #");
         StringBuilder menu = new StringBuilder();
         menu.append("code: 1 - Continue session\n");

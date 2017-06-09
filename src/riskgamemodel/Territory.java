@@ -1,6 +1,8 @@
 package riskgamemodel;
 
+import java.awt.Panel;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -179,7 +181,9 @@ public class Territory {
         playerstart.setCaptureState("CAPTURE");
         if(playerstart.getContinentAmount() == sessionstart.getMap().getContinents().length && (sessionstart.getType().equals("WORLD_DOMINATION_RISK") || sessionstart.getType().equals("RISK_FOR_TWO_PLAYERS"))){
             System.out.println(playerstart.getContinentAmount()+ "  " + sessionstart.getMap().getContinents().length);
-            System.out.println("Ganador");
+            JOptionPane.showMessageDialog(new Panel(), "YOU ARE WINNER", "Question",
+        JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
         }else if(sessionstart.getType().equals("WORLD_DOMINATION_RISK")){
             if(attack.getDefender().getCapital()){
                 ArrayList<Territory> capitals = new ArrayList();
@@ -198,7 +202,10 @@ public class Territory {
                     }
                 }
                 if(counter == capitals.size()){
+                    JOptionPane.showMessageDialog(new Panel(), "YOU ARE WINNER", "Question",
+        JOptionPane.INFORMATION_MESSAGE);
                     System.out.println("ganador");
+                    System.exit(0);
                 }
             }
         }
