@@ -38,7 +38,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         Die_Value_Attack_3.setVisible(false);
         Die_Value_Defense_1.setVisible(false);
         Die_Value_defense_2.setVisible(false);
-        RollDieManager.start(attack, this);
+        dsd.controller.risk.RollDieManager.start(attack, this);
         this.setLocationRelativeTo(null);
     }
 
@@ -65,7 +65,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, -1, -1));
 
         Die_Value_Attack_1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
@@ -101,7 +101,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(219, 320, 120, 40));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
 
         pack();
@@ -112,7 +112,7 @@ public class Roll_Dice_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        RollDieManager.Button_Finish(sessionstart, attack,this,playerstart);
+        dsd.controller.risk.RollDieManager.Button_Finish(sessionstart, attack,this,playerstart);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     /**

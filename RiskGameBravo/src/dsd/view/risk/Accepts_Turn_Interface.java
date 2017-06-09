@@ -1,6 +1,5 @@
 package dsd.view.risk;
 
-import dsd.controller.risk.AcceptTurnManager;
 import dsd.model.risk.Session;
 
 /**
@@ -66,7 +65,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_AcceptsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AcceptsActionPerformed
-        AcceptTurnManager.Button_finish(sessionstart, this);
+        dsd.controller.risk.AcceptTurnManager.Button_finish(sessionstart, this);
     }//GEN-LAST:event_Button_AcceptsActionPerformed
     
 

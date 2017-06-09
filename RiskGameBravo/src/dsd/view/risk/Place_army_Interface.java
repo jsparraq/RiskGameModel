@@ -36,7 +36,7 @@ public class Place_army_Interface extends javax.swing.JFrame {
         sessionstart = session;
         initComponents();
         this.setLocationRelativeTo(null);
-        Territory.setModel((new javax.swing.DefaultComboBoxModel(PlaceArmyManager.Territoriesneutral(sessionstart))));
+        Territory.setModel((new javax.swing.DefaultComboBoxModel(dsd.controller.risk.PlaceArmyManager.Territoriesneutral(sessionstart))));
         Army_player.setText("");
         jLabel1.setText("SELECT THE TERRITORY NEUTRAL");
     }
@@ -123,17 +123,17 @@ public class Place_army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 550, 220, -1));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(PlaceArmyManager.Map(sessionstart)))));
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.PlaceArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SELECTS THE TERRITORY");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 520, 200, -1));
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
@@ -150,13 +150,13 @@ public class Place_army_Interface extends javax.swing.JFrame {
      */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
-        PlaceArmyManager.Button_Finish(sessionstart, this, name_territory,playerstart);
+        dsd.controller.risk.PlaceArmyManager.Button_Finish(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
     private void Button_auxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_auxActionPerformed
         // TODO add your handling code here:
         String name_territory = (String)Territory.getSelectedItem();
-        PlaceArmyManager.Button_aux(sessionstart, this, name_territory,playerstart);
+        dsd.controller.risk.PlaceArmyManager.Button_aux(sessionstart, this, name_territory,playerstart);
     }//GEN-LAST:event_Button_auxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

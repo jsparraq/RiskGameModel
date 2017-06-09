@@ -391,7 +391,7 @@ public class GameModelController {
                 players1[2] = player;
             }
             
-            Session sessionstart = new Session(id.intValue(),"START PLACE ARMY",players1,map,type);
+            Session sessionstart = new Session(id.intValue(),state,players1,map,type);
             
             return sessionstart;
         }catch(ParseException e)

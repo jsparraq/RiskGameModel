@@ -29,7 +29,7 @@
     <Component class="javax.swing.JLabel" name="Logo_Risk">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/RISK-LOGO_EMEA.png"/>
+          <Image iconType="3" name="/dsd/view/images/RISK-LOGO_EMEA.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -134,7 +134,7 @@
     <Component class="javax.swing.JLabel" name="Background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/blue-hd-wallpapers-20.jpg"/>
+          <Image iconType="3" name="/dsd/view/images/blue-hd-wallpapers-20.jpg"/>
         </Property>
       </Properties>
       <Constraints>

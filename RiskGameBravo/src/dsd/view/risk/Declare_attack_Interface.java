@@ -49,10 +49,10 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 210, 80));
 
-        Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart,playerstart))));
+        Territory_attacker.setModel((new javax.swing.DefaultComboBoxModel(dsd.controller.risk.AttackManager.Territories(sessionstart,playerstart))));
         Territory_attacker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Territory_attackerActionPerformed(evt);
@@ -60,7 +60,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Territory_attacker, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 540, 290, -1));
 
-        Map.setIcon(((new javax.swing.ImageIcon(getClass().getResource(AttackManager.Map(sessionstart)))))
+        Map.setIcon(((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.AttackManager.Map(sessionstart)))))
         );
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
@@ -89,7 +89,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_finish, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 550, 90, 30));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 640));
 
         pack();
@@ -101,7 +101,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
      */
     private void Territory_attackerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_attackerActionPerformed
         Territory_Defender.setEnabled(true);
-        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem(),playerstart)));
+        Territory_Defender.setModel(new javax.swing.DefaultComboBoxModel<>(dsd.controller.risk.AttackManager.neighbours(sessionstart, (String)Territory_attacker.getSelectedItem(),playerstart)));
     }//GEN-LAST:event_Territory_attackerActionPerformed
 
     /**
@@ -111,7 +111,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
     private void Button_Roll_DiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Roll_DiceActionPerformed
         String terrAt = (String)Territory_attacker.getSelectedItem();
         String terrdef = (String)Territory_Defender.getSelectedItem();
-        AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef,playerstart);
+        dsd.controller.risk.AttackManager.button_RollDie(this, sessionstart, terrAt, terrdef,playerstart);
     }//GEN-LAST:event_Button_Roll_DiceActionPerformed
 
     /**
@@ -119,7 +119,7 @@ public class Declare_attack_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
-        AttackManager.button_Finish(this, sessionstart,playerstart);
+        dsd.controller.risk.AttackManager.button_Finish(this, sessionstart,playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
     private void Territory_DefenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Territory_DefenderActionPerformed

@@ -46,7 +46,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, -1, -1));
 
         Button_Finish.setText("Finish");
@@ -74,10 +74,10 @@ public class Move_Army_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Starting_territory, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 510, 310, -1));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(MoveArmyManager.Map(sessionstart)))));
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.MoveArmyManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 640));
 
         pack();
@@ -97,7 +97,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
      */
     private void Starting_territoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Starting_territoryActionPerformed
         Final_Territory.setEnabled(true);
-        Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(MoveArmyManager.neighbours(sessionstart, (String)Starting_territory.getSelectedItem())));
+        Final_Territory.setModel(new javax.swing.DefaultComboBoxModel(dsd.controller.risk.MoveArmyManager.neighbours(sessionstart, (String)Starting_territory.getSelectedItem())));
     }//GEN-LAST:event_Starting_territoryActionPerformed
 
     /**
@@ -105,7 +105,7 @@ public class Move_Army_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_FinishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_FinishActionPerformed
-        MoveArmyManager.Button_Finish(this, (String)Starting_territory.getSelectedItem(), (String)Final_Territory.getSelectedItem(), sessionstart);
+        dsd.controller.risk.MoveArmyManager.Button_Finish(this, (String)Starting_territory.getSelectedItem(), (String)Final_Territory.getSelectedItem(), sessionstart);
     }//GEN-LAST:event_Button_FinishActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

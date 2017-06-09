@@ -43,10 +43,10 @@ public class Selects_capital_Interface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 210, 70));
 
-        map.setIcon((new javax.swing.ImageIcon(getClass().getResource(SelectscapitalManager.Map(sessionstart)))));
+        map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.SelectscapitalManager.Map(sessionstart)))));
         getContentPane().add(map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
         Territory.setModel((new javax.swing.DefaultComboBoxModel(SelectscapitalManager.Territories(sessionstart))));
@@ -64,7 +64,7 @@ public class Selects_capital_Interface extends javax.swing.JFrame {
         jLabel1.setText("Selects the capital");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 524, 130, 20));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
@@ -72,7 +72,7 @@ public class Selects_capital_Interface extends javax.swing.JFrame {
 
     private void Button_finishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_finishActionPerformed
         String name_territory = (String)Territory.getSelectedItem();
-        SelectscapitalManager.Button_Finish(sessionstart, this, name_territory, playerstart);
+        dsd.controller.risk.SelectscapitalManager.Button_Finish(sessionstart, this, name_territory, playerstart);
     }//GEN-LAST:event_Button_finishActionPerformed
 
    

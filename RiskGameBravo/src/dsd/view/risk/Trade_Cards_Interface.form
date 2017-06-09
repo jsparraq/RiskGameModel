@@ -38,7 +38,7 @@
     <Component class="javax.swing.JLabel" name="Logo_Risk">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/RISK-LOGO_EMEA.png"/>
+          <Image iconType="3" name="/dsd/view/images/RISK-LOGO_EMEA.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -79,7 +79,7 @@
     <Component class="javax.swing.JComboBox" name="Trade_Card_1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart)))" type="code"/>
+          <Connection code="(new javax.swing.DefaultComboBoxModel(dsd.controller.risk.TradeCardManager.cards(sessionstart)))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -94,7 +94,7 @@
     <Component class="javax.swing.JComboBox" name="Trade_Card_2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart))))" type="code"/>
+          <Connection code="((new javax.swing.DefaultComboBoxModel(dsd.controller.risk.TradeCardManager.cards(sessionstart))))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -112,7 +112,7 @@
     <Component class="javax.swing.JComboBox" name="Trade_Card_3">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="((new javax.swing.DefaultComboBoxModel(TradeCardManager.cards(sessionstart))))" type="code"/>
+          <Connection code="((new javax.swing.DefaultComboBoxModel(dsd.controller.risk.TradeCardManager.cards(sessionstart))))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -130,7 +130,7 @@
     <Component class="javax.swing.JLabel" name="Background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/blue-hd-wallpapers-20.jpg"/>
+          <Image iconType="3" name="/dsd/view/images/blue-hd-wallpapers-20.jpg"/>
         </Property>
       </Properties>
       <Constraints>

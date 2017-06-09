@@ -56,7 +56,7 @@ public class Main_Interface extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, 80));
 
         Button_Attack.setText("Attack");
@@ -86,10 +86,10 @@ public class Main_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Pass_Turn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 540, 170, 30));
 
-        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(MainManager.Map(sessionstart)))));
+        Map.setIcon((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.MainManager.Map(sessionstart)))));
         getContentPane().add(Map, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 85, -1, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 590));
 
         pack();
@@ -100,7 +100,7 @@ public class Main_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_AttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AttackActionPerformed
-        MainManager.Button_Attack(sessionstart, this,playerstart);
+        dsd.controller.risk.MainManager.Button_Attack(sessionstart, this,playerstart);
     }//GEN-LAST:event_Button_AttackActionPerformed
 
     /**
@@ -108,7 +108,7 @@ public class Main_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_Move_ArmyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Move_ArmyActionPerformed
-        MainManager.Button_Moves(sessionstart, this);
+        dsd.controller.risk.MainManager.Button_Moves(sessionstart, this);
     }//GEN-LAST:event_Button_Move_ArmyActionPerformed
 
     /**
@@ -116,7 +116,7 @@ public class Main_Interface extends javax.swing.JFrame {
      * @param evt 
      */
     private void Button_Pass_TurnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_Pass_TurnActionPerformed
-        MainManager.Button_Pass(sessionstart,this);
+        dsd.controller.risk.MainManager.Button_Pass(sessionstart,this);
     }//GEN-LAST:event_Button_Pass_TurnActionPerformed
          
     // Variables declaration - do not modify//GEN-BEGIN:variables

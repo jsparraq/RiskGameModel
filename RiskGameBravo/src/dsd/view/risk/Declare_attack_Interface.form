@@ -29,7 +29,7 @@
     <Component class="javax.swing.JLabel" name="Logo_Risk">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/RISK-LOGO_EMEA.png"/>
+          <Image iconType="3" name="/dsd/view/images/RISK-LOGO_EMEA.png"/>
         </Property>
       </Properties>
       <Constraints>
@@ -41,7 +41,7 @@
     <Component class="javax.swing.JComboBox" name="Territory_attacker">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="(new javax.swing.DefaultComboBoxModel(AttackManager.Territories(sessionstart,playerstart)))" type="code"/>
+          <Connection code="(new javax.swing.DefaultComboBoxModel(dsd.controller.risk.AttackManager.Territories(sessionstart,playerstart)))" type="code"/>
         </Property>
       </Properties>
       <Events>
@@ -56,7 +56,7 @@
     <Component class="javax.swing.JLabel" name="Map">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="((new javax.swing.ImageIcon(getClass().getResource(AttackManager.Map(sessionstart)))))&#xd;&#xa;" type="code"/>
+          <Connection code="((new javax.swing.ImageIcon(getClass().getResource(dsd.controller.risk.AttackManager.Map(sessionstart)))))&#xd;&#xa;" type="code"/>
         </Property>
       </Properties>
       <Constraints>
@@ -115,7 +115,7 @@
     <Component class="javax.swing.JLabel" name="Background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/blue-hd-wallpapers-20.jpg"/>
+          <Image iconType="3" name="/dsd/view/images/blue-hd-wallpapers-20.jpg"/>
         </Property>
       </Properties>
       <Constraints>
