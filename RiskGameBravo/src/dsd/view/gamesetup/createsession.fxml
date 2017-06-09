@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.*?>
+<?import dsd.model.*?>
+<?import javafx.scene.control.cell.*?> 
+<?import javafx.collections.*?> 
+
+
+<AnchorPane id="gamesessions" minWidth="700.0" prefHeight="600.0" prefWidth="700.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="dsd.controller.gamesetup.CreateSessionController">
+    <children>
+        <AnchorPane id="anchorPane1" prefHeight="600.0" prefWidth="700.0" styleClass="" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <GridPane alignment="CENTER" hgap="5.0" vgap="5.0">
+                    <Label id="welocme" fx:id="welocme" text="Create Session" >
+                        <padding>
+                            <Insets bottom="20.0" left="270.0" right="0.0" top="30.0"/>
+                        </padding> 
+                    </Label>
+                </GridPane>
+                
+                <VBox id="VBox"  prefHeight="600.0" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <children>
+                        
+                        <HBox id="hBox1"  prefHeight="520.0" prefWidth="600.0"  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="30.0">
+                            <children>
+                                <HBox id="HBox"  prefWidth="282.0" spacing="0.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                                    <TableView fx:id="contactTable" GridPane.columnIndex="0"  GridPane.rowIndex="0" prefWidth="400.0"  >
+                                        <columns>
+                                            <TableColumn fx:id="contactColumn" prefWidth="150.0" text="Contact" >
+                                                <cellValueFactory>
+                                                    <PropertyValueFactory property="" />
+                                                </cellValueFactory>
+                                            </TableColumn>
+                                            
+                                            <TableColumn fx:id="inviteColumn" prefWidth="130.0" text="" />
+                                        </columns>
+                                    </TableView>
+                                
+                                </HBox>
+                                <VBox id="VBox"  prefHeight="600.0" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20">
+                                    <AnchorPane minHeight="0.0" minWidth="0.0"  prefWidth="348.0">
+                                        <children>
+                                            <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                                
+                                                <HBox id="HBox"  prefHeight="285.0" prefWidth="370.0" spacing="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                    <TableView fx:id="playerTable" GridPane.columnIndex="0"  GridPane.rowIndex="0">
+                                           
+                                                        <columns>
+                                                            <TableColumn fx:id="playerColumn" text="Player" prefWidth="160" />
+                                                            <TableColumn fx:id="removeColumn" text="" prefWidth="150" />
+                                                        </columns>
+
+                                                    </TableView>
+                                                    <padding>
+                                                        <Insets bottom="60.0" left="50.0" right="0.0" top="0.0"/>
+                                                    </padding>
+                                                </HBox>
+                                            </GridPane> 
+                                        </children>
+                                    </AnchorPane>
+                                    <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                    <VBox id="selectgame"   prefWidth="360.0" prefHeight="250.0" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40">
+                                        <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                            <HBox id="HBox"  prefHeight="100.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0">
+                                                <Label styleClass="selectxt" layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="150.0" text="Map : " AnchorPane.bottomAnchor="150.0" />
+                                                <SplitMenuButton fx:id="listMap" alignment="CENTER" layoutX="121.0" layoutY="24.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="145.0">
+                                                    <items>
+                                                        <MenuItem mnemonicParsing="false" text="Classic" />
+                                                    </items>
+                                                </SplitMenuButton>
+                                            </HBox>
+                                            <padding>
+                                                <Insets bottom="10.0" left="50.0" right="0.0" top="0.0"/>
+                                            </padding>
+                                        </GridPane>
+                                        <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                            <HBox id="HBox"  prefHeight="100.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Label styleClass="selectxt" layoutX="11.0" layoutY="75.0" prefHeight="17.0" prefWidth="150.0" text="Type : " AnchorPane.bottomAnchor="100.0" />
+                                           
+                                                <SplitMenuButton alignment="CENTER" layoutX="121.0" layoutY="74.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="95.0">
+                                                    <items>
+                                                        <MenuItem mnemonicParsing="false" text="WORLD_DOMINATION_RISK" />
+                                                        <MenuItem mnemonicParsing="false" text="RISK_FOR_TWO_PLAYERS" />
+                                                        <MenuItem mnemonicParsing="false" text="CAPITAL_RISK" />
+                                                    </items>
+                                                </SplitMenuButton>
+                                            </HBox>
+                                            <padding>
+                                                <Insets bottom="10.0" left="50.0" right="0.0" top="0.0"/>
+                                            </padding>
+                                        </GridPane>
+                                        <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                            <HBox id="HBox"  prefHeight="100.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Label styleClass="selectxt" layoutX="11.0" layoutY="109.0" prefHeight="17.0" prefWidth="150.0" text="Color : " AnchorPane.bottomAnchor="50.0" />
+                                                <SplitMenuButton  alignment="CENTER" layoutX="121.0" layoutY="124.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="45.0">
+                                                    <items>
+                                                        <MenuItem  mnemonicParsing="false" text="YELLOW" />
+                                                        <MenuItem  mnemonicParsing="false" text="BLUE" />
+                                                        <MenuItem  mnemonicParsing="false" text="RED" />
+                                                        <MenuItem  mnemonicParsing="false" text="GREEN" />
+                                                        <MenuItem  mnemonicParsing="false" text="ORANGE" />
+                                                        <MenuItem  mnemonicParsing="false" text="PURPLE" />
+                                                    </items>
+                                                </SplitMenuButton>
+                                            </HBox>
+                                            <padding>
+                                                <Insets bottom="10.0" left="50.0" right="0.0" top="0.0"/>
+                                            </padding>
+                                        </GridPane>
+                                        <GridPane alignment="CENTER" hgap="0.0" vgap="0.0">
+                                            <HBox id="HBox" prefHeight="100.0" prefWidth="300.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Label  styleClass="selectxt"  layoutX="0.0" layoutY="165.0" prefHeight="17.0" prefWidth="150.0" text="Players : " />
+                                                <Slider  layoutX="123.0" layoutY="173.0" max="6.0" min="3.0" prefHeight="16.0" prefWidth="199.0" showTickLabels="true" showTickMarks="true" value="3.0" />
+                                       
+                                            </HBox>
+                                            <padding>
+                                                <Insets bottom="10.0" left="50.0" right="0.0" top="0.0"/>
+                                            </padding>
+                                        </GridPane>
+                                    </VBox>
+                                    <padding>
+                                                <Insets bottom="10.0" left="0.0" right="0.0" top="70.0"/>
+                                            </padding>
+                                 </GridPane>
+                                </VBox>
+                               
+                              
+                            </children>
+                        </HBox>
+                        
+                       
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+       
+        <HBox id="HBox" alignment="CENTER" prefWidth="700" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+            <children>
+                              
+                <Button fx:id="backprofile" styleClass="sessiontxt" defaultButton="true" font="$x1" maxHeight="2.147483647E9" onAction="#backToProfile" prefHeight="40.0" prefWidth="170.0" text="Back" HBox.hgrow="ALWAYS" >
+                    <GridPane.margin>
+                        <Insets top="0.0" left="10" />
+                    </GridPane.margin>
+                </Button>
+                                     
+               
+                <Button fx:id="start" styleClass="sessiontxt" defaultButton="true" font="$x1" maxHeight="2.147483647E9" onAction="#startGame" prefHeight="40.0" prefWidth="185.0" text="Start Session" HBox.hgrow="ALWAYS" >
+                    <GridPane.margin>
+                        <Insets top="0.0" left="50" />
+                    </GridPane.margin>
+                </Button>
+              
+               
+            </children>
+        </HBox>
+    </children>
+    <stylesheets>
+         <URL value="@../dsdrisk.css" />
+    </stylesheets>
+</AnchorPane>
+
