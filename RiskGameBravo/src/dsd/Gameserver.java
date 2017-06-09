@@ -23,6 +23,7 @@ public class Gameserver {
         while ((line = readJson.readLine()) != null) {
             jsonTest.append(line);
         }
+        
         GameModelController.createstateSession(jsonTest.toString());
 
     }
