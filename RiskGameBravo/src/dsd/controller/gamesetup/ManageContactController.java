@@ -152,7 +152,8 @@ public class ManageContactController implements Initializable {
                 + "  -fx-border-insets: 10;\n"
                 + "  -fx-border-radius: 6;\n"
                 + "-fx-background-radius: 6;");
-
+        
+        username.setText("");
     }
 
 }
