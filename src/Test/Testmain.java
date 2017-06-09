@@ -33,7 +33,7 @@ public class Testmain {
         int method = entrada.nextInt();
         switch (method) {
             case 1:
-                BufferedReader readJson = new BufferedReader(new FileReader("jsonTest.json"));
+                BufferedReader readJson = new BufferedReader(new FileReader("jsonPrueba.json"));
                 String line = null;
                 StringBuilder jsonTest = new StringBuilder();
                 while ((line = readJson.readLine()) != null) {

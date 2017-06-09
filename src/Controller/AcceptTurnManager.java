@@ -99,11 +99,9 @@ public class AcceptTurnManager {
                 String continent_owner = (String)continentico.get("owner");                
                 
                 JSONArray territories = (JSONArray) continentico.get("Territories");
-                System.out.println(territories.size());
                 JSONObject asd2 = (JSONObject)territories.get(0);
                 Territory[] territories1 = new Territory[asd2.size()];
                 for (int j = 0;j < asd2.size(); j++) {
-                        JSONObject territorio = (JSONObject)asd2.get(j);
                         String nombre_territorios = "Territory"+(j+1);
                         JSONObject mini_territorio = (JSONObject)asd2.get(nombre_territorios);
                         String territory_name = (String)mini_territorio.get("name");                        
@@ -120,8 +118,7 @@ public class AcceptTurnManager {
             JSONArray cards = (JSONArray) map.get("cards");
             JSONObject asd3 = (JSONObject)cards.get(0);
             Card[] cards1 = new Card[asd3.size()];
-            for (int j = 0; j< asd3.size(); j++) {                
-                JSONObject carta = (JSONObject) asd3.get(j);                
+            for (int j = 0; j< asd3.size(); j++) {                          
                 String nombre_carta = "Card"+(j+1);
                  
                 JSONObject cartica = (JSONObject)asd3.get(nombre_carta);
