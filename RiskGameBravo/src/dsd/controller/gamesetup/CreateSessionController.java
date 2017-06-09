@@ -24,6 +24,7 @@ import dsd.model.risk.Map;
 import dsd.model.risk.Player;
 import dsd.model.risk.Session;
 import dsd.model.risk.Territory;
+import java.io.IOException;
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;
 
@@ -244,9 +245,8 @@ public class CreateSessionController extends AnchorPane implements Initializable
         controller.gotoProfile();
     }
 
-    public void startGame() {
-        
-        //controller.gotoRiskModel(session);
+    public void startGame() throws IOException {
+        controller.gotoRiskModel();
     }
 
 }

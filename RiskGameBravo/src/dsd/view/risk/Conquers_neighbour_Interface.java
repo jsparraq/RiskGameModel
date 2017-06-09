@@ -1,4 +1,4 @@
-package View;
+package dsd.view.risk;
 
 import dsd.model.risk.Session;
 import dsd.controller.risk.ConquersNeighbourManager;

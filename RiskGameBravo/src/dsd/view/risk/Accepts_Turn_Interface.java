@@ -36,7 +36,6 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(560, 430));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -45,7 +44,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         Text.setText("Your turn has started!");
         getContentPane().add(Text, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, -1, -1));
 
-        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/RISK-LOGO_EMEA.png"))); // NOI18N
+        Logo_Risk.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/RISK-LOGO_EMEA.png"))); // NOI18N
         getContentPane().add(Logo_Risk, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
 
         Button_Accepts.setText("Accepts Turn");
@@ -56,7 +55,7 @@ public class Accepts_Turn_Interface extends javax.swing.JFrame {
         });
         getContentPane().add(Button_Accepts, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 120, 40));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
+        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dsd/view/images/blue-hd-wallpapers-20.jpg"))); // NOI18N
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 430));
 
         pack();

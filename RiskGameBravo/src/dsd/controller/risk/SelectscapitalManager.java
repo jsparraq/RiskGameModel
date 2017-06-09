@@ -5,7 +5,7 @@
  */
 package dsd.controller.risk;
 
-import View.Main_Interface;
+import dsd.view.risk.*;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import dsd.model.risk.*;
@@ -53,7 +53,7 @@ public class SelectscapitalManager {
      * @return 
      */
     public static String Map(Session sessionstart){
-        return "/images/" + sessionstart.getMap().getName() + ".png";
+        return "/dsd/view/images/" + sessionstart.getMap().getName() + ".png";
     }
     
     public static void Button_Finish(Session sessionstart, JFrame window, String name_territory, Player playerstart){

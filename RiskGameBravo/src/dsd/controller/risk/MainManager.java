@@ -5,8 +5,7 @@
  */
 package dsd.controller.risk;
 
-import View.Declare_attack_Interface;
-import View.Move_Army_Interface;
+import dsd.view.risk.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JFrame;
@@ -68,7 +67,7 @@ public class MainManager {
      * @return 
      */
     public static String Map(Session sessionstart){
-        return "/images/" + sessionstart.getMap().getName() + ".png";
+        return "/dsd/view/images/" + sessionstart.getMap().getName() + ".png";
     } 
     
     /**
@@ -157,7 +156,7 @@ public class MainManager {
         json2.put("session",json);
         System.out.println(json);
         try{
-            PrintWriter writer = new PrintWriter("jsonPrueba.json", "UTF-8");
+            PrintWriter writer = new PrintWriter("NewStateSession.json", "UTF-8");
             writer.println(json2);
             writer.close();
         } catch (IOException e) {

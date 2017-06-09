@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package dsd.view.risk;
 
 import dsd.controller.risk.SelectscapitalManager;
 import dsd.model.risk.Player;

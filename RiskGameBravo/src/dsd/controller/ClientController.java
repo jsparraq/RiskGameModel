@@ -19,6 +19,8 @@ import dsd.model.RiskConstanst;
 import dsd.model.game.GameSetup;
 import dsd.model.risk.Session;
 import dsd.view.risk.Accepts_Turn_Interface;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -157,10 +159,10 @@ public class ClientController implements Initializable {
         }
     }
     
-    public void gotoRiskModel(Session session){
+    public void gotoRiskModel() throws FileNotFoundException, IOException{
         ImageIcon img = new ImageIcon(getClass().getResource("/dsd/view/images/icon.png"));
-        
-        JFrame frame = new Accepts_Turn_Interface(session);
+        Session sessionstart = dsd.controller.clientapi.GameModelController.createSession(dsd.controller.clientapi.GameModelController.initialSession());
+        JFrame frame = new Accepts_Turn_Interface(sessionstart);
         frame.setTitle(RiskConstanst.TITLE);
         frame.setIconImage(img.getImage());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,4 +1,4 @@
-package View;
+package dsd.view.risk;
 
 import javax.swing.Icon;
 import dsd.controller.risk.MoveArmyManager;

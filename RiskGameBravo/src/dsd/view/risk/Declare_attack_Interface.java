@@ -1,4 +1,4 @@
-package View;
+package dsd.view.risk;
 
 import dsd.controller.risk.AttackManager;
 import dsd.model.risk.Player;

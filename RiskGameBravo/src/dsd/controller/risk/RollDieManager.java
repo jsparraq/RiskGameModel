@@ -1,8 +1,6 @@
 package dsd.controller.risk;
 
-import View.Conquers_neighbour_Interface;
-import View.Main_Interface;
-import View.Roll_Dice_Interface;
+import dsd.view.risk.*;
 import javax.swing.JFrame;
 import dsd.model.risk.*;
 

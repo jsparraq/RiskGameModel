@@ -72,9 +72,7 @@
                                                 <Label styleClass="selectxt" layoutX="11.0" layoutY="41.0" prefHeight="17.0" prefWidth="150.0" text="Map : " AnchorPane.bottomAnchor="150.0" />
                                                 <SplitMenuButton fx:id="listMap" alignment="CENTER" layoutX="121.0" layoutY="24.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="145.0">
                                                     <items>
-                                                        <MenuItem mnemonicParsing="false" text="WORLD_DOMINATION_RISK" />
-                                                        <MenuItem mnemonicParsing="false" text="RISK_FOR_TWO_PLAYERS" />
-                                                        <MenuItem mnemonicParsing="false" text="CAPITAL_RISK" />
+                                                        <MenuItem mnemonicParsing="false" text="Classic" />
                                                     </items>
                                                 </SplitMenuButton>
                                             </HBox>
@@ -88,7 +86,9 @@
                                            
                                                 <SplitMenuButton alignment="CENTER" layoutX="121.0" layoutY="74.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="95.0">
                                                     <items>
-                                                        <MenuItem mnemonicParsing="false" text="Classic" />
+                                                        <MenuItem mnemonicParsing="false" text="WORLD_DOMINATION_RISK" />
+                                                        <MenuItem mnemonicParsing="false" text="RISK_FOR_TWO_PLAYERS" />
+                                                        <MenuItem mnemonicParsing="false" text="CAPITAL_RISK" />
                                                     </items>
                                                 </SplitMenuButton>
                                             </HBox>
@@ -101,8 +101,12 @@
                                                 <Label styleClass="selectxt" layoutX="11.0" layoutY="109.0" prefHeight="17.0" prefWidth="150.0" text="Color : " AnchorPane.bottomAnchor="50.0" />
                                                 <SplitMenuButton  alignment="CENTER" layoutX="121.0" layoutY="124.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="201.0" text="Choose" AnchorPane.bottomAnchor="45.0">
                                                     <items>
-                                                        <MenuItem   mnemonicParsing="false" text="Action 1" />
-                                                        <MenuItem  mnemonicParsing="false" text="Action 2" />
+                                                        <MenuItem  mnemonicParsing="false" text="YELLOW" />
+                                                        <MenuItem  mnemonicParsing="false" text="BLUE" />
+                                                        <MenuItem  mnemonicParsing="false" text="RED" />
+                                                        <MenuItem  mnemonicParsing="false" text="GREEN" />
+                                                        <MenuItem  mnemonicParsing="false" text="ORANGE" />
+                                                        <MenuItem  mnemonicParsing="false" text="PURPLE" />
                                                     </items>
                                                 </SplitMenuButton>
                                             </HBox>
